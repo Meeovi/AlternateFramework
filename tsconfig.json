@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "types": [
+      "@nuxt/types",
+    ],
+    "jsx": "preserve",
+    "target": "ES6",
+    "lib": ["es2018", "esnext.asynciterable", "DOM"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+  }
+}

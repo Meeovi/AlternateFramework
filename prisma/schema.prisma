@@ -1,0 +1,437 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex", "metrics", "postgresqlExtensions", "fieldReference"]
+}
+
+generator typegraphql {
+  provider           = "typegraphql-prisma"
+  output             = "../prisma/generated/type-graphql"
+  emitTranspiledCode = "true"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  extensions = [hstore(schema: "myHstoreSchema"), pg_tgrm, postgis(version: "2.1"), uuidOssp(map: "uuid-ossp")]
+}
+
+model apitoken {
+  id          BigInt    @id @default(autoincrement())
+  created_at  DateTime? @default(now())
+  name        String    @unique(map: "apitoken.name_unique")
+  token_type  String?
+  description String?
+  token       BigInt    @unique(map: "apitoken.token_unique")
+}
+
+model categories {
+  id               Int      @id @default(autoincrement())
+  thumbnail        String?
+  name             String
+  visibility       String?
+  status           Boolean?
+  websites         String?
+  product          String?
+  country          String?
+  description      String?
+  content          String?
+  image            String?
+  meta_title       String?
+  meta_keywords    String?
+  meta_description String?
+  meta_url         String?
+  workspaces       String?
+}
+
+model content_type {
+  id            BigInt    @id @default(autoincrement())
+  created_at    DateTime? @default(now())
+  text          String?
+  number        Decimal?  @db.Decimal(10, 0)
+  json          Json?
+  link          String?
+  email         String?
+  uid           String?
+  date          DateTime? @db.Date
+  time          DateTime? @db.Time(6)
+  timestamp     DateTime?
+  boolean       Boolean?
+  rich_text     String?
+  password      String?
+  media         String?
+  database_name String?
+}
+
+model customers {
+  id                     Int       @id @default(autoincrement())
+  thumbnail              String?
+  name_prefix            String?
+  first_name             String
+  middle_name            String?
+  last_name              String
+  email                  String
+  customer_group         String?
+  phone                  String?
+  zipcode                String?
+  name_suffix            String?
+  websites               String?
+  product                String?
+  country                String?
+  state                  String?
+  customer_since         DateTime? @default(now())
+  confirmed_email        String?
+  date_of_birth          String?
+  tax_vat_number         String?
+  gender                 String?
+  description            String?
+  short_description      String?
+  image                  String?
+  Address                String?
+  address_two            String?
+  payment_type           String?
+  username               String?
+  password               String?
+  comments               String?
+  credit_memos           String?
+  customer_payment       String?
+  emails                 String?
+  mediamanager           String?
+  messages               String?
+  newsletter_subscribers String?
+  orders                 String?
+  projects               String?
+  quotes                 String?
+  returns                String?
+  workspaces             String?
+}
+
+model dashboards {
+  id            BigInt    @id @default(autoincrement())
+  created_at    DateTime? @default(now())
+  name          String?   @unique
+  client_id     String?
+  client_secret String?
+  privacy       String?
+  category      String?
+  url           String?
+  media         String?
+  reports       String?
+  tasks         String?
+  projects      String?
+  tickets       String?
+  customers     String?
+  checklists    String?
+  visits        String?
+  users         String?
+  products      String?
+  articles      String?
+  sales         String?
+  logo          String?
+  content       String?
+  published     String?
+}
+
+model integrations {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now())
+  name       String?
+  content    String?
+  media      String?
+  location   String?
+  category   String?
+}
+
+model internalization {
+  id          BigInt    @id @default(autoincrement())
+  created_at  DateTime? @default(now())
+  name        String?
+  region      String?
+  description String?
+  default     String?
+  website     String?
+}
+
+model mediamanager {
+  id                                  Int       @id @default(autoincrement())
+  created_at                          DateTime? @default(now())
+  name                                String?
+  description                         String?
+  media                               String?
+  keywords                            String?
+  tags                                String?
+  brands                              String?
+  status                              String?
+  expiration_date                     String?
+  copyright                           String?
+  dimensions                          String?
+  author                              String?
+  content_type                        String?
+  versions                            String?
+  watermark_name                      String?
+  watermark_description               String?
+  watermark_media                     String?
+  agreements                          String?
+  albums                              String?
+  comment                             String?
+  workspace                           String?
+  task_name                           String?
+  task_description                    String?
+  task_type                           String?
+  members                             String?
+  products                            String?
+  agreements_agreementsTomediamanager String?
+  brands_brandsTomediamanager         String?
+  comments                            String?
+  customers                           String?
+  products_mediamanagerToproducts     String?
+  tasks                               String?
+  users                               String?
+}
+
+model pages {
+  id               Int      @id @default(autoincrement())
+  enable_page      Boolean?
+  title            String
+  content_title    String?
+  content          String?
+  url_key          String?
+  meta_title       String?
+  meta_keywords    String?
+  meta_description String?
+}
+
+model permissions {
+  id         BigInt    @id @unique(map: "permissions.id_unique") @default(autoincrement())
+  created_at DateTime? @default(now())
+  name       String?
+  content    String?
+  create     String?
+  delete     String?
+  read       String?
+  role       String?
+  update     String?
+  users      String?
+}
+
+model plugins {
+  id              BigInt    @id @default(autoincrement())
+  created_at      DateTime? @default(now())
+  name            String?
+  url             String?
+  github_link     String?
+  description     String?
+  logo            String?
+  screenshots     String?
+  last_updated    DateTime? @default(now())
+  publisher_name  String?
+  agree_terms     Boolean?
+  publisher_email String?
+}
+
+model providers {
+  id               BigInt    @id @unique(map: "providers.id_unique") @default(autoincrement())
+  created_at       DateTime? @default(now())
+  client_id        String?
+  client_secret    String?
+  host_uri         String?
+  redirect_url     String?
+  redirect_url_app String?
+  icon             String?
+  name             String    @unique(map: "providers.name_unique")
+  active           String?
+}
+
+model roles {
+  id         Int       @id @default(autoincrement())
+  role_name  String
+  content    String?
+  created_at DateTime? @default(now())
+}
+
+model tags {
+  id         Int     @id @default(autoincrement())
+  name       String
+  excerpt    String?
+  categories String?
+  articles   String?
+  products   String?
+  customers  String?
+  users      String?
+}
+
+model themes {
+  id           Int     @id @default(autoincrement())
+  title        String?
+  parent_theme String?
+  theme_path   String?
+  action       String?
+  website_id   BigInt
+  websites     String
+
+  @@index([website_id], map: "themes_website_id_fkey")
+}
+
+model upload_file {
+  id                Int       @id @default(autoincrement())
+  name              String
+  alternativeText   String?
+  caption           String?
+  width             Int?
+  height            Int?
+  formats           Json?
+  hash              String
+  ext               String?
+  mime              String
+  size              Decimal   @db.Decimal(10, 2)
+  url               String
+  previewUrl        String?
+  provider          String
+  provider_metadata Json?
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now())
+  updated_at        DateTime? @default(now())
+}
+
+model users {
+  id               BigInt    @id @default(autoincrement())
+  username         String
+  first_name       String
+  last_name        String?
+  email            String
+  password         String
+  interface_locale String?
+  value            String?
+  permissions      String?
+  created_at       DateTime? @default(now())
+  emails           String?
+  mediamanager     String?
+  messages         String?
+  projects         String?
+  workspaces       String?
+}
+
+model webhooks {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now())
+  name       String
+  url        String
+  headers    String?
+  create     String?
+  retrieve   String?
+  update     String?
+  delete     String?
+  publish    String?
+  unpublish  String?
+}
+
+model settings {
+  id                       BigInt    @id(map: "shop_settings_pkey") @default(autoincrement())
+  created_at               DateTime? @default(now())
+  store_name               String?
+  store_phone              String?
+  store_hours              String?
+  country                  String?
+  region                   String?
+  zipcode                  String?
+  city                     String?
+  address                  String?
+  address_two              String?
+  vat_number               String?
+  allow_state              String?
+  state_required_for       String?
+  allow_countries          String?
+  default_country          String?
+  optional_zip             String?
+  european_union_countries String?
+  top_destinations         String?
+  base_currency            String?
+  default_currency         String?
+  allowed_currency         String?
+  siteName                 String?
+  siteWebsite              String?
+  sentryDsn                String?
+  awsS3                    String?
+  databaseUrl              String?
+  isPublic                 String?
+  type                     String?
+  googleAnalytics          String?
+  searchSetting            String?
+  mailServer               String?
+  siteTagline              String?
+}
+
+model logIn {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  email      String?
+  password   String?
+  token      String?
+  expiresIn  String?
+  users      String?
+  username   String?
+}
+
+model dashboardslist {
+  id            BigInt    @id @default(autoincrement())
+  created_at    DateTime? @default(now())
+  name          String?   @unique
+  client_id     String?
+  client_secret String?
+  privacy       String?
+  category      String?
+  url           String?
+  media         String?
+  reports       String?
+  tasks         String?
+  projects      String?
+  tickets       String?
+  customers     String?
+  checklists    String?
+  visits        String?
+  users         String?
+  products      String?
+  articles      String?
+  sales         String?
+  logo          String?
+  content       String?
+  published     String?
+}
+
+model dashboardgraphql {
+  id          Int     @id @default(autoincrement())
+  name        String
+  url         String?
+  headerValue String?
+  headerKey   String?
+  urlValue    String?
+  urlKey      String?
+  description String?
+}
+
+model dashboardjson {
+  id          Int     @id @default(autoincrement())
+  name        String
+  url         String?
+  description String?
+  definition  String?
+  format      String?
+}
+
+model dashboardrestapi {
+  id                 Int     @id @default(autoincrement())
+  name               String
+  url                String?
+  headerValue        String?
+  headerKey          String?
+  authenticationType String?
+  description        String?
+}
+
+model dashboardslides {
+  id          Int     @id @default(autoincrement())
+  name        String
+  categories  String?
+  media       String?
+  description String?
+}

@@ -1,0 +1,105 @@
+/********************** Main CSS *************/
+body {
+    margin: 0;
+}
+
+.v-container {
+    max-width: 100% !important;
+}
+
+.contentLeft {
+    left: 0px !important;
+    position: relative;
+    overflow-x: auto;
+    top: 0px !important;
+    width: 200px !important;
+}
+
+.contentRight {
+    position: relative;
+    top: 0px !important;
+    width: 100% !important;
+}
+
+.tableEditor {
+    width: 100% !important;
+    position: relative;
+}
+
+.tableEditor .buttonBar {
+    padding: 5px;
+    top: 15px;
+    position: relative;
+    float: left;
+    left: -30px;
+}
+
+.buttonBar button {
+    margin-right: 5px;
+}
+
+.rightCsv {
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+.insertAddBtn {
+    top: -17px;
+    position: relative;
+    left: 5%;
+}
+
+.rightAddBtn {
+    top: 25px;
+    margin-bottom: 51px;
+}
+
+.ag-theme-alpine { /** Content Editor */
+    min-width: 100% !important;
+    height: 100vh;
+    position: relative;
+    top: 11px !important;
+    left: -55px;
+}
+
+.form-wrapper {
+    padding: 2em;
+    border: 1px solid #a8a8a8;
+    border-radius: .5em;
+    box-sizing: border-box;
+    width: 100% !important;
+  }
+  
+  .form-wrapper input {
+    min-width: 50px !important;
+  }
+  
+  .form-wrapper button {
+    background-color: rgb(52, 109, 216);
+    border: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+  }
+
+/******************* Main Section CSS *********/
+
+#mainSection {
+    top: 5px;
+    position: relative;
+    left: 57px;
+    max-width: 100%;
+}
+
+
+/******************** Sidebar CSS *************/
+
+#sidebarNav {
+    height: 92vh;
+    left: 0px;
+    float: left;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+}
