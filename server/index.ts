@@ -7,7 +7,7 @@ import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 
 import { createYoga } from 'graphql-yoga';
-import { createBuiltMeshHTTPHandler } from './.mesh'
+import { createBuiltMeshHTTPHandler } from '../.mesh'
 import { createServer } from 'node:http';
 import { createFetch } from '@whatwg-node/fetch';
 import { useGraphQlJit } from '@envelop/graphql-jit';
