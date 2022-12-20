@@ -13,12 +13,13 @@
   },
   "license": "MIT",
   "private": true,
+  
   "prisma": {
     "seed": "node prisma/seedDashboard.js"
   },
   "scripts": {
     "alternate-commit": "git add . && git commit -m \"ready for update\"",
-    "alternate-update": "git pull \"https://github.com/meeovi/alternatecms\"",
+    "alternate-update": "git pull \"https://github.com/Meeovi/AlternateFramework\"",
     "build": "nuxt build && mesh build",
     "dev": "nuxt dev && node server/server.js",
     "yoga": "ts-node server/index.ts",

@@ -3,6 +3,7 @@
     "types": [
       "@nuxt/types",
     ],
+    "module": "commonjs",
     "jsx": "preserve",
     "target": "ES6",
     "lib": ["es2018", "esnext.asynciterable", "DOM"],
@@ -19,5 +20,6 @@
     "importHelpers": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-  }
+  },
+  "exclude": ["node_modules"]
 }
