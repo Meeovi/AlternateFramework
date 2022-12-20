@@ -4,7 +4,22 @@ body {
 }
 
 .v-container {
-    max-width: 100% !important;
+    max-width: 100vh !important;
+}
+
+.choiceGrid .v-card {
+    margin: 10px;
+}
+
+.leftContent {
+    max-width: 11.05% !important;
+}
+
+.leftContent h4 {
+    width: 100%;
+    text-align: center;
+    top: 5px;
+    position: relative;
 }
 
 .contentLeft {
@@ -13,12 +28,14 @@ body {
     overflow-x: auto;
     top: 0px !important;
     width: 200px !important;
+    height: 100vh !important;
 }
 
 .contentRight {
     position: relative;
     top: 0px !important;
     width: 100% !important;
+    height: 100% !important;
 }
 
 .tableEditor {
@@ -31,7 +48,7 @@ body {
     top: 15px;
     position: relative;
     float: left;
-    left: -30px;
+    left: 0px;
 }
 
 .buttonBar button {
@@ -53,6 +70,7 @@ body {
 .rightAddBtn {
     top: 25px;
     margin-bottom: 51px;
+    display: block !important;
 }
 
 .ag-theme-alpine { /** Content Editor */
@@ -60,7 +78,7 @@ body {
     height: 100vh;
     position: relative;
     top: 11px !important;
-    left: -55px;
+    background-color: transparent !important;
 }
 
 .form-wrapper {

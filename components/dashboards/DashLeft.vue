@@ -2,7 +2,8 @@
     <div>
         <v-navigation-drawer permanent class="contentLeft">
             <v-list>
-                <RightAddContent />
+                <h4>Dashboards</h4>
+                <RightAddDashboards />
                 <v-divider></v-divider>
                 <v-list-item title="Home" value="home"></v-list-item>
 
@@ -15,8 +16,10 @@
 </template>
 
 <script>
-    export default {
+import RightAddDashboards from './RightAddDashboards.vue'
 
+    export default {
+        components: { RightAddDashboards }
 
     }
 </script>

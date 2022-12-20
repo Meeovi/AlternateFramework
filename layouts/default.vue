@@ -1,9 +1,6 @@
 <template>
     <v-app :theme="theme">
         <v-app-bar>
-            <template v-slot:image>
-                <v-img gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"></v-img>
-            </template>
             <template v-slot:prepend>
                 <v-icon start icon="fas fa-hurricane"></v-icon>
             </template>

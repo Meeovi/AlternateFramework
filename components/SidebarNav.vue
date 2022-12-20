@@ -2,10 +2,9 @@
     <v-card>
       <v-layout>
         <v-navigation-drawer
-          v-model="drawer"
-          :rail="rail"
-          @click="rail = false"
-        >
+        expand-on-hover
+        rail
+      >
           <v-list-item
             prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
             title="John Leider"

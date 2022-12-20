@@ -7,7 +7,6 @@ import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 
 import { createYoga } from 'graphql-yoga';
-import { createBuiltMeshHTTPHandler } from '../.mesh'
 import { createServer } from 'node:http';
 import { createFetch } from '@whatwg-node/fetch';
 import { useGraphQlJit } from '@envelop/graphql-jit';
@@ -37,8 +36,6 @@ app.options('*', cors())
     //{ name: 'products', url: 'http://localhost:4002' }
   ]
 }) */
-
-const meshHttp = createBuiltMeshHTTPHandler()
 
 // Pulling our Graphql Resolvers from Type-graphql & Prisma generation
 
@@ -123,14 +120,14 @@ async function main() {
     })
   });
 
-  const server = createServer(createBuiltMeshHTTPHandler(yoga))
+  const server = createServer(yoga)
 
   app.route({
     url: '/graphql',
     method: ['GET', 'POST', 'OPTIONS'],
     handler: async (req, reply) => {
       // Second parameter adds Fastify's `req` and `reply` to the GraphQL Context
-      const response = await meshHttp.handleNodeRequest(req, {
+      const response = await yoga.handleNodeRequest(req, {
         req,
         reply
       })
