@@ -121,3 +121,29 @@ body {
     padding-left: 0px;
     padding-right: 0px;
 }
+
+/********************* Metrics CSS ***********/
+
+.metricsVcard {
+    height: 100vh !important;
+    width: 100%;
+    top: -5px;
+    margin: 0px;
+}
+
+.metricsWindowRight {
+    width: 80%;
+    height: 83vh !important;
+    overflow: scroll;
+}
+
+.metricsVcard h4 {
+    padding: 10px;
+}
+
+.databaseSections {
+    width: 100%;
+    position: relative;
+    height: 83vh !important;
+    overflow: scroll;
+}

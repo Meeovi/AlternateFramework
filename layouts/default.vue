@@ -9,7 +9,7 @@
 
             <div class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height">
                 <v-col>
-                    <v-btn :prepend-icon="theme === 'light' ? 'fas fa-sun' : 'fas fa-moon'"
+                    <v-btn :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'"
                         @click="onClick"></v-btn>
                 </v-col>
                 <v-col>
@@ -95,7 +95,7 @@ export default {
 <script setup>
     import { ref } from 'vue'
 
-    const theme = ref('light')
+    const theme = ref('dark')
 
     function onClick() {
         theme.value = theme.value === 'light' ? 'dark' : 'light'

@@ -1,9 +1,5 @@
-const { PrismaClient, Prisma } = require("@prisma/client");
+import { prisma, Prisma } from '@prisma/client'
 
-const prisma = new PrismaClient();
+const where = Prisma.sql`where column = ${condition}`
 
-async function createContent() {
-    prisma.$queryRaw`SELECT * FROM Customers o WHERE  o.customer_id IN (${Prisma.join(sub_users)}) `;
-}
-
-export default createContent()
+const result = await prisma.$queryRaw`SELECT column FROM table ${condition ? where : Prisma.empty}`
