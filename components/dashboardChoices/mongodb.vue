@@ -13,6 +13,22 @@
         </v-card>
     </template>
       <v-card>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="6">
+                <v-text-field label="Name*" id="mongodbName" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Connection String" id="mongodbConnection*" hint="mongodb://root:example@localhost:27017/test" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Description" id="mongodbDescription" hint="Your chance to describe the operation! Make sure the description is clear and concise."></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
         <v-card-actions>
           <v-btn
             color="blue-darken-1"

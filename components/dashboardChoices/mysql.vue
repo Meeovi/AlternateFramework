@@ -13,6 +13,31 @@
         </v-card>
     </template>
       <v-card>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="6">
+                <v-text-field label="Name*" id="mysqlName" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Host" id="mysqlHost*" hint="localhost" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Port" id="mysqlPort*" hint="3306" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="User" id="mysqlUser*" hint="root" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Password" id="mysqlPassword*" hint="passwd" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Database" id="mysqlDatabase*" hint="employees" required></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
         <v-card-actions>
           <v-btn
             color="blue-darken-1"

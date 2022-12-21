@@ -1,9 +1,9 @@
-const { defineEventHandler } = require('h3');
-const { PrismaClient } = require("@prisma/client");
+import prisma from '../../plugins/prisma'
 
-export default defineEventHandler((event) => {
-    const prisma = PrismaClient(event)
+async function createTable() {
+    const atable = await prisma.$queryRaw`CREATE TABLE sample`
 
-    return prisma.users.findMany()
-  })
-  
+    return atable
+}
+
+createTable()

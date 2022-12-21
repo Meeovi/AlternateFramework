@@ -13,6 +13,19 @@
         </v-card>
     </template>
       <v-card>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="6">
+                <v-text-field label="Name*" id="postgresName" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Connection String" id="postgresConnection*" hint="postgres://postgres:password@localhost/postgres" required></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
         <v-card-actions>
           <v-btn
             color="blue-darken-1"

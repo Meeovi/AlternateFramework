@@ -1,31 +1,55 @@
 <template>
-    <v-row justify="center">
-      <v-dialog
-        v-model="dialog"
-        scrollable
-      >
-        <template v-slot:activator="{ props }">
+  <v-row justify="center">
+    <v-dialog v-model="dialog" scrollable>
+      <template v-slot:activator="{ props }">
         <v-card class="mx-auto" max-width="200" v-bind="props">
-            <v-img class="align-end text-white" height="200" width="200"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
-                <v-card-title style="width:100%;text-align:center;">Apache Thrift</v-card-title>
-            </v-img>
+          <v-img class="align-end text-white" height="200" width="200"
+            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+            <v-card-title style="width:100%;text-align:center;">Apache Thrift</v-card-title>
+          </v-img>
         </v-card>
-    </template>
+      </template>
       <v-card>
+        <v-card-title>
+          <span class="text-h6">Connect to Apache Thrift Service</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="6">
+                <v-text-field label="Name*" id="sourceName" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Hostname*" id="sourceHostname" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Port*" id="sourcePort" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Path to IDL File*" id="sourceIdl" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Path to Thrift Service" id="pathService" hint="/thrift"></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Service Name*" id="serviceName" required></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Operation Headers" id="operationHeaders"></v-text-field>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field label="Schema Headers" id="schemaHeaders"></v-text-field>
+              </v-col>
+
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
         <v-card-actions>
-          <v-btn
-            color="blue-darken-1"
-            variant="text"
-            @click="dialog = false"
-          >
+          <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
             Close
           </v-btn>
-          <v-btn
-            color="blue-darken-1"
-            variant="text"
-            @click="dialog = false"
-          >
+          <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
             Save
           </v-btn>
         </v-card-actions>
@@ -36,7 +60,7 @@
 
 <script>
   export default {
-    data () {
+    data() {
       return {
         dialog: false,
       }

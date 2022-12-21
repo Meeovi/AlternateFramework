@@ -1,7 +1,9 @@
-const prisma = require('../../plugins/prisma');
+import prisma from '../../plugins/prisma'
 
-async function createContent() {
-    prisma.$queryRaw`SELECT * FROM Customers o WHERE  o.customer_id IN (${prisma.join(sub_users)}) `;
+async function deleteTable() {
+    const deletetable = await prisma.$executeRaw`DELETE TABLE sample`
+
+    return deletetable
 }
 
-export default createContent()
+deleteTable()
