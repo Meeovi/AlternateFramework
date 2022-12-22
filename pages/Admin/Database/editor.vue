@@ -29,12 +29,6 @@
                             </v-icon>
                             Edge Functions
                         </v-tab>
-                        <v-tab value="option-5">
-                            <v-icon start>
-                                mdi-access-point
-                            </v-icon>
-                            Reports
-                        </v-tab>
                         <v-tab value="option-6">
                             <v-icon start>
                                 mdi-access-point
@@ -76,11 +70,6 @@
                                 <edgefunctions />
                             </v-card>
                         </v-window-item>
-                        <v-window-item value="option-5">
-                            <v-card flat>
-                                <reports />
-                            </v-card>
-                        </v-window-item>
                         <v-window-item value="option-6">
                             <v-card flat>
                                 <logs />
@@ -107,7 +96,6 @@
     import sqleditor from '~/components/database/sqleditor'
     import authentication from '~/components/database/authentication'
     import edgefunctions from '~/components/database/edgefunctions'
-    import reports from '~/components/database/reports'
     import logs from '~/components/database/logs'
     import apidocs from '~/components/database/apidocs'
     import apistudio from '~/components/database/apistudio'
@@ -118,7 +106,6 @@
             sqleditor,
             authentication,
             edgefunctions,
-            reports,
             logs,
             apidocs,
             apistudio,

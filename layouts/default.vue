@@ -61,7 +61,10 @@
             <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards" href="/Admin/Dashboard/explorer"></v-list-item>
             <v-list-item prepend-icon="fas fa-chart-column" title="Metrics" value="metrics" href="/Admin/Metrics/"></v-list-item>
             <v-list-item prepend-icon="fas fa-database" title="Database" value="database" href="/Admin/Database/editor"></v-list-item>
-          </v-list>
+            <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Media/"></v-list-item>
+            <v-list-item prepend-icon="fas fa-cubes" title="Integrations" value="integrations" href="/Admin/Integrations/"></v-list-item>
+            <v-list-item prepend-icon="fas fa-gear" title="Settings" value="settings" href="/Admin/Settings/general-settings"></v-list-item>
+        </v-list>
         </v-navigation-drawer>
         <v-main id="sidebarNav">
           <main id="mainSection">
@@ -85,6 +88,9 @@ export default {
         { title: 'Dashboards', icon: 'fas fa-chart-simple' },
         { title: 'Metrics', icon: 'fas fa-chart-column' },
         { title: 'Database', icon: 'fas fa-database' },
+        { title: 'Media Manager', icon: 'fas fa-icons' },
+        { title: 'Integrations', icon: 'fas fa-cubes' },
+        { title: 'Settings', icon: 'fas fa-gear' },
       ],
       rail: true,
     }

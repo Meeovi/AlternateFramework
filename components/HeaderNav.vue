@@ -3,7 +3,7 @@
             <template v-slot:prepend>
                 <v-app-bar-nav-icon></v-app-bar-nav-icon>
             </template>
-            <v-app-bar-title>ALTERNATE</v-app-bar-title>
+            <v-app-bar-title href="/">ALTERNATE</v-app-bar-title>
             <v-spacer></v-spacer>
 
             <div class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height">
