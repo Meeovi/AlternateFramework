@@ -1,10 +1,10 @@
 <template>
     <div>
             <v-card class="metricsVcard">
-                <v-toolbar color="primary">
+                <v-toolbar color="secondary">
                     <v-toolbar-title>Database</v-toolbar-title>
                 </v-toolbar>
-                    <v-tabs v-model="tab" color="primary">
+                    <v-tabs v-model="tab" color="secondary">
                         <v-tab value="option-1">
                             <v-icon start>
                                 mdi-account
@@ -63,37 +63,37 @@
                         </v-window-item>
                         <v-window-item value="option-2">
                             <v-card flat>
-                                <errors />
+                                <sqleditor />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-3">
                             <v-card flat>
-                                <usage />
+                                <authentication />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-4">
                             <v-card flat>
-                                <operations />
+                                <edgefunctions />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-5">
                             <v-card flat>
-                                <websockets />
+                                <reports />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-6">
                             <v-card flat>
-                                <subscriptionWorkers />
+                                <logs />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-7">
                             <v-card flat>
-                                <allowLists />
+                                <apidocs />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-8">
                             <v-card flat>
-                                <apiLimits />
+                                <apistudio />
                             </v-card>
                         </v-window-item>
                     </v-window>
@@ -103,25 +103,25 @@
 </template>
 
 <script>
-    import overview from '~/components/metrics/metriclinks/overview'
-    import errors from '~/components/metrics/metriclinks/errors'
-    import usage from '~/components/metrics/metriclinks/usage'
-    import operations from '~/components/metrics/metriclinks/operations'
-    import websockets from '~/components/metrics/metriclinks/websockets'
-    import subscriptionWorkers from '~/components/metrics/metriclinks/subscriptionWorkers'
-    import allowLists from '~/components/metrics/metriclinks/allowLists'
-    import apiLimits from '~/components/metrics/metriclinks/apiLimits'
+    import overview from '~/components/database/overview'
+    import sqleditor from '~/components/database/sqleditor'
+    import authentication from '~/components/database/authentication'
+    import edgefunctions from '~/components/database/edgefunctions'
+    import reports from '~/components/database/reports'
+    import logs from '~/components/database/logs'
+    import apidocs from '~/components/database/apidocs'
+    import apistudio from '~/components/database/apistudio'
 
     export default {
         components: {
             overview,
-            errors,
-            usage,
-            operations,
-            websockets,
-            subscriptionWorkers,
-            allowLists,
-            apiLimits,
+            sqleditor,
+            authentication,
+            edgefunctions,
+            reports,
+            logs,
+            apidocs,
+            apistudio,
         },
         data: () => ({
             tab: 'option-1',
