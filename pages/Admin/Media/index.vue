@@ -1,41 +1,106 @@
 <template>
-    <v-row>
-      <v-col
-        v-for="n in 9"
-        :key="n"
-        class="d-flex child-flex"
-        cols="4"
-      >
-        <v-img
-          :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-          :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-          aspect-ratio="1"
-          cover
-          class="bg-grey-lighten-2"
-        >
-          <template v-slot:placeholder>
-            <v-row
-              class="fill-height ma-0"
-              align="center"
-              justify="center"
-            >
-              <v-progress-circular
-                indeterminate
-                color="grey-lighten-5"
-              ></v-progress-circular>
-            </v-row>
-          </template>
-        </v-img>
-      </v-col>
-    </v-row>
-  </template>
+  <div>
+    <v-card class="metricsVcard">
+      <v-toolbar color="warning">
+        <v-col cols="9">
+          <v-toolbar-title>Media Manager</v-toolbar-title>
+        </v-col>
+        <v-col cols="2">
+          <v-file-input multiple label="Upload Media" class="mediaUpload"></v-file-input>
+        </v-col>
+      </v-toolbar>
+        <v-tabs v-model="tab" color="warning">
+          <v-tab value="option-1">
+            <v-icon start>
+              mdi-account
+            </v-icon>
+            Overview
+          </v-tab>
+          <v-tab value="option-2">
+            <v-icon start>
+              mdi-lock
+            </v-icon>
+            Files
+          </v-tab>
+          <v-tab value="option-3">
+            <v-icon start>
+              mdi-access-point
+            </v-icon>
+            Albums
+          </v-tab>
+          <v-tab value="option-4">
+            <v-icon start>
+              mdi-access-point
+            </v-icon>
+            Workflows
+          </v-tab>
+          <v-tab value="option-5">
+            <v-icon start>
+              mdi-access-point
+            </v-icon>
+            Guidelines
+          </v-tab>
+        </v-tabs>
+        <v-card-text>
+          <v-window v-model="tab" class="mediaSections">
+            <v-window-item value="option-1">
+              <v-card flat>
+                <overview />
+              </v-card>
+            </v-window-item>
+            <v-window-item value="option-2">
+              <v-card flat>
+                <files />
+              </v-card>
+            </v-window-item>
+            <v-window-item value="option-3">
+              <v-card flat>
+                <albums />
+              </v-card>
+            </v-window-item>
+            <v-window-item value="option-4">
+              <v-card flat>
+                <workflow />
+              </v-card>
+            </v-window-item>
+            <v-window-item value="option-5">
+              <v-card flat>
+                <guidelines />
+              </v-card>
+            </v-window-item>
+          </v-window>
+        </v-card-text>
+    </v-card>
+  </div>
+</template>
 
 <script>
-export default {
-    
-}
+  import overview from '~/components/media/overview'
+  import files from '~/components/media/files'
+  import albums from '~/components/media/albums'
+  import workflow from '~/components/media/workflow'
+  import guidelines from '~/components/media/guidelines'
+
+  export default {
+    components: {
+      overview,
+      files,
+      albums,
+      workflow,
+      guidelines
+    },
+    data: () => ({
+      tab: 'option-1',
+    }),
+  }
 </script>
 
 <script setup>
-
+  useHead({
+    title: 'Media Manager',
+  })
 </script>
+
+<style scoped>
+
+</style>

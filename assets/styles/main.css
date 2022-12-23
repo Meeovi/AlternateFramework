@@ -147,3 +147,22 @@ body {
     height: 83vh !important;
     overflow: scroll;
 }
+
+/********************** Media Manager CSS ***********/
+
+.mediaManager, .mediaManager img {
+    width: 200px;
+    height: 200px;
+}
+
+.mediaOptions {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    max-width: 100% !important;
+}
+
+.mediaUpload {
+    position: relative;
+    top: 15px;
+    height: 100%;
+}
