@@ -3,9 +3,10 @@
         <v-navigation-drawer permanent class="contentLeft">
             <v-list>
                 <h4>Content Manager</h4>
-                <RightAddContent />
+                <LeftCreateTable />
                 <v-divider></v-divider>
-                <v-list-item title="Home" value="home"></v-list-item>
+                <h6>Tables ({{ data }})</h6>
+                <v-list-item title="Home" value="home">{{ data }}</v-list-item>
 
                 <v-list-item title="Contacts" value="contacts"></v-list-item>
 
@@ -16,8 +17,15 @@
 </template>
 
 <script>
-    export default {
+import LeftCreateTable from './LeftCreateTable'
 
+    export default {
+        components: { LeftCreateTable }
 
     }
+</script>
+
+<script setup>
+const count = ref(1)
+const { data } = await useFetch(() => `/api/read/${count.value}`, { params: { token: 123 } })
 </script>

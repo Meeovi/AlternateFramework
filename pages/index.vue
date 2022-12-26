@@ -1,15 +1,21 @@
 <template>
     <div>
-        hey
+        <v-row>
+            <v-col>
+
+            </v-col>
+        </v-row>
     </div>
 </template>
 
 <script>
 export default {
-
-    head: {
-        title: 'Home'
-    }
-}  
     
+}
+</script>
+
+<script setup>
+    useHead({
+        title: 'Alternate Framework',
+    })
 </script>

@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+#checkbox-10443 {
+    border: 1px solid white !important;
+}
+
 .v-container {
     max-width: 100vh !important;
 }
@@ -12,10 +16,10 @@ body {
 }
 
 .leftContent {
-    max-width: 12.95% !important;
+    max-width: 210px !important;
 }
 
-.leftContent h4 {
+.leftContent h4, .leftContent h6 {
     width: 100%;
     text-align: center;
     top: 5px;
@@ -29,6 +33,10 @@ body {
     top: 0px !important;
     width: 200px !important;
     height: 100vh !important;
+}
+
+.contentLeft h4, .contentLeft h6 {
+    padding: 15px;
 }
 
 .contentRight {
@@ -78,7 +86,13 @@ body {
     height: 100vh;
     position: relative;
     top: 11px !important;
-    background-color: transparent !important;
+    --ag-background-color: transparent !important;
+    --ag-border-color: transparent !important;
+    --ag-secondary-border-color: transparent !important;
+    --ag-header-background-color: transparent !important;
+    --ag-odd-row-background-color: transparent !important;
+    --ag-control-panel-background-color: transparent !important;
+    --ag-subheader-background-color: transparent !important;
 }
 
 .form-wrapper {
@@ -125,7 +139,7 @@ body {
 /********************* Metrics CSS ***********/
 
 .metricsVcard {
-    height: 100vh !important;
+    min-height: 100% !important;
     width: 100%;
     top: -5px;
     margin: 0px;

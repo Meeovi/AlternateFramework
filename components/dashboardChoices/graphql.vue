@@ -16,6 +16,9 @@
         <v-card-text>
           <v-container>
             <v-row>
+              <v-col cols="12" justify="center">
+                <h1>GRAPHQL</h1>
+              </v-col>
               <v-col cols="6">
                 <v-text-field label="Name*" id="graphqlName" required></v-text-field>
               </v-col>

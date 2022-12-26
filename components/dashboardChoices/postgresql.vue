@@ -16,10 +16,13 @@
         <v-card-text>
           <v-container>
             <v-row>
-              <v-col cols="6">
+              <v-col cols="12" justify="center">
+                <h1>POSTGRESQL / POSTGRAPHILE</h1>
+              </v-col>
+              <v-col cols="12">
                 <v-text-field label="Name*" id="postgresName" required></v-text-field>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="12">
                 <v-text-field label="Connection String" id="postgresConnection*" hint="postgres://postgres:password@localhost/postgres" required></v-text-field>
               </v-col>
             </v-row>

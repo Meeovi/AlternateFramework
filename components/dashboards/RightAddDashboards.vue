@@ -14,10 +14,6 @@
                     <v-container>
                         <v-row class="choiceGrid">
                             <v-col>
-                                <restapi />
-                            </v-col>
-
-                            <v-col>
                                 <apacheThrift />
                             </v-col>
 
@@ -89,12 +85,11 @@ import neo4j from '../dashboardChoices/neo4j.vue'
 import odata from '../dashboardChoices/odata.vue'
 import openapiSwagger from '../dashboardChoices/openapiSwagger.vue'
 import postgresql from '../dashboardChoices/postgresql.vue'
-import restapi from '../dashboardChoices/restapi.vue'
 import soap from '../dashboardChoices/soap.vue'
 import sqlite from '../dashboardChoices/sqlite.vue'
 
     export default {
-        components: { apacheThrift, graphql, grpcProtobuf, jsonSchema, mongodb, mysql, neo4j, odata, openapiSwagger, postgresql, restapi, soap, sqlite },
+        components: { apacheThrift, graphql, grpcProtobuf, jsonSchema, mongodb, mysql, neo4j, odata, openapiSwagger, postgresql, soap, sqlite },
         data: () => ({
             dialog: false,
         }),

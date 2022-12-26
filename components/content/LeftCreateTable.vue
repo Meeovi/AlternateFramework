@@ -42,7 +42,7 @@
                                                 <v-text-field id="columnName" label="Column Name" hint="Column Name"></v-text-field>
                                             </v-col>
                                             <v-col>
-                                                <v-select id="columnType" :items="['0-17', '18-29', '30-54', '54+']" label="Type*" required></v-select>
+                                                <v-select id="columnType" :items="[data]" label="Type*" required></v-select>
                                             </v-col>
                                             <v-col>
                                                 <v-autocomplete id="columnDefaultName" :items="['Set as NULL', 'Set as empty string']" label="Default Value"></v-autocomplete>
@@ -70,9 +70,15 @@
 </template>
 
 <script>
+
     export default {
         data: () => ({
             dialog: false,
         }),
+        
     }
+</script>
+
+<script setup>
+const { data } = await useFetch('/api/dataType.json')
 </script>

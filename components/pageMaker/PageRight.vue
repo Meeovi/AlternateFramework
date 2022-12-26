@@ -3,7 +3,7 @@
         <v-col class="buttonBar">
             <v-btn variant="flat" size="small" v-on:click="refreshCache([])"><v-icon start icon="fas fa-rotate"></v-icon>Refresh</v-btn>
             <v-btn variant="flat" size="small" @click="deselectRows">deselect rows</v-btn>
-            <InsertAddContent />
+            <InsertAddPage />
         </v-col>
         <v-col class="rightCsv">
             <v-btn variant="flat" size="small" v-on:click="onBtnUpdate()"><v-icon start icon="fas fa-file-csv"></v-icon>Show CSV</v-btn>
@@ -22,12 +22,13 @@
     import {
         AgGridVue
     } from "ag-grid-vue3"; // the AG Grid Vue Component
+    import InsertAddPage from './InsertAddPage.vue'
     import {
         reactive,
         onMounted,
         ref
     } from "vue";
-    import InsertAddContent from './InsertAddContent.vue'
+
     import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
     import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
 
@@ -35,7 +36,7 @@
         name: "App",
         components: {
             AgGridVue,
-            InsertAddContent
+            InsertAddPage
         },
         setup() {
             const gridApi = ref(null); // Optional - for accessing Grid's API
@@ -50,13 +51,13 @@
             // Each Column Definition results in one Column.
             const columnDefs = reactive({
                 value: [{
-                        field: "make"
+                        field: "ID"
                     },
                     {
-                        field: "model"
+                        field: "Name"
                     },
                     {
-                        field: "price"
+                        field: "URL"
                     }
                 ],
             });

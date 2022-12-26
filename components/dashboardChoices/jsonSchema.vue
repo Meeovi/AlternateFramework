@@ -16,6 +16,9 @@
         <v-card-text>
           <v-container>
             <v-row>
+              <v-col cols="12" justify="center">
+                <h1>JSON</h1>
+              </v-col>
               <v-col cols="6">
                 <v-text-field label="Name*" id="jsonName" required></v-text-field>
               </v-col>
@@ -26,8 +29,7 @@
                 <v-text-field label="Description" id="jsonDescription" hint="Your chance to describe the operation! Make sure the description is clear and concise."></v-text-field>
               </v-col>
               <v-col cols="6">
-                <div class="text-subtitle-1 text-medium-emphasis">Json Type (required)</div>
-                <v-autocomplete id="jsonType" :items="['Query', 'Mutation', 'Subscription']" label="Type field is set the opertion type: Query, Mutation or Subscription"></v-autocomplete>
+                <v-autocomplete id="jsonType" :items="['Query', 'Mutation', 'Subscription']" label="Json Type" hint="Type field is set the opertion type: Query, Mutation or Subscription"></v-autocomplete>
               </v-col>
               <v-col cols="6">
                 <v-text-field label="Operation Headers" id="operationHeaders"></v-text-field>

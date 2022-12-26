@@ -16,10 +16,13 @@
         <v-card-text>
           <v-container>
             <v-row>
-              <v-col cols="6">
+              <v-col cols="12" justify="center">
+                <h1>SOAP</h1>
+              </v-col>
+              <v-col cols="12">
                 <v-text-field label="Name*" id="soapName" required></v-text-field>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="12">
                 <v-text-field label="Soap Source" id="soapConnection*" hint="http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL" required></v-text-field>
               </v-col>
             </v-row>
