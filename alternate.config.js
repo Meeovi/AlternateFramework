@@ -1,28 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports = () => {
+module.exports = {
 
 }

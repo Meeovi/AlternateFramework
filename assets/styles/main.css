@@ -124,6 +124,25 @@ body {
     max-width: 100% !important;
 }
 
+.homeSection {
+    padding: 45px;
+}
+
+.homeSection a {
+    text-decoration: none;
+}
+
+.homeTitle, .homeDescription {
+    padding: 5px;
+}
+
+.homeRows {
+    color: white;
+}
+
+.homeRight {
+    padding: 15px;
+}
 
 /******************** Sidebar CSS *************/
 
@@ -179,4 +198,14 @@ body {
     position: relative;
     top: 15px;
     height: 100%;
+}
+
+/*************** Footer ***************************/
+
+.footerHelp {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    float: right;
+    z-index: 99999999;
 }

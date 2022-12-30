@@ -42,7 +42,7 @@
                                                 <v-text-field id="columnName" label="Column Name" hint="Column Name"></v-text-field>
                                             </v-col>
                                             <v-col>
-                                                <v-select id="columnType" :items="[data]" label="Type*" required></v-select>
+                                                <v-select id="columnType" :items="['Integer', 'BigInteger', 'Text', 'Boolean', 'SmallInteger', 'Datetime', 'Float', 'Json', 'Bytes', 'Decimal']" label="Type*" required></v-select>
                                             </v-col>
                                             <v-col>
                                                 <v-autocomplete id="columnDefaultName" :items="['Set as NULL', 'Set as empty string']" label="Default Value"></v-autocomplete>
