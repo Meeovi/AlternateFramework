@@ -5,12 +5,10 @@
                 <h4>Content Manager</h4>
                 <LeftCreateTable />
                 <v-divider></v-divider>
-                <h6>Tables ({{ data }})</h6>
-                <v-list-item title="Home" value="home">{{ data }}</v-list-item>
-
-                <v-list-item title="Contacts" value="contacts"></v-list-item>
-
-                <v-list-item title="Settings" value="settings"></v-list-item>
+                <h6>Tables ()</h6>
+                <div>
+                    <v-list-item :title="apitables" :value="apitables">{{ apitables }}</v-list-item>
+                </div>
             </v-list>
         </v-navigation-drawer>
     </div>
@@ -21,11 +19,9 @@ import LeftCreateTable from './LeftCreateTable'
 
     export default {
         components: { LeftCreateTable }
-
     }
 </script>
 
 <script setup>
-const count = ref(1)
-const { data } = await useFetch(() => `/api/read/${count.value}`, { params: { token: 123 } })
+const { data: apitables } = await useAsyncData("api", () => $fetch("/api/read"));
 </script>

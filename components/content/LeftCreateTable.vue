@@ -20,36 +20,33 @@
                                 <v-text-field label="Description" id="tableDescription" hint="Optional"></v-text-field>
                             </v-col>
                             <v-divider></v-divider>
-                            <br>
-                            <v-row>
-                                <v-col>
+                                <v-col cols="6">
                                     <div class="text-subtitle-1 text-medium-emphasis">Broadcast changes to eligible users?</div>
                                     <v-autocomplete id="tableBroadcast" :items="['Broadcast', 'Disable']" label="Notifications"></v-autocomplete>
                                 </v-col>
-                                <v-col>
+                                <v-col cols="6">
                                     <div class="text-subtitle-1 text-medium-emphasis">Who can see this content?</div>
                                     <v-autocomplete id="tableVisible" :items="['Public', 'Private']" label="Visibility"></v-autocomplete>
                                 </v-col>
-                            </v-row>
                             <v-divider></v-divider>
                             <br>
                             <div class="form-wrapper">
-                                <form type="group" name="taskGroup" :repeatable="true" add-label="+ Add Task"
+                                <div type="group" name="taskGroup" :repeatable="true" add-label="+ Add Task"
                                     validation="required">
                                     <div class="task" style="padding-bottom:10px;">
                                         <v-row>
-                                            <v-col>
+                                            <v-col cols="4">
                                                 <v-text-field id="columnName" label="Column Name" hint="Column Name"></v-text-field>
                                             </v-col>
-                                            <v-col>
+                                            <v-col cols="4">
                                                 <v-select id="columnType" :items="['Integer', 'BigInteger', 'Text', 'Boolean', 'SmallInteger', 'Datetime', 'Float', 'Json', 'Bytes', 'Decimal']" label="Type*" required></v-select>
                                             </v-col>
-                                            <v-col>
+                                            <v-col cols="4">
                                                 <v-autocomplete id="columnDefaultName" :items="['Set as NULL', 'Set as empty string']" label="Default Value"></v-autocomplete>
                                             </v-col>
                                         </v-row>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </v-row>
                     </v-container>
@@ -60,8 +57,8 @@
                     <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
                         Close
                     </v-btn>
-                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Save
+                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false" @submit.prevent="addDatabaseTable()">
+                        Create
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -75,7 +72,9 @@
         data: () => ({
             dialog: false,
         }),
-        
+        mounted() {
+
+        }
     }
 </script>
 

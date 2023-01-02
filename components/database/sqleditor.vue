@@ -7,13 +7,13 @@
                             <v-icon start>
                                 mdi-account
                             </v-icon>
-                            New Query
+                            Getting Started
                         </v-tab>
                         <v-tab value="option-2">
                             <v-icon start>
                                 mdi-lock
                             </v-icon>
-                            Getting Started
+                            New Query
                         </v-tab>
                         <v-tab value="option-3">
                             <v-icon start>
@@ -31,12 +31,12 @@
                     <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <overview />
+                                <gettingstarted />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
                             <v-card flat>
-                                <errors />
+                                <newquery />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-3">
@@ -46,7 +46,7 @@
                         </v-window-item>
                         <v-window-item value="option-4">
                             <v-card flat>
-                                <operations />
+                                <snippets />
                             </v-card>
                         </v-window-item>
                     </v-window>
@@ -56,17 +56,17 @@
 </template>
 
 <script>
-    import overview from '~/components/database/overview'
-    import errors from '~/components/metrics/metriclinks/errors'
-    import usage from '~/components/metrics/metriclinks/usage'
-    import operations from '~/components/metrics/metriclinks/operations'
+    import gettingstarted from '~/components/database/sqleditor/gettingstarted'
+    import newquery from '~/components/database/sqleditor/newquery'
+    import usage from '~/components/database/sqleditor/usage'
+    import snippets from '~/components/database/sqleditor/snippets'
 
     export default {
         components: {
-            overview,
-            errors,
+            gettingstarted,
+            newquery,
             usage,
-            operations,
+            snippets,
         },
         data: () => ({
             tab: 'option-1',

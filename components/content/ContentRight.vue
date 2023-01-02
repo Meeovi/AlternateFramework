@@ -10,7 +10,7 @@
             <v-btn variant="flat" size="small" v-on:click="onBtnExport()"><v-icon start icon="fas fa-share"></v-icon>Export CSV</v-btn>
         </v-col>
         <ag-grid-vue class="ag-theme-alpine"
-            :columnDefs="columnDefs.value" :rowData="rowData.value" :defaultColDef="defaultColDef"
+            :columnDefs="columnDefs.value" :rowData="rowData.value" :defaultColDef="defaultColDef" theme="dark"
             rowSelection="multiple" animateRows="true" @cell-clicked="cellWasClicked"
             :autoGroupColumnDef="autoGroupColumnDef" :rowModelType="rowModelType" :suppressAggFuncInHeader="true"
             :rowGroupPanelShow="rowGroupPanelShow" @grid-ready="onGridReady">

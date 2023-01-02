@@ -1,25 +1,15 @@
 {
-  "compilerOptions": {
-    "types": [
-      "@nuxt/types",
-    ],
-    "module": "commonjs",
-    "jsx": "preserve",
-    "target": "ES6",
-    "lib": ["es2018", "esnext.asynciterable", "DOM"],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "inlineSources": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "noImplicitAny": false,
-    "noUnusedParameters": true,
-    "importHelpers": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-  },
-  "exclude": ["node_modules"]
+   "compilerOptions": {
+      "lib": [
+         "es5",
+         "es6"
+      ],
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./build",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true
+   }
 }

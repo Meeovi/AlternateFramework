@@ -55,42 +55,42 @@
                     <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <overview />
+                                <query />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
                             <v-card flat>
-                                <errors />
+                                <savedqueries />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-3">
                             <v-card flat>
-                                <usage />
+                                <recentqueries />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-4">
                             <v-card flat>
-                                <operations />
+                                <templates />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-5">
                             <v-card flat>
-                                <websockets />
+                                <apiedge />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-6">
                             <v-card flat>
-                                <subscriptionWorkers />
+                                <auth />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-7">
                             <v-card flat>
-                                <allowLists />
+                                <storage />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-8">
                             <v-card flat>
-                                <apiLimits />
+                                <realtime />
                             </v-card>
                         </v-window-item>
                     </v-window>
@@ -100,25 +100,25 @@
 </template>
 
 <script>
-    import overview from '~/components/metrics/metriclinks/overview'
-    import errors from '~/components/metrics/metriclinks/errors'
-    import usage from '~/components/metrics/metriclinks/usage'
-    import operations from '~/components/metrics/metriclinks/operations'
-    import websockets from '~/components/metrics/metriclinks/websockets'
-    import subscriptionWorkers from '~/components/metrics/metriclinks/subscriptionWorkers'
-    import allowLists from '~/components/metrics/metriclinks/allowLists'
-    import apiLimits from '~/components/metrics/metriclinks/apiLimits'
+    import query from '~/components/database/logs/query'
+    import savedqueries from '~/components/database/logs/savedqueries'
+    import recentqueries from '~/components/database/logs/recentqueries'
+    import templates from '~/components/database/logs/templates'
+    import apiedge from '~/components/database/logs/apiedge'
+    import auth from '~/components/database/logs/auth'
+    import storage from '~/components/database/logs/storage'
+    import realtime from '~/components/database/logs/realtime'
 
     export default {
         components: {
-            overview,
-            errors,
-            usage,
-            operations,
-            websockets,
-            subscriptionWorkers,
-            allowLists,
-            apiLimits,
+            query,
+            savedqueries,
+            recentqueries,
+            templates,
+            apiedge,
+            auth,
+            storage,
+            realtime,
         },
         data: () => ({
             tab: 'option-1',

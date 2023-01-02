@@ -37,32 +37,27 @@
                     <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <overview />
+                                <users />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
                             <v-card flat>
-                                <errors />
+                                <policies />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-3">
                             <v-card flat>
-                                <usage />
+                                <providers />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-4">
                             <v-card flat>
-                                <operations />
+                                <emailtemplates />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-5">
                             <v-card flat>
-                                <websockets />
-                            </v-card>
-                        </v-window-item>
-                        <v-window-item value="option-6">
-                            <v-card flat>
-                                <subscriptionWorkers />
+                                <urlconfigurations />
                             </v-card>
                         </v-window-item>
                     </v-window>
@@ -72,21 +67,19 @@
 </template>
 
 <script>
-    import overview from '~/components/metrics/metriclinks/overview'
-    import errors from '~/components/metrics/metriclinks/errors'
-    import usage from '~/components/metrics/metriclinks/usage'
-    import operations from '~/components/metrics/metriclinks/operations'
-    import websockets from '~/components/metrics/metriclinks/websockets'
-    import subscriptionWorkers from '~/components/metrics/metriclinks/subscriptionWorkers'
+    import users from '~/components/database/authentication/users'
+    import policies from '~/components/database/authentication/policies'
+    import providers from '~/components/database/authentication/providers'
+    import emailtemplates from '~/components/database/authentication/emailtemplates'
+    import urlconfigurations from '~/components/database/authentication/urlconfigurations'
 
     export default {
         components: {
-            overview,
-            errors,
-            usage,
-            operations,
-            websockets,
-            subscriptionWorkers,
+            users,
+            policies,
+            providers,
+            emailtemplates,
+            urlconfigurations,
         },
         data: () => ({
             tab: 'option-1',

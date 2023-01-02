@@ -15,11 +15,12 @@ export default defineNuxtConfig({
     ],
 
     modules: [
-      '@formkit/nuxt',
       '@nuxtjs/apollo',
       '@sidebase/nuxt-auth',
       '@sidebase/nuxt-session',
       'nuxt-highcharts',
+      'nuxt-monaco-editor',
+      '@nuxt/content',
     ],
 
     auth: {
@@ -84,6 +85,16 @@ export default defineNuxtConfig({
           methods: ['patch', 'get', 'post', 'delete'],
           // The sessions endpoints are mounted at `/api/session`
           basePath: '/api/session'
+        }
+      },
+
+      monacoEditor: {
+        // These are default values:
+        dest: '_monaco',
+        locale: 'en',
+        componentName: {
+          codeEditor: 'MonacoEditor',
+          diffEditor: 'MonacoDiffEditor'
         }
       },
 

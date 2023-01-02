@@ -111,15 +111,15 @@
 </template>
 
 <script>
-    import overview from '~/components/metrics/metriclinks/overview'
-    import errors from '~/components/metrics/metriclinks/errors'
-    import usage from '~/components/metrics/metriclinks/usage'
-    import operations from '~/components/metrics/metriclinks/operations'
-    import websockets from '~/components/metrics/metriclinks/websockets'
-    import subscriptionWorkers from '~/components/metrics/metriclinks/subscriptionWorkers'
-    import allowLists from '~/components/metrics/metriclinks/allowLists'
-    import apiLimits from '~/components/metrics/metriclinks/apiLimits'
-    import regressionTests from '~/components/metrics/metriclinks/regressionTests'
+    import overview from '~/components/database/edgefunctions/overview'
+    import errors from '~/components/database/edgefunctions/errors'
+    import usage from '~/components/database/edgefunctions/usage'
+    import operations from '~/components/database/edgefunctions/operations'
+    import websockets from '~/components/database/edgefunctions/websockets'
+    import subscriptionWorkers from '~/components/database/edgefunctions/subscriptionWorkers'
+    import allowLists from '~/components/database/edgefunctions/allowLists'
+    import apiLimits from '~/components/database/edgefunctions/apiLimits'
+    import regressionTests from '~/components/database/edgefunctions/regressionTests'
 
     export default {
         components: {
