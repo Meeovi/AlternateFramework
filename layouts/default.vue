@@ -1,112 +1,151 @@
 <template>
-    <v-app :theme="theme">
-        <v-app-bar>
-            <template v-slot:prepend>
-                <v-icon start icon="fas fa-hurricane"></v-icon>
-            </template>
-            <v-app-bar-title>ALTERNATE</v-app-bar-title>
-            <v-spacer></v-spacer>
+  <v-app :theme="theme">
+    <v-app-bar density="compact">
+      <template v-slot:prepend>
+        <v-btn variant="flat" @click="drawer = !drawer">
+          <v-icon start icon="fas fa-bars"></v-icon> Menu
+        </v-btn>
+      </template>
+      <v-app-bar-title><a class="logobrand" href="/">
+          <v-icon start icon="fas fa-hurricane"></v-icon>ALTERNATE
+        </a></v-app-bar-title>
+      <v-spacer></v-spacer>
 
-            <div class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height">
-                <v-col>
-                    <v-btn :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'"
-                        @click="onClick"></v-btn>
-                </v-col>
-                <v-col>
-                    <v-btn variant="flat">
-                        <v-icon start icon="fas fa-question-circle"></v-icon>Help
-                    </v-btn>
-                </v-col>
-                <v-col>
-                    <v-btn variant="flat">
-                        <v-icon start icon="fas fa-comment"></v-icon>Feedback on this page?
-                    </v-btn>
-                </v-col>
-                <v-col>
-                    <v-btn variant="flat">
-                        <v-icon start icon="fas fa-bell"></v-icon>
-                    </v-btn>
-                </v-col>
-            </div>
-        </v-app-bar>
-
-        <v-main>
-            <v-card>
-      <v-layout>
-        <v-navigation-drawer
-          v-model="drawer"
-          :rail="rail"
-          permanent
-          @click="rail = false"
-        >
-          <v-list-item
-            prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
-            title="John Leider"
-            nav
-          >
-            <template v-slot:append>
-              <v-btn
-                variant="text"
-                icon="fas fa-chevron-left"
-                @click.stop="rail = !rail"
-              ></v-btn>
+      <div class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height">
+        <v-col>
+          <v-btn :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
+        </v-col>
+        <v-col>
+          <v-menu :location="bottom" transition="slide-y-transition">
+            <template v-slot:activator="{ props }">
+              <v-btn variant="flat" v-bind="props">
+                <v-icon start icon="fas fa-circle-question"></v-icon>Help
+              </v-btn>
             </template>
-          </v-list-item>
-  
-          <v-divider></v-divider>
-  
-          <v-list density="compact" nav>
-            <v-list-item prepend-icon="fas fa-home" title="Home" value="home" href="/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-feather-pointed" title="Content Manager" value="content manager" href="/Admin/Content/manager"></v-list-item>
-            <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards" href="/Admin/Dashboard/explorer"></v-list-item>
-            <v-list-item prepend-icon="fas fa-chart-column" title="Metrics" value="metrics" href="/Admin/Metrics/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-database" title="Database" value="database" href="/Admin/Database/editor"></v-list-item>
-            <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/PageManager/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Media/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-cubes" title="Integrations" value="integrations" href="/Admin/Integrations/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-gear" title="Settings" value="settings" href="/Admin/Settings/general-settings"></v-list-item>
-        </v-list>
-        </v-navigation-drawer>
-        <v-main id="sidebarNav">
-          <main id="mainSection">
-            <slot />
-          </main>
-        </v-main>
-      </v-layout>
-    </v-card>
-        </v-main>
-    </v-app>
+            <v-list>
+              <v-list-item title="Documentation" value="documentation" href="https://www.alternatecms.com/docs">
+              </v-list-item>
+              <v-list-item title="Discussions" value="discussions"
+                href="https://github.com/Meeovi/alternatecms/discussions"></v-list-item>
+              <v-list-item title="Versions" value="versions" href="https://github.com/Meeovi/alternatecms/releases">
+              </v-list-item>
+              <v-list-item title="Official Site" value="official site" href="https://www.alternatecms.com">
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-col>
+        <v-col>
+          <v-btn variant="flat">
+            <v-icon start icon="fas fa-comment"></v-icon>Feedback on this page?
+          </v-btn>
+        </v-col>
+        <v-col>
+          <v-btn variant="flat">
+            <v-icon start icon="fas fa-bell"></v-icon>
+          </v-btn>
+        </v-col>
+      </div>
+    </v-app-bar>
+
+    <v-main>
+      <v-card>
+        <v-layout>
+          <v-navigation-drawer expand-on-hover temporary v-model="drawer" :rail="rail" @click="rail = false">
+            <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg" title="John Leider" nav>
+              <template v-slot:append>
+                <v-btn variant="text" icon="fas fa-chevron-left" @click.stop="rail = !rail"></v-btn>
+              </template>
+            </v-list-item>
+
+            <v-divider></v-divider>
+
+            <v-list density="compact" nav>
+              <v-list-item prepend-icon="fas fa-home" title="Home" value="home" href="/"></v-list-item>
+              <v-list-item prepend-icon="fas fa-feather-pointed" title="Content Manager" value="content manager"
+                href="/Admin/Content/manager"></v-list-item>
+              <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
+                href="/Admin/Dashboard/explorer"></v-list-item>
+              <v-list-item prepend-icon="fas fa-chart-column" title="Monitoring" value="monitoring"
+                href="/Admin/Monitoring/"></v-list-item>
+              <v-list-item prepend-icon="fas fa-database" title="Database" value="database"
+                href="/Admin/Database/editor"></v-list-item>
+              <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/PageManager/">
+              </v-list-item>
+              <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Media/">
+              </v-list-item>
+              <v-list-item prepend-icon="fas fa-cubes" title="Integrations" value="integrations"
+                href="/Admin/Integrations/"></v-list-item>
+              <v-list-item prepend-icon="fas fa-gear" title="Settings" value="settings"
+                href="/Admin/Settings/general-settings"></v-list-item>
+            </v-list>
+          </v-navigation-drawer>
+          <v-main id="sidebarNav">
+            <main id="mainSection">
+              <slot />
+            </main>
+          </v-main>
+        </v-layout>
+      </v-card>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-export default {
+  export default {
     data() {
-    return {
-      drawer: true,
-      items: [
-        { title: 'Home', icon: 'fas fa-home' },
-        { title: 'Content Manager', icon: 'fas fa-feather-pointed' },
-        { title: 'Dashboards', icon: 'fas fa-chart-simple' },
-        { title: 'Metrics', icon: 'fas fa-chart-column' },
-        { title: 'Database', icon: 'fas fa-database' },
-        { title: 'Pages', icon: 'fas fa-desktop' },
-        { title: 'Media Manager', icon: 'fas fa-icons' },
-        { title: 'Integrations', icon: 'fas fa-cubes' },
-        { title: 'Settings', icon: 'fas fa-gear' },
-      ],
-      rail: true,
+      return {
+        drawer: null,
+        items: [{
+            title: 'Home',
+            icon: 'fas fa-home'
+          },
+          {
+            title: 'Content Manager',
+            icon: 'fas fa-feather-pointed'
+          },
+          {
+            title: 'Dashboards',
+            icon: 'fas fa-chart-simple'
+          },
+          {
+            title: 'Monitoring',
+            icon: 'fas fa-chart-column'
+          },
+          {
+            title: 'Database',
+            icon: 'fas fa-database'
+          },
+          {
+            title: 'Pages',
+            icon: 'fas fa-desktop'
+          },
+          {
+            title: 'Media Manager',
+            icon: 'fas fa-icons'
+          },
+          {
+            title: 'Integrations',
+            icon: 'fas fa-cubes'
+          },
+          {
+            title: 'Settings',
+            icon: 'fas fa-gear'
+          },
+        ],
+        rail: true,
+      }
     }
   }
-}
 </script>
 
 <script setup>
-    import { ref } from 'vue'
+  import {
+    ref
+  } from 'vue'
 
-    const theme = ref('dark')
+  const theme = ref('dark')
 
-    function onClick() {
-        theme.value = theme.value === 'light' ? 'dark' : 'light'
-    };
+  function onClick() {
+    theme.value = theme.value === 'light' ? 'dark' : 'light'
+  };
 </script>
-

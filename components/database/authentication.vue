@@ -27,12 +27,6 @@
                             </v-icon>
                             Email Templates
                         </v-tab>
-                        <v-tab value="option-5">
-                            <v-icon start>
-                                mdi-access-point
-                            </v-icon>
-                            URL Configuration
-                        </v-tab>
                     </v-tabs>
                     <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
@@ -55,11 +49,6 @@
                                 <emailtemplates />
                             </v-card>
                         </v-window-item>
-                        <v-window-item value="option-5">
-                            <v-card flat>
-                                <urlconfigurations />
-                            </v-card>
-                        </v-window-item>
                     </v-window>
                 </div>
             </v-card>
@@ -71,7 +60,6 @@
     import policies from '~/components/database/authentication/policies'
     import providers from '~/components/database/authentication/providers'
     import emailtemplates from '~/components/database/authentication/emailtemplates'
-    import urlconfigurations from '~/components/database/authentication/urlconfigurations'
 
     export default {
         components: {
@@ -79,7 +67,6 @@
             policies,
             providers,
             emailtemplates,
-            urlconfigurations,
         },
         data: () => ({
             tab: 'option-1',

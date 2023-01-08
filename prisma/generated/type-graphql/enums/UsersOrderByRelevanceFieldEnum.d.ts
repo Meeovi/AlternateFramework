@@ -4,12 +4,7 @@ export declare enum UsersOrderByRelevanceFieldEnum {
     last_name = "last_name",
     email = "email",
     password = "password",
-    interface_locale = "interface_locale",
-    value = "value",
+    phone = "phone",
     permissions = "permissions",
-    emails = "emails",
-    mediamanager = "mediamanager",
-    messages = "messages",
-    projects = "projects",
-    workspaces = "workspaces"
+    mediamanager = "mediamanager"
 }

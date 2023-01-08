@@ -1,116 +1,81 @@
 <template>
-    <v-row class="tableEditor">
-        <v-col class="buttonBar">
-            <v-btn variant="flat" size="small" v-on:click="refreshCache([])"><v-icon start icon="fas fa-rotate"></v-icon>Refresh</v-btn>
-            <v-btn variant="flat" size="small" @click="deselectRows">deselect rows</v-btn>
-            <InsertAddWebhooks />
-        </v-col>
-        <ag-grid-vue class="ag-theme-alpine"
-            :columnDefs="columnDefs.value" :rowData="rowData.value" :defaultColDef="defaultColDef"
-            rowSelection="multiple" animateRows="true" @cell-clicked="cellWasClicked"
-            :autoGroupColumnDef="autoGroupColumnDef" :rowModelType="rowModelType" :suppressAggFuncInHeader="true"
-            :rowGroupPanelShow="rowGroupPanelShow" @grid-ready="onGridReady">
-        </ag-grid-vue>
-    </v-row>
+    <div>
+        <v-row>
+            <v-col cols="10">
+
+            </v-col>
+            <v-col cols="2">
+                <createWebhook />
+            </v-col>
+        </v-row>
+        <v-table fixed-header height="300px" width="100%">
+            <thead>
+                <tr>
+                    <th class="text-left">
+                        Webhook Name
+                    </th>
+                    <th class="text-left">
+                        URL
+                    </th>
+                    <th class="text-left">
+                        Create
+                    </th>
+                    <th class="text-left">
+                        Update
+                    </th>
+                    <th class="text-left">
+                        Delete
+                    </th>
+                    <th class="text-left">
+                        Publish
+                    </th>
+                    <th class="text-left">
+                        Unpublish
+                    </th>
+                    <th class="text-left">
+                        Created
+                    </th>
+                    <th class="text-left">
+                        Edit
+                    </th>
+                </tr>
+            </thead>
+            <tbody v-for="webhooks in findManyWebhooks" :key="webhooks.id">
+                  <tr>
+                    <td>{{ webhooks.name }}</td>
+                    <td>{{ webhooks.url }}</td>
+                    <td>{{ webhooks.create }}</td>
+                    <td>{{ webhooks.delete }}</td>
+                    <td>{{ webhooks.publish }}</td>
+                    <td>{{ webhooks.unpublish }}</td>
+                    <td>{{ webhooks.created_at }}</td>
+                    <td><a :href="`/admin/settings/general-settings/${webhooks.id}`">
+                            <!--<editUser />--></a></td>
+                </tr>
+            </tbody>
+        </v-table>
+    </div>
 </template>
 
 <script>
-import { AgGridVue } from "ag-grid-vue3"; // the AG Grid Vue Component
-import { reactive, onMounted, ref } from "vue";
-import InsertAddWebhooks from './InsertAddWebhooks.vue'
-import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
-import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
+    import createWebhook from './InsertAddWebhooks'
+    import findManyWebhooks from '../../graphql/query/findManyWebhooks.gql'
 
-export default {
-        name: "App",
+    export default {
         components: {
-            AgGridVue,
-            InsertAddWebhooks
+            createWebhook,
+            //editUser
         },
-        setup() {
-            const gridApi = ref(null); // Optional - for accessing Grid's API
-
-            // Obtain API from grid's onGridReady event
-            const onGridReady = (params) => {
-                gridApi.value = params.api;
-            };
-
-            const rowData = reactive({}); // Set rowData to Array of Objects, one Object per Row
-
-            // Each Column Definition results in one Column.
-            const columnDefs = reactive({
-                value: [{
-                        field: "Name"
-                    },
-                    {
-                        field: "URL"
-                    },
-                    {
-                        field: "Headers"
-                    }
-                    ,
-                    {
-                        field: "Create"
-                    },
-                    {
-                        field: "Update"
-                    },
-                    {
-                        field: "Delete"
-                    },
-                    {
-                        field: "Publish"
-                    },
-                    {
-                        field: "Unpublish"
-                    }
-                ],
-            });
-
-            // DefaultColDef sets props common to all Columns
-            const defaultColDef = {
-                sortable: true,
-                filter: true,
-                editable: true,
-                resizable: true,
-                minWidth: 150,
-                headerCheckboxSelection: true,
-                checkboxSelection: true,
-                flex: 1
-            };
-
-            // Example load data from sever
-            onMounted(() => {
-                fetch("https://www.ag-grid.com/example-assets/row-data.json")
-                    .then((result) => result.json())
-                    .then((remoteRowData) => (rowData.value = remoteRowData));
-            });
-
+        data() {
             return {
-                onGridReady,
-                columnDefs,
-                rowData,
-                defaultColDef,
-                autoGroupColumnDef: null,
-                rowModelType: null,
-                rowGroupPanelShow: null,
-                gridApi: null,
-                columnApi: null,
-                cellWasClicked: (event) => { // Example of consuming Grid Event
-                    console.log("cell was clicked", event);
-                },
-                deselectRows: () => {
-                    gridApi.value.deselectAll()
-                }
-            };
+                findManyWebhooks: [],
+            }
         },
-        methods: {
-            onGridReady(params) {
-            this.gridApi = params.api;
-            this.gridColumnApi = params.columnApi;
-            },
+        apollo: {
+            findManyWebhooks: {
+                prefetch: true,
+                query: findManyWebhooks
+            }
         },
-    };
+    }
 </script>
-
-<style lang="scss"></style>

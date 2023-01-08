@@ -2,13 +2,11 @@
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
-    '/api/users': Awaited<ReturnType<typeof import('../../server/api/users.get').default>>
     '/api/update': Awaited<ReturnType<typeof import('../../server/api/update').default>>
     '/api/serverSessions': Awaited<ReturnType<typeof import('../../server/api/serverSessions').default>>
     '/api/read': Awaited<ReturnType<typeof import('../../server/api/read').default>>
     '/api/prisma': Awaited<ReturnType<typeof import('../../server/api/prisma').default>>
     '/api/metrics': Awaited<ReturnType<typeof import('../../server/api/metrics').default>>
-    '/api': Awaited<ReturnType<typeof import('../../server/api/index').default>>
     '/api/delete': Awaited<ReturnType<typeof import('../../server/api/delete').default>>
     '/api/create': Awaited<ReturnType<typeof import('../../server/api/create').default>>
     '/api/auth/**': Awaited<ReturnType<typeof import('../../server/api/auth/[...]').default>>

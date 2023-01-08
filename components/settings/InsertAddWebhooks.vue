@@ -2,11 +2,12 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" persistent>
             <template v-slot:activator="{ props }">
-                <v-btn color="primary" size="small" v-bind="props" class="insertAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Create Webhook
+                <v-btn color="primary" size="small" v-bind="props" class="rightAddBtn">
+                    <v-icon start icon="fas fa-tower-broadcast"></v-icon>Create Webhook
                 </v-btn>
             </template>
             <v-card>
+                <form enctype="multipart/form-data" @submit.prevent="addWebhook()">
                 <v-card-text>
                     <v-container>
                         <v-row>
@@ -64,6 +65,7 @@
                         Save
                     </v-btn>
                 </v-card-actions>
+            </form>
             </v-card>
         </v-dialog>
     </v-row>

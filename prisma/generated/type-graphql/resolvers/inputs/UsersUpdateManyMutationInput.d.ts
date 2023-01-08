@@ -9,13 +9,8 @@ export declare class UsersUpdateManyMutationInput {
     last_name?: NullableStringFieldUpdateOperationsInput | undefined;
     email?: StringFieldUpdateOperationsInput | undefined;
     password?: StringFieldUpdateOperationsInput | undefined;
-    interface_locale?: NullableStringFieldUpdateOperationsInput | undefined;
-    value?: NullableStringFieldUpdateOperationsInput | undefined;
+    phone?: NullableStringFieldUpdateOperationsInput | undefined;
     permissions?: NullableStringFieldUpdateOperationsInput | undefined;
     created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
-    emails?: NullableStringFieldUpdateOperationsInput | undefined;
     mediamanager?: NullableStringFieldUpdateOperationsInput | undefined;
-    messages?: NullableStringFieldUpdateOperationsInput | undefined;
-    projects?: NullableStringFieldUpdateOperationsInput | undefined;
-    workspaces?: NullableStringFieldUpdateOperationsInput | undefined;
 }

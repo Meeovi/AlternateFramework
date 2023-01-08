@@ -28,22 +28,22 @@
                     <v-col cols="6">
                         <v-row>
                             <v-col cols="10">
-                                <v-card color="#385F73" theme="dark">
+                                <v-card color="yellow-darken-2" theme="dark">
                                     <v-row class="homeRight">
                                         <v-col cols="12">
                                         <h4>Join the Community</h4>
                                         <p>Discuss with team members, contributors and developers on different channels.</p>
                                         <br>
-                                        <a href="https://www.alternatecms.com/roadmap">See Our Roadmap</a>
+                                        <v-list-item prepend-icon="fas fa-arrow-up-right-from-square" title="See Our Roadmap" value="roadmap" href="https://www.alternatecms.com/roadmap"></v-list-item>
                                     </v-col>
                                     <v-col cols="6">
-                                        <v-list-item prepend-icon="fa fa-github" title="Github" value="github" href="https://github.com/meeovi/alternatecms"></v-list-item>
+                                        <v-list-item prepend-icon="fab fa-github" title="Github" value="github" href="https://github.com/meeovi/alternatecms"></v-list-item>
                                     </v-col>
                                     <v-col cols="6">
-                                        <v-list-item prepend-icon="fa fa-reddit" title="Reddit" value="reddit" href="https://www.reddit.com/r/AlternateFramework"></v-list-item>
+                                        <v-list-item prepend-icon="fab fa-reddit" title="Reddit" value="reddit" href="https://www.reddit.com/r/AlternateFramework"></v-list-item>
                                     </v-col>
                                     <v-col cols="6">
-                                        <v-list-item prepend-icon="fa fa-twitter" title="Twitter" value="twitter" href="https://www.twitter.com/alternatecms"></v-list-item>
+                                        <v-list-item prepend-icon="fab fa-twitter" title="Twitter" value="twitter" href="https://www.twitter.com/alternatecms"></v-list-item>
                                     </v-col>
                                     <v-col cols="6">
                                         <v-list-item prepend-icon="fas fa-pen-to-square" title="Our Blog" value="blog" href="https://www.alternatecms.com/blog"></v-list-item>

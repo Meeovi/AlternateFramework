@@ -7,6 +7,14 @@ type AffectedRowsOutput {
   count: Int!
 }
 
+type AggregateAgreements {
+  _avg: AgreementsAvgAggregate
+  _count: AgreementsCountAggregate
+  _max: AgreementsMaxAggregate
+  _min: AgreementsMinAggregate
+  _sum: AgreementsSumAggregate
+}
+
 type AggregateApitoken {
   _avg: ApitokenAvgAggregate
   _count: ApitokenCountAggregate
@@ -205,6 +213,209 @@ type AggregateWebhooks {
   _max: WebhooksMaxAggregate
   _min: WebhooksMinAggregate
   _sum: WebhooksSumAggregate
+}
+
+type Agreements {
+  author: String
+  created_at: DateTime
+  id: BigInt!
+  name: String
+  type: String
+  updated_at: DateTime
+}
+
+type AgreementsAvgAggregate {
+  id: Float
+}
+
+input AgreementsAvgOrderByAggregateInput {
+  id: SortOrder
+}
+
+type AgreementsCountAggregate {
+  _all: Int!
+  author: Int!
+  created_at: Int!
+  id: Int!
+  name: Int!
+  type: Int!
+  updated_at: Int!
+}
+
+input AgreementsCountOrderByAggregateInput {
+  author: SortOrder
+  created_at: SortOrder
+  id: SortOrder
+  name: SortOrder
+  type: SortOrder
+  updated_at: SortOrder
+}
+
+input AgreementsCreateInput {
+  author: String
+  created_at: DateTime
+  id: BigInt
+  name: String
+  type: String
+  updated_at: DateTime
+}
+
+input AgreementsCreateManyInput {
+  author: String
+  created_at: DateTime
+  id: BigInt
+  name: String
+  type: String
+  updated_at: DateTime
+}
+
+type AgreementsGroupBy {
+  _avg: AgreementsAvgAggregate
+  _count: AgreementsCountAggregate
+  _max: AgreementsMaxAggregate
+  _min: AgreementsMinAggregate
+  _sum: AgreementsSumAggregate
+  author: String
+  created_at: DateTime
+  id: BigInt!
+  name: String
+  type: String
+  updated_at: DateTime
+}
+
+type AgreementsMaxAggregate {
+  author: String
+  created_at: DateTime
+  id: BigInt
+  name: String
+  type: String
+  updated_at: DateTime
+}
+
+input AgreementsMaxOrderByAggregateInput {
+  author: SortOrder
+  created_at: SortOrder
+  id: SortOrder
+  name: SortOrder
+  type: SortOrder
+  updated_at: SortOrder
+}
+
+type AgreementsMinAggregate {
+  author: String
+  created_at: DateTime
+  id: BigInt
+  name: String
+  type: String
+  updated_at: DateTime
+}
+
+input AgreementsMinOrderByAggregateInput {
+  author: SortOrder
+  created_at: SortOrder
+  id: SortOrder
+  name: SortOrder
+  type: SortOrder
+  updated_at: SortOrder
+}
+
+enum AgreementsOrderByRelevanceFieldEnum {
+  author
+  name
+  type
+}
+
+input AgreementsOrderByRelevanceInput {
+  fields: [AgreementsOrderByRelevanceFieldEnum!]!
+  search: String!
+  sort: SortOrder!
+}
+
+input AgreementsOrderByWithAggregationInput {
+  _avg: AgreementsAvgOrderByAggregateInput
+  _count: AgreementsCountOrderByAggregateInput
+  _max: AgreementsMaxOrderByAggregateInput
+  _min: AgreementsMinOrderByAggregateInput
+  _sum: AgreementsSumOrderByAggregateInput
+  author: SortOrder
+  created_at: SortOrder
+  id: SortOrder
+  name: SortOrder
+  type: SortOrder
+  updated_at: SortOrder
+}
+
+input AgreementsOrderByWithRelationAndSearchRelevanceInput {
+  _relevance: AgreementsOrderByRelevanceInput
+  author: SortOrder
+  created_at: SortOrder
+  id: SortOrder
+  name: SortOrder
+  type: SortOrder
+  updated_at: SortOrder
+}
+
+enum AgreementsScalarFieldEnum {
+  author
+  created_at
+  id
+  name
+  type
+  updated_at
+}
+
+input AgreementsScalarWhereWithAggregatesInput {
+  AND: [AgreementsScalarWhereWithAggregatesInput!]
+  NOT: [AgreementsScalarWhereWithAggregatesInput!]
+  OR: [AgreementsScalarWhereWithAggregatesInput!]
+  author: StringNullableWithAggregatesFilter
+  created_at: DateTimeNullableWithAggregatesFilter
+  id: BigIntWithAggregatesFilter
+  name: StringNullableWithAggregatesFilter
+  type: StringNullableWithAggregatesFilter
+  updated_at: DateTimeNullableWithAggregatesFilter
+}
+
+type AgreementsSumAggregate {
+  id: BigInt
+}
+
+input AgreementsSumOrderByAggregateInput {
+  id: SortOrder
+}
+
+input AgreementsUpdateInput {
+  author: NullableStringFieldUpdateOperationsInput
+  created_at: NullableDateTimeFieldUpdateOperationsInput
+  id: BigIntFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
+  updated_at: NullableDateTimeFieldUpdateOperationsInput
+}
+
+input AgreementsUpdateManyMutationInput {
+  author: NullableStringFieldUpdateOperationsInput
+  created_at: NullableDateTimeFieldUpdateOperationsInput
+  id: BigIntFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
+  updated_at: NullableDateTimeFieldUpdateOperationsInput
+}
+
+input AgreementsWhereInput {
+  AND: [AgreementsWhereInput!]
+  NOT: [AgreementsWhereInput!]
+  OR: [AgreementsWhereInput!]
+  author: StringNullableFilter
+  created_at: DateTimeNullableFilter
+  id: BigIntFilter
+  name: StringNullableFilter
+  type: StringNullableFilter
+  updated_at: DateTimeNullableFilter
+}
+
+input AgreementsWhereUniqueInput {
+  id: BigInt
 }
 
 type Apitoken {
@@ -5488,6 +5699,7 @@ input MediamanagerWhereUniqueInput {
 }
 
 type Mutation {
+  createManyAgreements(data: [AgreementsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyApitoken(data: [ApitokenCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyCategories(data: [CategoriesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyContent_type(data: [Content_typeCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -5513,6 +5725,7 @@ type Mutation {
   createManyUpload_file(data: [Upload_fileCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyUsers(data: [UsersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyWebhooks(data: [WebhooksCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
+  createOneAgreements(data: AgreementsCreateInput!): Agreements!
   createOneApitoken(data: ApitokenCreateInput!): Apitoken!
   createOneCategories(data: CategoriesCreateInput!): Categories!
   createOneContent_type(data: Content_typeCreateInput!): Content_type!
@@ -5538,6 +5751,7 @@ type Mutation {
   createOneUpload_file(data: Upload_fileCreateInput!): Upload_file!
   createOneUsers(data: UsersCreateInput!): Users!
   createOneWebhooks(data: WebhooksCreateInput!): Webhooks!
+  deleteManyAgreements(where: AgreementsWhereInput): AffectedRowsOutput!
   deleteManyApitoken(where: ApitokenWhereInput): AffectedRowsOutput!
   deleteManyCategories(where: CategoriesWhereInput): AffectedRowsOutput!
   deleteManyContent_type(where: Content_typeWhereInput): AffectedRowsOutput!
@@ -5563,6 +5777,7 @@ type Mutation {
   deleteManyUpload_file(where: Upload_fileWhereInput): AffectedRowsOutput!
   deleteManyUsers(where: UsersWhereInput): AffectedRowsOutput!
   deleteManyWebhooks(where: WebhooksWhereInput): AffectedRowsOutput!
+  deleteOneAgreements(where: AgreementsWhereUniqueInput!): Agreements
   deleteOneApitoken(where: ApitokenWhereUniqueInput!): Apitoken
   deleteOneCategories(where: CategoriesWhereUniqueInput!): Categories
   deleteOneContent_type(where: Content_typeWhereUniqueInput!): Content_type
@@ -5588,6 +5803,7 @@ type Mutation {
   deleteOneUpload_file(where: Upload_fileWhereUniqueInput!): Upload_file
   deleteOneUsers(where: UsersWhereUniqueInput!): Users
   deleteOneWebhooks(where: WebhooksWhereUniqueInput!): Webhooks
+  updateManyAgreements(data: AgreementsUpdateManyMutationInput!, where: AgreementsWhereInput): AffectedRowsOutput!
   updateManyApitoken(data: ApitokenUpdateManyMutationInput!, where: ApitokenWhereInput): AffectedRowsOutput!
   updateManyCategories(data: CategoriesUpdateManyMutationInput!, where: CategoriesWhereInput): AffectedRowsOutput!
   updateManyContent_type(data: Content_typeUpdateManyMutationInput!, where: Content_typeWhereInput): AffectedRowsOutput!
@@ -5613,6 +5829,7 @@ type Mutation {
   updateManyUpload_file(data: Upload_fileUpdateManyMutationInput!, where: Upload_fileWhereInput): AffectedRowsOutput!
   updateManyUsers(data: UsersUpdateManyMutationInput!, where: UsersWhereInput): AffectedRowsOutput!
   updateManyWebhooks(data: WebhooksUpdateManyMutationInput!, where: WebhooksWhereInput): AffectedRowsOutput!
+  updateOneAgreements(data: AgreementsUpdateInput!, where: AgreementsWhereUniqueInput!): Agreements
   updateOneApitoken(data: ApitokenUpdateInput!, where: ApitokenWhereUniqueInput!): Apitoken
   updateOneCategories(data: CategoriesUpdateInput!, where: CategoriesWhereUniqueInput!): Categories
   updateOneContent_type(data: Content_typeUpdateInput!, where: Content_typeWhereUniqueInput!): Content_type
@@ -5638,6 +5855,7 @@ type Mutation {
   updateOneUpload_file(data: Upload_fileUpdateInput!, where: Upload_fileWhereUniqueInput!): Upload_file
   updateOneUsers(data: UsersUpdateInput!, where: UsersWhereUniqueInput!): Users
   updateOneWebhooks(data: WebhooksUpdateInput!, where: WebhooksWhereUniqueInput!): Webhooks
+  upsertOneAgreements(create: AgreementsCreateInput!, update: AgreementsUpdateInput!, where: AgreementsWhereUniqueInput!): Agreements!
   upsertOneApitoken(create: ApitokenCreateInput!, update: ApitokenUpdateInput!, where: ApitokenWhereUniqueInput!): Apitoken!
   upsertOneCategories(create: CategoriesCreateInput!, update: CategoriesUpdateInput!, where: CategoriesWhereUniqueInput!): Categories!
   upsertOneContent_type(create: Content_typeCreateInput!, update: Content_typeUpdateInput!, where: Content_typeWhereUniqueInput!): Content_type!
@@ -7089,6 +7307,7 @@ input ProvidersWhereUniqueInput {
 }
 
 type Query {
+  aggregateAgreements(cursor: AgreementsWhereUniqueInput, orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): AggregateAgreements!
   aggregateApitoken(cursor: ApitokenWhereUniqueInput, orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): AggregateApitoken!
   aggregateCategories(cursor: CategoriesWhereUniqueInput, orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): AggregateCategories!
   aggregateContent_type(cursor: Content_typeWhereUniqueInput, orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): AggregateContent_type!
@@ -7126,6 +7345,8 @@ type Query {
   dashboardrestapis(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): [Dashboardrestapi!]!
   dashboardslist(where: DashboardslistWhereUniqueInput!): Dashboardslist
   dashboardslists(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslistWhereInput): [Dashboardslist!]!
+  findFirstAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
+  findFirstAgreementsOrThrow(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
   findFirstApitoken(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
   findFirstApitokenOrThrow(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
   findFirstCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
@@ -7176,6 +7397,7 @@ type Query {
   findFirstUsersOrThrow(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): Users
   findFirstWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
   findFirstWebhooksOrThrow(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
+  findManyAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): [Agreements!]!
   findManyCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): [Categories!]!
   findManyCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): [Customers!]!
   findManyDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): [Dashboards!]!
@@ -7191,6 +7413,8 @@ type Query {
   findManyThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): [Themes!]!
   findManyUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): [Users!]!
   findManyWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): [Webhooks!]!
+  findUniqueAgreements(where: AgreementsWhereUniqueInput!): Agreements
+  findUniqueAgreementsOrThrow(where: AgreementsWhereUniqueInput!): Agreements
   findUniqueCategories(where: CategoriesWhereUniqueInput!): Categories
   findUniqueCategoriesOrThrow(where: CategoriesWhereUniqueInput!): Categories
   findUniqueCustomers(where: CustomersWhereUniqueInput!): Customers
@@ -7231,6 +7455,7 @@ type Query {
   getLogIn(where: LogInWhereUniqueInput!): LogIn
   getMediamanager(where: MediamanagerWhereUniqueInput!): Mediamanager
   getUpload_file(where: Upload_fileWhereUniqueInput!): Upload_file
+  groupByAgreements(by: [AgreementsScalarFieldEnum!]!, having: AgreementsScalarWhereWithAggregatesInput, orderBy: [AgreementsOrderByWithAggregationInput!], skip: Int, take: Int, where: AgreementsWhereInput): [AgreementsGroupBy!]!
   groupByApitoken(by: [ApitokenScalarFieldEnum!]!, having: ApitokenScalarWhereWithAggregatesInput, orderBy: [ApitokenOrderByWithAggregationInput!], skip: Int, take: Int, where: ApitokenWhereInput): [ApitokenGroupBy!]!
   groupByCategories(by: [CategoriesScalarFieldEnum!]!, having: CategoriesScalarWhereWithAggregatesInput, orderBy: [CategoriesOrderByWithAggregationInput!], skip: Int, take: Int, where: CategoriesWhereInput): [CategoriesGroupBy!]!
   groupByContent_type(by: [Content_typeScalarFieldEnum!]!, having: Content_typeScalarWhereWithAggregatesInput, orderBy: [Content_typeOrderByWithAggregationInput!], skip: Int, take: Int, where: Content_typeWhereInput): [Content_typeGroupBy!]!
@@ -9108,19 +9333,14 @@ input Upload_fileWhereUniqueInput {
 type Users {
   created_at: DateTime
   email: String!
-  emails: String
   first_name: String!
   id: BigInt!
-  interface_locale: String
   last_name: String
   mediamanager: String
-  messages: String
   password: String!
   permissions: String
-  projects: String
+  phone: String
   username: String!
-  value: String
-  workspaces: String
 }
 
 type UsersAvgAggregate {
@@ -9135,73 +9355,53 @@ type UsersCountAggregate {
   _all: Int!
   created_at: Int!
   email: Int!
-  emails: Int!
   first_name: Int!
   id: Int!
-  interface_locale: Int!
   last_name: Int!
   mediamanager: Int!
-  messages: Int!
   password: Int!
   permissions: Int!
-  projects: Int!
+  phone: Int!
   username: Int!
-  value: Int!
-  workspaces: Int!
 }
 
 input UsersCountOrderByAggregateInput {
   created_at: SortOrder
   email: SortOrder
-  emails: SortOrder
   first_name: SortOrder
   id: SortOrder
-  interface_locale: SortOrder
   last_name: SortOrder
   mediamanager: SortOrder
-  messages: SortOrder
   password: SortOrder
   permissions: SortOrder
-  projects: SortOrder
+  phone: SortOrder
   username: SortOrder
-  value: SortOrder
-  workspaces: SortOrder
 }
 
 input UsersCreateInput {
   created_at: DateTime
   email: String!
-  emails: String
   first_name: String!
   id: BigInt
-  interface_locale: String
   last_name: String
   mediamanager: String
-  messages: String
   password: String!
   permissions: String
-  projects: String
+  phone: String
   username: String!
-  value: String
-  workspaces: String
 }
 
 input UsersCreateManyInput {
   created_at: DateTime
   email: String!
-  emails: String
   first_name: String!
   id: BigInt
-  interface_locale: String
   last_name: String
   mediamanager: String
-  messages: String
   password: String!
   permissions: String
-  projects: String
+  phone: String
   username: String!
-  value: String
-  workspaces: String
 }
 
 type UsersGroupBy {
@@ -9212,107 +9412,77 @@ type UsersGroupBy {
   _sum: UsersSumAggregate
   created_at: DateTime
   email: String!
-  emails: String
   first_name: String!
   id: BigInt!
-  interface_locale: String
   last_name: String
   mediamanager: String
-  messages: String
   password: String!
   permissions: String
-  projects: String
+  phone: String
   username: String!
-  value: String
-  workspaces: String
 }
 
 type UsersMaxAggregate {
   created_at: DateTime
   email: String
-  emails: String
   first_name: String
   id: BigInt
-  interface_locale: String
   last_name: String
   mediamanager: String
-  messages: String
   password: String
   permissions: String
-  projects: String
+  phone: String
   username: String
-  value: String
-  workspaces: String
 }
 
 input UsersMaxOrderByAggregateInput {
   created_at: SortOrder
   email: SortOrder
-  emails: SortOrder
   first_name: SortOrder
   id: SortOrder
-  interface_locale: SortOrder
   last_name: SortOrder
   mediamanager: SortOrder
-  messages: SortOrder
   password: SortOrder
   permissions: SortOrder
-  projects: SortOrder
+  phone: SortOrder
   username: SortOrder
-  value: SortOrder
-  workspaces: SortOrder
 }
 
 type UsersMinAggregate {
   created_at: DateTime
   email: String
-  emails: String
   first_name: String
   id: BigInt
-  interface_locale: String
   last_name: String
   mediamanager: String
-  messages: String
   password: String
   permissions: String
-  projects: String
+  phone: String
   username: String
-  value: String
-  workspaces: String
 }
 
 input UsersMinOrderByAggregateInput {
   created_at: SortOrder
   email: SortOrder
-  emails: SortOrder
   first_name: SortOrder
   id: SortOrder
-  interface_locale: SortOrder
   last_name: SortOrder
   mediamanager: SortOrder
-  messages: SortOrder
   password: SortOrder
   permissions: SortOrder
-  projects: SortOrder
+  phone: SortOrder
   username: SortOrder
-  value: SortOrder
-  workspaces: SortOrder
 }
 
 enum UsersOrderByRelevanceFieldEnum {
   email
-  emails
   first_name
-  interface_locale
   last_name
   mediamanager
-  messages
   password
   permissions
-  projects
+  phone
   username
-  value
-  workspaces
 }
 
 input UsersOrderByRelevanceInput {
@@ -9329,56 +9499,41 @@ input UsersOrderByWithAggregationInput {
   _sum: UsersSumOrderByAggregateInput
   created_at: SortOrder
   email: SortOrder
-  emails: SortOrder
   first_name: SortOrder
   id: SortOrder
-  interface_locale: SortOrder
   last_name: SortOrder
   mediamanager: SortOrder
-  messages: SortOrder
   password: SortOrder
   permissions: SortOrder
-  projects: SortOrder
+  phone: SortOrder
   username: SortOrder
-  value: SortOrder
-  workspaces: SortOrder
 }
 
 input UsersOrderByWithRelationAndSearchRelevanceInput {
   _relevance: UsersOrderByRelevanceInput
   created_at: SortOrder
   email: SortOrder
-  emails: SortOrder
   first_name: SortOrder
   id: SortOrder
-  interface_locale: SortOrder
   last_name: SortOrder
   mediamanager: SortOrder
-  messages: SortOrder
   password: SortOrder
   permissions: SortOrder
-  projects: SortOrder
+  phone: SortOrder
   username: SortOrder
-  value: SortOrder
-  workspaces: SortOrder
 }
 
 enum UsersScalarFieldEnum {
   created_at
   email
-  emails
   first_name
   id
-  interface_locale
   last_name
   mediamanager
-  messages
   password
   permissions
-  projects
+  phone
   username
-  value
-  workspaces
 }
 
 input UsersScalarWhereWithAggregatesInput {
@@ -9387,19 +9542,14 @@ input UsersScalarWhereWithAggregatesInput {
   OR: [UsersScalarWhereWithAggregatesInput!]
   created_at: DateTimeNullableWithAggregatesFilter
   email: StringWithAggregatesFilter
-  emails: StringNullableWithAggregatesFilter
   first_name: StringWithAggregatesFilter
   id: BigIntWithAggregatesFilter
-  interface_locale: StringNullableWithAggregatesFilter
   last_name: StringNullableWithAggregatesFilter
   mediamanager: StringNullableWithAggregatesFilter
-  messages: StringNullableWithAggregatesFilter
   password: StringWithAggregatesFilter
   permissions: StringNullableWithAggregatesFilter
-  projects: StringNullableWithAggregatesFilter
+  phone: StringNullableWithAggregatesFilter
   username: StringWithAggregatesFilter
-  value: StringNullableWithAggregatesFilter
-  workspaces: StringNullableWithAggregatesFilter
 }
 
 type UsersSumAggregate {
@@ -9413,37 +9563,27 @@ input UsersSumOrderByAggregateInput {
 input UsersUpdateInput {
   created_at: NullableDateTimeFieldUpdateOperationsInput
   email: StringFieldUpdateOperationsInput
-  emails: NullableStringFieldUpdateOperationsInput
   first_name: StringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
-  interface_locale: NullableStringFieldUpdateOperationsInput
   last_name: NullableStringFieldUpdateOperationsInput
   mediamanager: NullableStringFieldUpdateOperationsInput
-  messages: NullableStringFieldUpdateOperationsInput
   password: StringFieldUpdateOperationsInput
   permissions: NullableStringFieldUpdateOperationsInput
-  projects: NullableStringFieldUpdateOperationsInput
+  phone: NullableStringFieldUpdateOperationsInput
   username: StringFieldUpdateOperationsInput
-  value: NullableStringFieldUpdateOperationsInput
-  workspaces: NullableStringFieldUpdateOperationsInput
 }
 
 input UsersUpdateManyMutationInput {
   created_at: NullableDateTimeFieldUpdateOperationsInput
   email: StringFieldUpdateOperationsInput
-  emails: NullableStringFieldUpdateOperationsInput
   first_name: StringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
-  interface_locale: NullableStringFieldUpdateOperationsInput
   last_name: NullableStringFieldUpdateOperationsInput
   mediamanager: NullableStringFieldUpdateOperationsInput
-  messages: NullableStringFieldUpdateOperationsInput
   password: StringFieldUpdateOperationsInput
   permissions: NullableStringFieldUpdateOperationsInput
-  projects: NullableStringFieldUpdateOperationsInput
+  phone: NullableStringFieldUpdateOperationsInput
   username: StringFieldUpdateOperationsInput
-  value: NullableStringFieldUpdateOperationsInput
-  workspaces: NullableStringFieldUpdateOperationsInput
 }
 
 input UsersWhereInput {
@@ -9452,19 +9592,14 @@ input UsersWhereInput {
   OR: [UsersWhereInput!]
   created_at: DateTimeNullableFilter
   email: StringFilter
-  emails: StringNullableFilter
   first_name: StringFilter
   id: BigIntFilter
-  interface_locale: StringNullableFilter
   last_name: StringNullableFilter
   mediamanager: StringNullableFilter
-  messages: StringNullableFilter
   password: StringFilter
   permissions: StringNullableFilter
-  projects: StringNullableFilter
+  phone: StringNullableFilter
   username: StringFilter
-  value: StringNullableFilter
-  workspaces: StringNullableFilter
 }
 
 input UsersWhereUniqueInput {

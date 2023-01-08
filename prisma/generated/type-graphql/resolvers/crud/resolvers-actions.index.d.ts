@@ -1,3 +1,17 @@
+export { AggregateAgreementsResolver } from "./Agreements/AggregateAgreementsResolver";
+export { CreateManyAgreementsResolver } from "./Agreements/CreateManyAgreementsResolver";
+export { CreateOneAgreementsResolver } from "./Agreements/CreateOneAgreementsResolver";
+export { DeleteManyAgreementsResolver } from "./Agreements/DeleteManyAgreementsResolver";
+export { DeleteOneAgreementsResolver } from "./Agreements/DeleteOneAgreementsResolver";
+export { FindFirstAgreementsResolver } from "./Agreements/FindFirstAgreementsResolver";
+export { FindFirstAgreementsOrThrowResolver } from "./Agreements/FindFirstAgreementsOrThrowResolver";
+export { FindManyAgreementsResolver } from "./Agreements/FindManyAgreementsResolver";
+export { FindUniqueAgreementsResolver } from "./Agreements/FindUniqueAgreementsResolver";
+export { FindUniqueAgreementsOrThrowResolver } from "./Agreements/FindUniqueAgreementsOrThrowResolver";
+export { GroupByAgreementsResolver } from "./Agreements/GroupByAgreementsResolver";
+export { UpdateManyAgreementsResolver } from "./Agreements/UpdateManyAgreementsResolver";
+export { UpdateOneAgreementsResolver } from "./Agreements/UpdateOneAgreementsResolver";
+export { UpsertOneAgreementsResolver } from "./Agreements/UpsertOneAgreementsResolver";
 export { AggregateApitokenResolver } from "./Apitoken/AggregateApitokenResolver";
 export { CreateManyApitokenResolver } from "./Apitoken/CreateManyApitokenResolver";
 export { CreateOneApitokenResolver } from "./Apitoken/CreateOneApitokenResolver";

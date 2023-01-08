@@ -1,3 +1,5 @@
+export { AgreementsOrderByRelevanceFieldEnum } from "./AgreementsOrderByRelevanceFieldEnum";
+export { AgreementsScalarFieldEnum } from "./AgreementsScalarFieldEnum";
 export { ApitokenOrderByRelevanceFieldEnum } from "./ApitokenOrderByRelevanceFieldEnum";
 export { ApitokenScalarFieldEnum } from "./ApitokenScalarFieldEnum";
 export { CategoriesOrderByRelevanceFieldEnum } from "./CategoriesOrderByRelevanceFieldEnum";

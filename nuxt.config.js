@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 
     modules: [
       '@nuxtjs/apollo',
+      '@formkit/nuxt',
       '@sidebase/nuxt-auth',
       '@sidebase/nuxt-session',
       'nuxt-highcharts',
@@ -39,14 +40,10 @@ export default defineNuxtConfig({
     },
 
     apollo: {
-      autoImports: true,
-      authType: 'Bearer',
-      authHeader: 'Authorization',
-      tokenStorage: 'cookie',
-      proxyCookies: true,
       clients: {
         default: {
-          httpEndpoint: 'http://localhost:4000/graphql'
+          httpEndpoint: 'http://localhost:4000/graphql',
+          wsEndpoint: "ws://localhost:4000/graphql"
         }
       },
     },
@@ -99,7 +96,14 @@ export default defineNuxtConfig({
       },
 
     build: {
-      transpile: ['vuetify'],
+      transpile: [
+        'vuetify',
+        "@fortawesome/vue-fontawesome",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/pro-solid-svg-icons",
+        "@fortawesome/pro-regular-svg-icons",
+        "@fortawesome/free-brands-svg-icons",
+      ],
     },
 
     vite: {

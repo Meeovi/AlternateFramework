@@ -1,4 +1,5 @@
 export { AffectedRowsOutput } from "./AffectedRowsOutput";
+export { AggregateAgreements } from "./AggregateAgreements";
 export { AggregateApitoken } from "./AggregateApitoken";
 export { AggregateCategories } from "./AggregateCategories";
 export { AggregateContent_type } from "./AggregateContent_type";
@@ -24,6 +25,12 @@ export { AggregateThemes } from "./AggregateThemes";
 export { AggregateUpload_file } from "./AggregateUpload_file";
 export { AggregateUsers } from "./AggregateUsers";
 export { AggregateWebhooks } from "./AggregateWebhooks";
+export { AgreementsAvgAggregate } from "./AgreementsAvgAggregate";
+export { AgreementsCountAggregate } from "./AgreementsCountAggregate";
+export { AgreementsGroupBy } from "./AgreementsGroupBy";
+export { AgreementsMaxAggregate } from "./AgreementsMaxAggregate";
+export { AgreementsMinAggregate } from "./AgreementsMinAggregate";
+export { AgreementsSumAggregate } from "./AgreementsSumAggregate";
 export { ApitokenAvgAggregate } from "./ApitokenAvgAggregate";
 export { ApitokenCountAggregate } from "./ApitokenCountAggregate";
 export { ApitokenGroupBy } from "./ApitokenGroupBy";

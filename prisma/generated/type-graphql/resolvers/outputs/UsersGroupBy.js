@@ -52,13 +52,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], UsersGroupBy.prototype, "interface_locale", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersGroupBy.prototype, "value", void 0);
+], UsersGroupBy.prototype, "phone", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -76,31 +70,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], UsersGroupBy.prototype, "emails", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], UsersGroupBy.prototype, "mediamanager", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersGroupBy.prototype, "messages", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersGroupBy.prototype, "projects", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersGroupBy.prototype, "workspaces", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => UsersCountAggregate_1.UsersCountAggregate, {
         nullable: true

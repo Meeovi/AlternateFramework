@@ -52,13 +52,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], UsersOrderByWithAggregationInput.prototype, "interface_locale", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersOrderByWithAggregationInput.prototype, "value", void 0);
+], UsersOrderByWithAggregationInput.prototype, "phone", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
@@ -76,31 +70,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], UsersOrderByWithAggregationInput.prototype, "emails", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], UsersOrderByWithAggregationInput.prototype, "mediamanager", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersOrderByWithAggregationInput.prototype, "messages", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersOrderByWithAggregationInput.prototype, "projects", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], UsersOrderByWithAggregationInput.prototype, "workspaces", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => UsersCountOrderByAggregateInput_1.UsersCountOrderByAggregateInput, {
         nullable: true

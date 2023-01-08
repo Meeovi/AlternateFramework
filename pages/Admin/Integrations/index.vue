@@ -12,49 +12,49 @@
             <v-tabs v-model="tab" color="error">
                 <v-tab value="option-1">
                     <v-icon start>
-                        mdi-account
-                    </v-icon>
-                    Overview
-                </v-tab>
-                <v-tab value="option-2">
-                    <v-icon start>
                         mdi-lock
                     </v-icon>
                     Plugins
                 </v-tab>
-                <v-tab value="option-3">
+                <v-tab value="option-2">
                     <v-icon start>
                         mdi-access-point
                     </v-icon>
                     Themes
                 </v-tab>
-                <v-tab value="option-4">
+                <v-tab value="option-3">
                     <v-icon start>
                         mdi-access-point
                     </v-icon>
                     Feature Packs
                 </v-tab>
+                <v-tab value="option-4">
+                    <v-icon start>
+                        mdi-account
+                    </v-icon>
+                    Installed Integrations
+                </v-tab>
             </v-tabs>
             <v-card-text>
-                <v-window v-model="tab" class="integrationsSections">
+                <v-window v-model="tab" class="metricsWindowRight">
                     <v-window-item value="option-1">
-                        <v-card flat>
-                            <overview />
-                        </v-card>
-                    </v-window-item>
-                    <v-window-item value="option-2">
                         <v-card flat>
                             <plugins />
                         </v-card>
                     </v-window-item>
-                    <v-window-item value="option-3">
+                    <v-window-item value="option-2">
                         <v-card flat>
                             <themes />
                         </v-card>
                     </v-window-item>
-                    <v-window-item value="option-4">
+                    <v-window-item value="option-3">
                         <v-card flat>
                             <featurepacks />
+                        </v-card>
+                    </v-window-item>
+                    <v-window-item value="option-4">
+                        <v-card flat>
+                            <installed />
                         </v-card>
                     </v-window-item>
                 </v-window>
@@ -65,7 +65,7 @@
 
 <script>
     import integrations from '~/components/integrations/add-extension'
-    import overview from '~/components/integrations/overview'
+    import installed from '~/components/integrations/installed'
     import plugins from '~/components/integrations/plugins'
     import themes from '~/components/integrations/themes'
     import featurepacks from '~/components/integrations/featurepacks'
@@ -73,7 +73,7 @@
     export default {
         components: {
             integrations,
-            overview,
+            installed,
             plugins,
             themes,
             featurepacks,

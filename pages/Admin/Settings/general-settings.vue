@@ -44,27 +44,21 @@
                             </v-icon>
                             Roles
                         </v-tab>
-                        <v-tab value="option-7">
-                            <v-icon start>
-                                mdi-access-point
-                            </v-icon>
-                            Users
-                        </v-tab>
                         <h4>EMAIL</h4>
-                        <v-tab value="option-8">
+                        <v-tab value="option-7">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Configuration
                         </v-tab>
                         <h4>ADVANCE SETTINGS</h4>
-                        <v-tab value="option-9">
+                        <v-tab value="option-8">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Storage
                         </v-tab>
-                        <v-tab value="option-10">
+                        <v-tab value="option-9">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
@@ -104,20 +98,15 @@
                         </v-window-item>
                         <v-window-item value="option-7">
                             <v-card flat>
-                                <users />
+                                <emailConfiguration />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-8">
                             <v-card flat>
-                                <emailConfiguration />
-                            </v-card>
-                        </v-window-item>
-                        <v-window-item value="option-9">
-                            <v-card flat>
                                 <storage />
                             </v-card>
                         </v-window-item>
-                        <v-window-item value="option-10">
+                        <v-window-item value="option-9">
                             <v-card flat>
                                 <auth />
                             </v-card>
@@ -137,7 +126,6 @@
     import medialibrary from '~/components/settings/medialibrary'
     import roles from '~/components/settings/roles'
     import storage from '~/components/settings/storage'
-    import users from '~/components/settings/users'
     import auth from '~/components/settings/auth'
 
     export default {
@@ -150,7 +138,6 @@
             roles,
             medialibrary,
             storage,
-            users,
             auth
         },
         data: () => ({

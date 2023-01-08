@@ -1,24 +1,15 @@
 <template>
     <div>
-            <v-card class="metricsVcard">
-                <div class="d-flex flex-row">
-
-                </div>
-            </v-card>
+        <v-card>
+            <iframe class="apiDocs" src="http://localhost:5858" frameborder="0"></iframe>
+        </v-card>
     </div>
 </template>
 
 <script>
-    //import overview from '~/components/metrics/metriclinks/overview'
-
 
     export default {
-        components: {
-            //overview,
-        },
-        data: () => ({
-            tab: 'option-1',
-        }),
+        components: {}
     }
 </script>
 

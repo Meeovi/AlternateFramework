@@ -12,13 +12,8 @@ export declare class UsersScalarWhereWithAggregatesInput {
     last_name?: StringNullableWithAggregatesFilter | undefined;
     email?: StringWithAggregatesFilter | undefined;
     password?: StringWithAggregatesFilter | undefined;
-    interface_locale?: StringNullableWithAggregatesFilter | undefined;
-    value?: StringNullableWithAggregatesFilter | undefined;
+    phone?: StringNullableWithAggregatesFilter | undefined;
     permissions?: StringNullableWithAggregatesFilter | undefined;
     created_at?: DateTimeNullableWithAggregatesFilter | undefined;
-    emails?: StringNullableWithAggregatesFilter | undefined;
     mediamanager?: StringNullableWithAggregatesFilter | undefined;
-    messages?: StringNullableWithAggregatesFilter | undefined;
-    projects?: StringNullableWithAggregatesFilter | undefined;
-    workspaces?: StringNullableWithAggregatesFilter | undefined;
 }

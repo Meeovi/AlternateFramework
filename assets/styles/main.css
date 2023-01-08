@@ -3,6 +3,36 @@ body {
     margin: 0;
 }
 
+.logobrand {
+    text-decoration: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(41, 40, 40);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 999999 !important;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
 #checkbox-10443 {
     border: 1px solid white !important;
 }
@@ -22,7 +52,7 @@ body {
 .leftContent h4, .leftContent h6 {
     width: 100%;
     text-align: center;
-    top: 5px;
+    top: 0px;
     position: relative;
 }
 
@@ -70,9 +100,9 @@ body {
 }
 
 .insertAddBtn {
-    top: -17px;
+    top: 10px;
     position: relative;
-    left: 5%;
+    margin-bottom: 35px;
 }
 
 .rightAddBtn {
@@ -122,6 +152,8 @@ body {
     position: relative;
     left: 57px;
     max-width: 100% !important;
+    height: 95vh;
+    overflow-y: scroll
 }
 
 .homeSection {
@@ -144,10 +176,15 @@ body {
     padding: 15px;
 }
 
+.emailTemplates {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /******************** Sidebar CSS *************/
 
 #sidebarNav {
-    height: 92vh !important;
+    height: 94vh !important;
     left: 0px;
     float: left;
     position: relative;
@@ -198,6 +235,13 @@ body {
     position: relative;
     top: 15px;
     height: 100%;
+}
+
+/************************* Database CSS ***************/
+
+.apiStudio, .apiDocs, .dataLogs {
+    width: 98%;
+    height: 95vh;
 }
 
 /*************** Footer ***************************/

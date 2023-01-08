@@ -12,13 +12,8 @@ export declare class UsersWhereInput {
     last_name?: StringNullableFilter | undefined;
     email?: StringFilter | undefined;
     password?: StringFilter | undefined;
-    interface_locale?: StringNullableFilter | undefined;
-    value?: StringNullableFilter | undefined;
+    phone?: StringNullableFilter | undefined;
     permissions?: StringNullableFilter | undefined;
     created_at?: DateTimeNullableFilter | undefined;
-    emails?: StringNullableFilter | undefined;
     mediamanager?: StringNullableFilter | undefined;
-    messages?: StringNullableFilter | undefined;
-    projects?: StringNullableFilter | undefined;
-    workspaces?: StringNullableFilter | undefined;
 }

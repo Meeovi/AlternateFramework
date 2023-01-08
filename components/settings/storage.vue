@@ -1,5 +1,6 @@
 <template>
     <div>
+        <form enctype="multipart/form-data" @submit.prevent="addLocale()">
         <v-row>
             <v-col cols="12">
                 <h3>Storage Settings</h3>
@@ -28,6 +29,7 @@
                 </v-card-actions>
             </v-col>
         </v-row>
+    </form>
     </div>
 </template>
 

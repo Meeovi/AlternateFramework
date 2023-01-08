@@ -5,9 +5,9 @@
                 <h4>Content Manager</h4>
                 <LeftCreateTable />
                 <v-divider></v-divider>
-                <h6>Tables ()</h6>
-                <div>
-                    <v-list-item :title="apitables" :value="apitables">{{ apitables }}</v-list-item>
+                <h6>Tables ({})</h6>
+                <div v-for="data in data" :key="data">
+                    <v-list-item  :value="data">{{ data.name }}</v-list-item>
                 </div>
             </v-list>
         </v-navigation-drawer>
@@ -23,5 +23,5 @@ import LeftCreateTable from './LeftCreateTable'
 </script>
 
 <script setup>
-const { data: apitables } = await useAsyncData("api", () => $fetch("/api/read"));
+    const { data } = await useAsyncData(() => $fetch("/api/read"));
 </script>

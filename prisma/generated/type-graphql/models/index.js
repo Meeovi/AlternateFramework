@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Webhooks = exports.Users = exports.Upload_file = exports.Themes = exports.Tags = exports.Settings = exports.Roles = exports.Providers = exports.Plugins = exports.Permissions = exports.Pages = exports.Mediamanager = exports.LogIn = exports.Internalization = exports.Integrations = exports.Dashboardslist = exports.Dashboardslides = exports.Dashboards = exports.Dashboardrestapi = exports.Dashboardjson = exports.Dashboardgraphql = exports.Customers = exports.Content_type = exports.Categories = exports.Apitoken = void 0;
+exports.Webhooks = exports.Users = exports.Upload_file = exports.Themes = exports.Tags = exports.Settings = exports.Roles = exports.Providers = exports.Plugins = exports.Permissions = exports.Pages = exports.Mediamanager = exports.LogIn = exports.Internalization = exports.Integrations = exports.Dashboardslist = exports.Dashboardslides = exports.Dashboards = exports.Dashboardrestapi = exports.Dashboardjson = exports.Dashboardgraphql = exports.Customers = exports.Content_type = exports.Categories = exports.Apitoken = exports.Agreements = void 0;
+var Agreements_1 = require("./Agreements");
+Object.defineProperty(exports, "Agreements", { enumerable: true, get: function () { return Agreements_1.Agreements; } });
 var Apitoken_1 = require("./Apitoken");
 Object.defineProperty(exports, "Apitoken", { enumerable: true, get: function () { return Apitoken_1.Apitoken; } });
 var Categories_1 = require("./Categories");

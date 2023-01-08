@@ -1,28 +1,76 @@
 <template>
     <div>
-        <v-row>
-            <v-col cols="2" class="leftContent">
-                <PageLeft />
+        <v-toolbar color="info">
+            <v-col cols="9">
+                <v-toolbar-title>Pages</v-toolbar-title>
             </v-col>
-            <v-col>
-                <PageRight />
+            <v-col cols="2">
+                <createPage />
             </v-col>
-        </v-row>
+        </v-toolbar>
+        <v-table fixed-header height="300px" width="100%">
+            <thead>
+                <tr>
+                    <th class="text-left">
+                        Page ID
+                    </th>
+                    <th class="text-left">
+                        Page Name
+                    </th>
+                    <th class="text-left">
+                        URL
+                    </th>
+                    <th class="text-left">
+                        Meta Title
+                    </th>
+                    <th class="text-left">
+                        Created
+                    </th>
+                    <th class="text-left">
+                        Edit
+                    </th>
+                </tr>
+            </thead>
+            <tbody v-for="pages in findManyPages" :key="pages.id">
+                <tr>
+                    <td>{{ pages.id }}</td>
+                    <td>{{ pages.title }}</td>
+                    <td>{{ pages.url_key }}</td>
+                    <td>{{ pages.meta_title }}</td>
+                    <td>{{ pages.created_at }}</td>
+                    <td><a :href="`/admin/database/${pages.id}`">
+                            <!--<editUser />--></a></td>
+                </tr>
+            </tbody>
+        </v-table>
     </div>
 </template>
 
 <script>
-import PageLeft from '../../../components/pageMaker/PageLeft.vue'
-import PageRight from '../../../components/pageMaker/PageRight.vue'
+    import createPage from './createPage'
+    import findManyPages from '../../../graphql/query/findManyPages.gql'
 
-export default {
-    components: { PageLeft, PageRight }
-}
+    export default {
+        components: {
+            createPage,
+            //editUser
+        },
+        data() {
+            return {
+                findManyPages: [],
+            }
+        },
+        apollo: {
+            findManyPages: {
+                prefetch: true,
+                query: findManyPages
+            }
+        },
+    }
 </script>
 
 <script setup>
-useHead({
+    useHead({
         title: 'Pages',
     })
 </script>
-

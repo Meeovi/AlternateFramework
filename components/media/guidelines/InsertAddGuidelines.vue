@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" persistent>
             <template v-slot:activator="{ props }">
-                <v-btn color="primary" size="small" v-bind="props" class="insertAddBtn">
+                <v-btn v-bind="props" class="rightAddBtn">
                     <v-icon start icon="fas fa-plus"></v-icon>Insert Content
                 </v-btn>
             </template>

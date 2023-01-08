@@ -1,3 +1,4 @@
+export * from "./Agreements/args";
 export * from "./Apitoken/args";
 export * from "./Categories/args";
 export * from "./Content_type/args";

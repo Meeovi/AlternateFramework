@@ -1,0 +1,36 @@
+query {
+  aggregateAgreements 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      author
+      created_at
+      id
+      name
+      type
+      updated_at
+    }
+    _max {
+      author
+      created_at
+      id
+      name
+      type
+      updated_at
+    }
+    _min {
+      author
+      created_at
+      id
+      name
+      type
+      updated_at
+    }
+    _sum {
+      id
+    }
+  }
+}

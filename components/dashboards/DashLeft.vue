@@ -3,23 +3,32 @@
         <v-navigation-drawer permanent class="contentLeft">
             <v-list>
                 <h4>Dashboards</h4>
-                <RightAddDashboards />
+                <CreateDashboard />
                 <v-divider></v-divider>
-                <v-list-item title="Home" value="home"></v-list-item>
-
-                <v-list-item title="Contacts" value="contacts"></v-list-item>
-
-                <v-list-item title="Settings" value="settings"></v-list-item>
+                <div v-for="dashboards in findManyDashboards" :key="dashboards.id">
+                   <v-list-item :title="dashboards.name" :value="dashboards.name"></v-list-item> 
+                </div>
             </v-list>
         </v-navigation-drawer>
     </div>
 </template>
 
 <script>
-import RightAddDashboards from './RightAddDashboards.vue'
+import CreateDashboard from './CreateDashboard.vue'
+import findManyDashboards from '../../graphql/query/findManyDashboards.gql'
 
     export default {
-        components: { RightAddDashboards }
-
+        components: { CreateDashboard },
+        data() {
+            return {
+                findManyDashboards: [],
+            }
+        },
+        apollo: {
+            findManyDashboards: {
+                prefetch: true,
+                query: findManyDashboards
+            }
+        },
     }
 </script>

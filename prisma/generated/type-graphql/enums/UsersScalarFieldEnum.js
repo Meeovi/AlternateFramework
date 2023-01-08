@@ -11,15 +11,10 @@ var UsersScalarFieldEnum;
     UsersScalarFieldEnum["last_name"] = "last_name";
     UsersScalarFieldEnum["email"] = "email";
     UsersScalarFieldEnum["password"] = "password";
-    UsersScalarFieldEnum["interface_locale"] = "interface_locale";
-    UsersScalarFieldEnum["value"] = "value";
+    UsersScalarFieldEnum["phone"] = "phone";
     UsersScalarFieldEnum["permissions"] = "permissions";
     UsersScalarFieldEnum["created_at"] = "created_at";
-    UsersScalarFieldEnum["emails"] = "emails";
     UsersScalarFieldEnum["mediamanager"] = "mediamanager";
-    UsersScalarFieldEnum["messages"] = "messages";
-    UsersScalarFieldEnum["projects"] = "projects";
-    UsersScalarFieldEnum["workspaces"] = "workspaces";
 })(UsersScalarFieldEnum = exports.UsersScalarFieldEnum || (exports.UsersScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(UsersScalarFieldEnum, {
     name: "UsersScalarFieldEnum",

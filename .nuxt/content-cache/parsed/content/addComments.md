@@ -1,6 +1,1 @@
----
-title: 'Add comments'
-description: 'Templates to add a comment to either a table or a column.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/addcomments","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Add comments","description":"Templates to add a comment to either a table or a column.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:addComments.md","_source":"content","_file":"addComments.md","_extension":"md"},"hash":"TfT22Sn6kA"}

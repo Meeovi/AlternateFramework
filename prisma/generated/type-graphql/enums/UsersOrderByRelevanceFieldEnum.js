@@ -10,14 +10,9 @@ var UsersOrderByRelevanceFieldEnum;
     UsersOrderByRelevanceFieldEnum["last_name"] = "last_name";
     UsersOrderByRelevanceFieldEnum["email"] = "email";
     UsersOrderByRelevanceFieldEnum["password"] = "password";
-    UsersOrderByRelevanceFieldEnum["interface_locale"] = "interface_locale";
-    UsersOrderByRelevanceFieldEnum["value"] = "value";
+    UsersOrderByRelevanceFieldEnum["phone"] = "phone";
     UsersOrderByRelevanceFieldEnum["permissions"] = "permissions";
-    UsersOrderByRelevanceFieldEnum["emails"] = "emails";
     UsersOrderByRelevanceFieldEnum["mediamanager"] = "mediamanager";
-    UsersOrderByRelevanceFieldEnum["messages"] = "messages";
-    UsersOrderByRelevanceFieldEnum["projects"] = "projects";
-    UsersOrderByRelevanceFieldEnum["workspaces"] = "workspaces";
 })(UsersOrderByRelevanceFieldEnum = exports.UsersOrderByRelevanceFieldEnum || (exports.UsersOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(UsersOrderByRelevanceFieldEnum, {
     name: "UsersOrderByRelevanceFieldEnum",

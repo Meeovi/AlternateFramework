@@ -1,100 +1,86 @@
 <template>
-    <v-row class="tableEditor">
-        <v-col class="buttonBar">
-            <v-btn variant="flat" size="small" v-on:click="refreshCache([])"><v-icon start icon="fas fa-rotate"></v-icon>Refresh</v-btn>
-            <v-btn variant="flat" size="small" @click="deselectRows">deselect rows</v-btn>
-            <InsertAddRoles />
-        </v-col>
-        <ag-grid-vue class="ag-theme-alpine"
-            :columnDefs="columnDefs.value" :rowData="rowData.value" :defaultColDef="defaultColDef"
-            rowSelection="multiple" animateRows="true" @cell-clicked="cellWasClicked"
-            :autoGroupColumnDef="autoGroupColumnDef" :rowModelType="rowModelType" :suppressAggFuncInHeader="true"
-            :rowGroupPanelShow="rowGroupPanelShow" @grid-ready="onGridReady">
-        </ag-grid-vue>
-    </v-row>
+    <div>
+        <v-row>
+            <v-col cols="10">
+
+            </v-col>
+            <v-col cols="2">
+                <createRole />
+            </v-col>
+        </v-row>
+        <v-table fixed-header height="300px" width="100%">
+            <thead>
+                <tr>
+                    <th class="text-left">
+                        Role Name
+                    </th>
+                    <th class="text-left">
+                        Role Type
+                    </th>
+                    <th class="text-left">
+                        Role
+                    </th>
+                    <th class="text-left">
+                        Create
+                    </th>
+                    <th class="text-left">
+                        Update
+                    </th>
+                    <th class="text-left">
+                        Delete
+                    </th>
+                    <th class="text-left">
+                        Publish
+                    </th>
+                    <th class="text-left">
+                        Unpublish
+                    </th>
+                    <th class="text-left">
+                        Created
+                    </th>
+                    <th class="text-left">
+                        Edit
+                    </th>
+                </tr>
+            </thead>
+            <tbody v-for="roles in findManyRoles" :key="roles.id">
+                  <tr>
+                    <td>{{ roles.role_name }}</td>
+                    <td>{{ roles.type }}</td>
+                    <td>{{ roles.role }}</td>
+                    <td>{{ roles.createRole }}</td>
+                    <td>{{ roles.updateRole }}</td>
+                    <td>{{ roles.deleteRole }}</td>
+                    <td>{{ roles.publishRole }}</td>
+                    <td>{{ roles.unpublishRole }}</td>
+                    <td>{{ roles.created_at }}</td>
+                    <td><a :href="`/admin/settings/general-settings/${roles.id}`">
+                            <!--<editUser />--></a></td>
+                </tr>
+            </tbody>
+        </v-table>
+    </div>
 </template>
 
 <script>
-import { AgGridVue } from "ag-grid-vue3"; // the AG Grid Vue Component
-import { reactive, onMounted, ref } from "vue";
-import InsertAddRoles from './InsertAddRoles.vue'
-import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
-import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
+    import createRole from './InsertAddRoles'
+    import findManyRoles from '../../graphql/query/findManyRoles.gql'
 
-export default {
-        name: "App",
+    export default {
         components: {
-            AgGridVue,
-            InsertAddRoles
+            createRole,
+            //editUser
         },
-        setup() {
-            const gridApi = ref(null); // Optional - for accessing Grid's API
-
-            // Obtain API from grid's onGridReady event
-            const onGridReady = (params) => {
-                gridApi.value = params.api;
-            };
-
-            const rowData = reactive({}); // Set rowData to Array of Objects, one Object per Row
-
-            // Each Column Definition results in one Column.
-            const columnDefs = reactive({
-                value: [{
-                        field: "Name"
-                    },
-                    {
-                        field: "Description"
-                    },
-                    {
-                        field: "Users"
-                    }
-                ],
-            });
-
-            // DefaultColDef sets props common to all Columns
-            const defaultColDef = {
-                sortable: true,
-                filter: true,
-                editable: true,
-                resizable: true,
-                minWidth: 150,
-                headerCheckboxSelection: true,
-                checkboxSelection: true,
-                flex: 1
-            };
-
-            // Example load data from sever
-            onMounted(() => {
-                fetch("https://www.ag-grid.com/example-assets/row-data.json")
-                    .then((result) => result.json())
-                    .then((remoteRowData) => (rowData.value = remoteRowData));
-            });
-
+        data() {
             return {
-                onGridReady,
-                columnDefs,
-                rowData,
-                defaultColDef,
-                autoGroupColumnDef: null,
-                rowModelType: null,
-                rowGroupPanelShow: null,
-                gridApi: null,
-                columnApi: null,
-                cellWasClicked: (event) => { // Example of consuming Grid Event
-                    console.log("cell was clicked", event);
-                },
-                deselectRows: () => {
-                    gridApi.value.deselectAll()
-                }
-            };
+                findManyRoles: [],
+            }
         },
-        methods: {
-            onGridReady(params) {
-            this.gridApi = params.api;
-            this.gridColumnApi = params.columnApi;
-            },
+        apollo: {
+            findManyRoles: {
+                prefetch: true,
+                query: findManyRoles
+            }
         },
-    };
+    }
 </script>
-
-<style lang="scss"></style>

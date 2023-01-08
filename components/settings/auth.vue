@@ -1,5 +1,6 @@
 <template>
     <div>
+        <form enctype="multipart/form-data" @submit.prevent="addLocale()">
         <v-row>
             <v-col cols="12">
                 <h3>Auth Settings</h3>
@@ -11,7 +12,7 @@
                 <h6>User Signups</h6>
             </v-col>
             <v-col cols="6">
-                <v-switch v-model="model" hide-details true-value="true" false-value="false" :label="`Allow new users to sign up: ${model}`"></v-switch>
+                <v-switch v-model="allowusers" hide-details true-value="true" false-value="false" :label="`Allow new users to sign up: ${allowusers}`"></v-switch>
                 <h6>If this is disabled, new users will not be able to sign up to your application.</h6>
             </v-col>
             <v-divider></v-divider>
@@ -26,12 +27,12 @@
                 <h6>Security and Protection</h6>
             </v-col>
             <v-col cols="6">
-                <v-switch v-model="model" hide-details true-value="true" false-value="false" :label="`Enable hCaptcha protection ${model}`"></v-switch>
+                <v-switch v-model="hcaptcha" hide-details true-value="true" false-value="false" :label="`Enable hCaptcha protection ${hcaptcha}`"></v-switch>
                 <h6>Protect authentication endpoints from abuse.</h6>
             </v-col>
             <v-col cols="6"></v-col>
             <v-col cols="6">
-                <v-switch v-model="model" hide-details true-value="true" false-value="false" :label="`Enable automatic reuse detection ${model}`"></v-switch>
+                <v-switch v-model="reusedetection" hide-details true-value="true" false-value="false" :label="`Enable automatic reuse detection ${reusedetection}`"></v-switch>
                 <h6>Prevent replay attacks from compromised refresh tokens.</h6>
             </v-col>
             <v-col cols="6"></v-col>
@@ -58,13 +59,16 @@
                 </v-card-actions>
             </v-col>
         </v-row>
+    </form>
     </div>
 </template>
 
 <script>
     export default {
         data: () => ({
-            model: 'no',
+            allowusers: 'no',
+            hcaptcha: 'no',
+            reusedetection: 'no',
         }),
     }
 </script>

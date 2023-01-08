@@ -1,3 +1,4 @@
+export { AgreementsCrudResolver } from "./Agreements/AgreementsCrudResolver";
 export { ApitokenCrudResolver } from "./Apitoken/ApitokenCrudResolver";
 export { CategoriesCrudResolver } from "./Categories/CategoriesCrudResolver";
 export { Content_typeCrudResolver } from "./Content_type/Content_typeCrudResolver";

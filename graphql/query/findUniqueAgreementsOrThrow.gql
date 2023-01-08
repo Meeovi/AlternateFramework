@@ -1,0 +1,11 @@
+query {
+  findUniqueAgreementsOrThrow 
+ {
+    author
+    created_at
+    id
+    name
+    type
+    updated_at
+  }
+}

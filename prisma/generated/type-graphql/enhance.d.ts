@@ -26,9 +26,10 @@ declare const crudResolversMap: {
     LogIn: typeof crudResolvers.LogInCrudResolver;
     Dashboardslist: typeof crudResolvers.DashboardslistCrudResolver;
     Dashboardgraphql: typeof crudResolvers.DashboardgraphqlCrudResolver;
-    Dashboardjson: typeof crudResolvers.DashboardjsonCrudResolver;
     Dashboardrestapi: typeof crudResolvers.DashboardrestapiCrudResolver;
     Dashboardslides: typeof crudResolvers.DashboardslidesCrudResolver;
+    Dashboardjson: typeof crudResolvers.DashboardjsonCrudResolver;
+    Agreements: typeof crudResolvers.AgreementsCrudResolver;
 };
 type ResolverModelNames = keyof typeof crudResolversMap;
 type ModelResolverActionNames<TModel extends ResolverModelNames> = keyof typeof crudResolversMap[TModel]["prototype"];

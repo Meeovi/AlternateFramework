@@ -27,21 +27,15 @@
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
-                            Edge Functions
-                        </v-tab>
-                        <v-tab value="option-6">
-                            <v-icon start>
-                                mdi-access-point
-                            </v-icon>
                             Logs
                         </v-tab>
-                        <v-tab value="option-7">
+                        <v-tab value="option-5">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             API Docs
                         </v-tab>
-                        <v-tab value="option-8">
+                        <v-tab value="option-6">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
@@ -67,20 +61,15 @@
                         </v-window-item>
                         <v-window-item value="option-4">
                             <v-card flat>
-                                <edgefunctions />
-                            </v-card>
-                        </v-window-item>
-                        <v-window-item value="option-6">
-                            <v-card flat>
                                 <logs />
                             </v-card>
                         </v-window-item>
-                        <v-window-item value="option-7">
+                        <v-window-item value="option-5">
                             <v-card flat>
                                 <apidocs />
                             </v-card>
                         </v-window-item>
-                        <v-window-item value="option-8">
+                        <v-window-item value="option-6">
                             <v-card flat>
                                 <apistudio />
                             </v-card>
@@ -95,7 +84,6 @@
     import overview from '~/components/database/overview'
     import sqleditor from '~/components/database/sqleditor'
     import authentication from '~/components/database/authentication'
-    import edgefunctions from '~/components/database/edgefunctions'
     import logs from '~/components/database/logs'
     import apidocs from '~/components/database/apidocs'
     import apistudio from '~/components/database/apistudio'
@@ -105,7 +93,6 @@
             overview,
             sqleditor,
             authentication,
-            edgefunctions,
             logs,
             apidocs,
             apistudio,

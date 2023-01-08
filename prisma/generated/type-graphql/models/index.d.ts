@@ -1,3 +1,4 @@
+export { Agreements } from "./Agreements";
 export { Apitoken } from "./Apitoken";
 export { Categories } from "./Categories";
 export { Content_type } from "./Content_type";

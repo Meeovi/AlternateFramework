@@ -7,5 +7,5 @@ export declare class FindManyUsersArgs {
     cursor?: UsersWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "username" | "first_name" | "last_name" | "email" | "password" | "interface_locale" | "value" | "permissions" | "created_at" | "emails" | "mediamanager" | "messages" | "projects" | "workspaces"> | undefined;
+    distinct?: Array<"id" | "username" | "first_name" | "last_name" | "email" | "password" | "phone" | "permissions" | "created_at" | "mediamanager"> | undefined;
 }
