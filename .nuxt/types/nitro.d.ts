@@ -6,6 +6,7 @@ declare module 'nitropack' {
     '/api/serverSessions': Awaited<ReturnType<typeof import('../../server/api/serverSessions').default>>
     '/api/read': Awaited<ReturnType<typeof import('../../server/api/read').default>>
     '/api/prisma': Awaited<ReturnType<typeof import('../../server/api/prisma').default>>
+    '/api/pages': Awaited<ReturnType<typeof import('../../server/api/pages').default>>
     '/api/metrics': Awaited<ReturnType<typeof import('../../server/api/metrics').default>>
     '/api/delete': Awaited<ReturnType<typeof import('../../server/api/delete').default>>
     '/api/create': Awaited<ReturnType<typeof import('../../server/api/create').default>>

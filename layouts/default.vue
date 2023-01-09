@@ -1,6 +1,6 @@
 <template>
   <v-app :theme="theme">
-    <v-app-bar density="compact">
+    <v-app-bar id="topnav" density="compact">
       <template v-slot:prepend>
         <v-btn variant="flat" @click="drawer = !drawer">
           <v-icon start icon="fas fa-bars"></v-icon> Menu
@@ -16,7 +16,7 @@
           <v-btn :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
         </v-col>
         <v-col>
-          <v-menu :location="bottom" transition="slide-y-transition">
+          <v-menu :location="location" transition="slide-y-transition">
             <template v-slot:activator="{ props }">
               <v-btn variant="flat" v-bind="props">
                 <v-icon start icon="fas fa-circle-question"></v-icon>Help
@@ -50,7 +50,7 @@
     <v-main>
       <v-card>
         <v-layout>
-          <v-navigation-drawer expand-on-hover temporary v-model="drawer" :rail="rail" @click="rail = false">
+          <v-navigation-drawer expand-on-hover v-model="drawer" :rail="rail" @click="rail = false">
             <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg" title="John Leider" nav>
               <template v-slot:append>
                 <v-btn variant="text" icon="fas fa-chevron-left" @click.stop="rail = !rail"></v-btn>
@@ -95,6 +95,7 @@
     data() {
       return {
         drawer: null,
+        location: 'bottom',
         items: [{
             title: 'Home',
             icon: 'fas fa-home'

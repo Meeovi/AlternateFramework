@@ -31,7 +31,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in findManyPages" :key="pages.id">
+            <tbody v-for="pages in pages" :key="pages.id">
                 <tr>
                     <td>{{ pages.id }}</td>
                     <td>{{ pages.title }}</td>
@@ -72,5 +72,7 @@
 <script setup>
     useHead({
         title: 'Pages',
-    })
+    });
+
+const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
 </script>

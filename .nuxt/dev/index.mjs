@@ -3600,6 +3600,7 @@ const _lazy_lQSHP4 = () => Promise.resolve().then(function () { return update$1;
 const _lazy_7cxtda = () => Promise.resolve().then(function () { return serverSessions$1; });
 const _lazy_ItkiBI = () => Promise.resolve().then(function () { return read$1; });
 const _lazy_erqJPE = () => Promise.resolve().then(function () { return prisma$3; });
+const _lazy_e5cmZJ = () => Promise.resolve().then(function () { return pages$1; });
 const _lazy_tGL4C0 = () => Promise.resolve().then(function () { return metrics; });
 const _lazy_05OzVT = () => Promise.resolve().then(function () { return _delete$1; });
 const _lazy_2EdZ29 = () => Promise.resolve().then(function () { return create$1; });
@@ -3612,6 +3613,7 @@ const handlers = [
   { route: '/api/serverSessions', handler: _lazy_7cxtda, lazy: true, middleware: false, method: undefined },
   { route: '/api/read', handler: _lazy_ItkiBI, lazy: true, middleware: false, method: undefined },
   { route: '/api/prisma', handler: _lazy_erqJPE, lazy: true, middleware: false, method: undefined },
+  { route: '/api/pages', handler: _lazy_e5cmZJ, lazy: true, middleware: false, method: undefined },
   { route: '/api/metrics', handler: _lazy_tGL4C0, lazy: true, middleware: false, method: undefined },
   { route: '/api/delete', handler: _lazy_05OzVT, lazy: true, middleware: false, method: undefined },
   { route: '/api/create', handler: _lazy_2EdZ29, lazy: true, middleware: false, method: undefined },
@@ -3746,6 +3748,16 @@ const prisma$2 = () => {
 const prisma$3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   'default': prisma$2
+});
+
+const pages = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.pages.findMany();
+});
+
+const pages$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': pages
 });
 
 const app = express();
