@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/countries","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Countries","description":"Create a table with all the countries in the world.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:countries.md","_source":"content","_file":"countries.md","_extension":"md"},"hash":"A7xWoyvOzs"}
+---
+title: 'Countries'
+description: 'Create a table with all the countries in the world.'
+---
+
+<!-- Content of the page -->

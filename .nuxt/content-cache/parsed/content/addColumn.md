@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/addcolumn","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Add column","description":"Template to add a column. Make sure to change the name and type.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:addColumn.md","_source":"content","_file":"addColumn.md","_extension":"md"},"hash":"xtmP0MRKYc"}
+---
+title: 'Add column'
+description: 'Template to add a column. Make sure to change the name and type.'
+---
+
+<!-- Content of the page -->

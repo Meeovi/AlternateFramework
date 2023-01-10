@@ -1,1 +1,0 @@
-{"parsed":{"_path":"/scripts","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":true,"title":"Scripts","description":"","body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:scripts.md","_source":"content","_file":"scripts.md","_extension":"md"},"hash":"w5eGHxtjmg"}

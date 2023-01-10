@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/showextensions","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Show extensions","description":"Get a list of extensions in your database and status.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:showExtensions.md","_source":"content","_file":"showExtensions.md","_extension":"md"},"hash":"gCJ1CN9kJu"}
+---
+title: 'Show extensions'
+description: 'Get a list of extensions in your database and status.'
+---
+
+<!-- Content of the page -->

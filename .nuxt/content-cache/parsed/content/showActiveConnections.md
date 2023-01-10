@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/showactiveconnections","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Show active connections","description":"Get the number of active and max connections","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:showActiveConnections.md","_source":"content","_file":"showActiveConnections.md","_extension":"md"},"hash":"VUWNa5MZfv"}
+---
+title: 'Show active connections'
+description: 'Get the number of active and max connections'
+---
+
+<!-- Content of the page -->
