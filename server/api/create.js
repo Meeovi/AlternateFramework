@@ -1,8 +1,11 @@
 import { usePrisma } from '@sidebase/nuxt-prisma'
-//import { tableName } from '../../components/content/LeftCreateTable'
+import { defineEventHandler } from 'h3'
+const { tableName } = require('../../packages/core/api/create.js')
 
 export default defineEventHandler(async (event) => {
   const prisma = usePrisma(event)
 
-  return prisma.$executeRaw`CREATE TABLE starter;`
+  return prisma.$executeRaw`CREATE TABLE ${tableName};`
+
+
 })
