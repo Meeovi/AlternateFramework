@@ -136,7 +136,7 @@ plugins:
 #      prefix: my-graphql-mesh
 #      # If you wish to disable introspection logging
 #     skipIntrospection: true
-  - prometheus:
+  - PrometheusConfig:
     # all optional, and by default, all set to false, please opt-in to the metrics you wish to get
  
     # requires `execute` to be true

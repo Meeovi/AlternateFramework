@@ -1,69 +1,63 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/node-fetch-native/dist/polyfill.mjs';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/node-fetch-native/dist/polyfill.mjs';
 import { Server } from 'http';
 import { tmpdir } from 'os';
 import { join as join$1 } from 'path';
 import { mkdirSync } from 'fs';
 import { parentPort, threadId } from 'worker_threads';
-import { provider, isWindows } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/std-env/dist/index.mjs';
-import { eventHandler, setHeaders, sendRedirect, defineEventHandler, handleCacheHeaders, createEvent, getRequestHeader, getRequestHeaders, setResponseHeader, deleteCookie, parseCookies, setCookie, readBody, createError, getQuery, getCookie, createApp, createRouter as createRouter$1, lazyEventHandler, toNodeListener, appendHeader, getHeaders, getMethod, isMethod } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/h3/dist/index.mjs';
-import { PrismaClient } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@prisma/client/index.js';
-import express from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/express/index.js';
-import prom from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/prom-client/index.js';
-import { defineNuxtConfig } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/nuxt/config.mjs';
-import CredentialsProvider from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/next-auth/providers/credentials.js';
-import GithubProvider from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/next-auth/providers/github.js';
-import { NextAuthHandler } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/next-auth/core/index.js';
-import getURL from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/requrl/dist/requrl.js';
-import defu from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/defu/dist/defu.mjs';
-import { createRenderer } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import devalue from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { renderToString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/vue/server-renderer/index.mjs';
-import { parseURL, withQuery, joinURL, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/ufo/dist/index.mjs';
-import destr from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/destr/dist/index.mjs';
-import { snakeCase, kebabCase, pascalCase, camelCase } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/scule/dist/index.mjs';
-import { createFetch as createFetch$1, Headers } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/ofetch/dist/node.mjs';
-import { createCall, createFetch } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/hookable/dist/index.mjs';
-import { hash } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/ohash/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unstorage/dist/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/radix3/dist/index.mjs';
-import { nanoid } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/nanoid/index.js';
-import dayjs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/dayjs/dayjs.min.js';
-import sessionDriver from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unstorage/dist/drivers/memory.mjs';
-import * as argon2 from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/argon2/argon2.js';
-import { extname, join } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/pathe/dist/index.mjs';
-import { unified } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unified/index.js';
-import { toString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/mdast-util-to-string/index.js';
-import { preprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark/dev/lib/preprocess.js';
-import { postprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark/dev/lib/postprocess.js';
-import { stringifyPosition } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-util-stringify-position/index.js';
-import { markdownLineEnding, markdownSpace } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark-util-character/dev/index.js';
-import { push, splice } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark-util-chunked/dev/index.js';
-import { resolveAll } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark-util-resolve-all/index.js';
-import remarkEmoji from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-emoji/index.js';
-import rehypeSlug from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-slug/index.js';
-import remarkSqueezeParagraphs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-squeeze-paragraphs/index.js';
-import rehypeExternalLinks from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-external-links/index.js';
-import remarkGfm from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-gfm/index.js';
-import rehypeSortAttributeValues from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-sort-attribute-values/index.js';
-import rehypeSortAttributes from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-sort-attributes/index.js';
-import rehypeRaw from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-raw/index.js';
-import remarkMDC, { parseFrontMatter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-mdc/dist/index.mjs';
-import remarkParse from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-parse/index.js';
-import remark2rehype from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-rehype/index.js';
-import { all } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/mdast-util-to-hast/index.js';
-import { detab } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/detab/index.js';
-import { u } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-builder/index.js';
-import { encode } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/mdurl/index.js';
-import slugify from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/slugify/slugify.js';
-import { position } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-util-position/index.js';
-import htmlTags from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/html-tags/index.js';
-import { visit } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-util-visit/index.js';
-import { BUNDLED_LANGUAGES, BUNDLED_THEMES, getHighlighter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/shiki-es/dist/shiki.node.mjs';
-import consola from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unenv/runtime/npm/consola.mjs';
+import { provider, isWindows } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/std-env/dist/index.mjs';
+import { eventHandler, setHeaders, sendRedirect, defineEventHandler, handleCacheHeaders, createEvent, getRequestHeader, getRequestHeaders, setResponseHeader, getQuery, getCookie, createError, createApp, createRouter as createRouter$1, lazyEventHandler, toNodeListener, setCookie, appendHeader, parseCookies, getHeaders, getMethod, isMethod, readBody } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/h3/dist/index.mjs';
+import { PrismaClient } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/@prisma/client/index.js';
+import { defineNuxtConfig } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/nuxt/config.mjs';
+import CredentialsProvider from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/next-auth/providers/credentials.js';
+import GithubProvider from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/next-auth/providers/github.js';
+import { NextAuthHandler } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/next-auth/core/index.js';
+import getURL from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/requrl/dist/requrl.js';
+import defu from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/defu/dist/defu.mjs';
+import { createRenderer } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import devalue from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { renderToString } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/vue/server-renderer/index.mjs';
+import { parseURL, withQuery, joinURL, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/ufo/dist/index.mjs';
+import destr from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/destr/dist/index.mjs';
+import { snakeCase, kebabCase, pascalCase, camelCase } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/scule/dist/index.mjs';
+import { createFetch as createFetch$1, Headers } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/ofetch/dist/node.mjs';
+import { createCall, createFetch } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/hookable/dist/index.mjs';
+import { hash } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/ohash/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unstorage/dist/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/radix3/dist/index.mjs';
+import { extname, join } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/pathe/dist/index.mjs';
+import { unified } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unified/index.js';
+import { toString } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/mdast-util-to-string/index.js';
+import { preprocess } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/micromark/dev/lib/preprocess.js';
+import { postprocess } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/micromark/dev/lib/postprocess.js';
+import { stringifyPosition } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unist-util-stringify-position/index.js';
+import { markdownLineEnding, markdownSpace } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/micromark-util-character/dev/index.js';
+import { push, splice } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/micromark-util-chunked/dev/index.js';
+import { resolveAll } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/micromark-util-resolve-all/index.js';
+import remarkEmoji from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/remark-emoji/index.js';
+import rehypeSlug from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/rehype-slug/index.js';
+import remarkSqueezeParagraphs from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/remark-squeeze-paragraphs/index.js';
+import rehypeExternalLinks from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/rehype-external-links/index.js';
+import remarkGfm from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/remark-gfm/index.js';
+import rehypeSortAttributeValues from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/rehype-sort-attribute-values/index.js';
+import rehypeSortAttributes from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/rehype-sort-attributes/index.js';
+import rehypeRaw from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/rehype-raw/index.js';
+import remarkMDC, { parseFrontMatter } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/remark-mdc/dist/index.mjs';
+import remarkParse from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/remark-parse/index.js';
+import remark2rehype from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/remark-rehype/index.js';
+import { all } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/mdast-util-to-hast/index.js';
+import { detab } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/detab/index.js';
+import { u } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unist-builder/index.js';
+import { encode } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/mdurl/index.js';
+import slugify from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/slugify/slugify.js';
+import { position } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unist-util-position/index.js';
+import htmlTags from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/html-tags/index.js';
+import { visit } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unist-util-visit/index.js';
+import { BUNDLED_LANGUAGES, BUNDLED_THEMES, getHighlighter } from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/shiki-es/dist/shiki.node.mjs';
+import consola from 'file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/unenv/runtime/npm/consola.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":"","__MONACO_EDITOR_LOCALE__":"en","__MONACO_EDITOR_LOCATION__":"/_monaco"},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false}},"envPrefix":"NUXT_"},"public":{"session":{"api":{"isEnabled":true,"methods":["patch","get","post","delete"],"basePath":"/api/session"}},"auth":{"isEnabled":true,"origin":"http://localhost:3000","basePath":"/api/auth","trustHost":false,"enableSessionRefreshPeriodically":true,"enableSessionRefreshOnWindowFocus":true,"enableGlobalAppMiddleware":false},"nuxtHighcharts":{"pluginOptions":{},"hcMods":["accessibility","annotations-advanced","annotations","arc-diagram","arrow-symbols","boost-canvas","boost","broken-axis","bullet","coloraxis","current-date-indicator","cylinder","data","datagrouping","debugger","dependency-wheel","dotplot","drag-panes","draggable-points","drilldown","dumbbell","export-data","exporting","full-screen","funnel","funnel3d","gantt","grid-axis","heatmap","heikinashi","histogram-bellcurve","hollowcandlestick","item-series","lollipop","map","marker-clusters","networkgraph","no-data-to-display","offline-exporting","oldie-polyfills","oldie","organization","overlapping-datalabels","parallel-coordinates","pareto","pathfinder","pattern-fill","price-indicator","pyramid3d","sankey","series-label","series-on-point","solid-gauge","sonification","static-scale","stock-tools","stock","streamgraph","sunburst","tilemap","timeline","treegraph","treegrid","treemap","variable-pie","variwide","vector","venn","windbarb","wordcloud","xrange"]},"content":{"locales":[],"experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4000/","documentDriven":false,"anchorLinks":{"depth":4,"exclude":[1]}},"naiveUI":{}},"auth":{"isEnabled":true,"origin":"http://localhost:3000","basePath":"/api/auth","trustHost":false,"enableSessionRefreshPeriodically":true,"enableSessionRefreshOnWindowFocus":true,"enableGlobalAppMiddleware":false,"isOriginSet":true},"session":{"isEnabled":true,"session":{"expiryInSeconds":600,"idLength":64,"storePrefix":"sessions","cookieSameSite":"lax","cookieSecure":true,"cookieHttpOnly":true,"storageOptions":{"driver":"memory","options":{}},"domain":false,"ipPinning":false,"rolling":false},"api":{"isEnabled":true,"methods":["patch","get","post","delete"],"basePath":"/api/session"}},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}}};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":"","__MONACO_EDITOR_LOCALE__":"en","__MONACO_EDITOR_LOCATION__":"/_monaco"},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false}},"envPrefix":"NUXT_"},"public":{"auth":{"isEnabled":true,"origin":"http://localhost:3000","basePath":"/api/auth","trustHost":false,"enableSessionRefreshPeriodically":true,"enableSessionRefreshOnWindowFocus":true,"enableGlobalAppMiddleware":false},"nuxtHighcharts":{"pluginOptions":{},"hcMods":["accessibility","annotations-advanced","annotations","arc-diagram","arrow-symbols","boost-canvas","boost","broken-axis","bullet","coloraxis","current-date-indicator","cylinder","data","datagrouping","debugger","dependency-wheel","dotplot","drag-panes","draggable-points","drilldown","dumbbell","export-data","exporting","full-screen","funnel","funnel3d","gantt","grid-axis","heatmap","heikinashi","histogram-bellcurve","hollowcandlestick","item-series","lollipop","map","marker-clusters","networkgraph","no-data-to-display","offline-exporting","oldie-polyfills","oldie","organization","overlapping-datalabels","parallel-coordinates","pareto","pathfinder","pattern-fill","price-indicator","pyramid3d","sankey","series-label","series-on-point","solid-gauge","sonification","static-scale","stock-tools","stock","streamgraph","sunburst","tilemap","timeline","treegraph","treegrid","treemap","variable-pie","variwide","vector","venn","windbarb","wordcloud","xrange"]},"content":{"locales":[],"experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4000/","documentDriven":false,"anchorLinks":{"depth":4,"exclude":[1]}},"naiveUI":{}},"auth":{"isEnabled":true,"origin":"http://localhost:3000","basePath":"/api/auth","trustHost":false,"enableSessionRefreshPeriodically":true,"enableSessionRefreshOnWindowFocus":true,"enableGlobalAppMiddleware":false,"isOriginSet":true},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}}};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -120,7 +114,7 @@ const timingMiddleware = eventHandler((event) => {
   }.bind(event.res);
 });
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/sehilton/Documents/github/alternateframework/server/assets"}];
 
 const assets = createStorage();
 
@@ -128,18 +122,18 @@ for (const asset of serverAssets) {
   assets.mount(asset.baseName, unstorage_47drivers_47fs({ base: asset.dir }));
 }
 
-const storage$1 = createStorage({});
+const storage = createStorage({});
 
-const useStorage = () => storage$1;
+const useStorage = () => storage;
 
-storage$1.mount('/assets', assets);
+storage.mount('/assets', assets);
 
-storage$1.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\content","ignore":["**/node_modules/**","**/.git/**"]}));
-storage$1.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\.nuxt\\content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage$1.mount('root', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3","ignore":["**/node_modules/**","**/.git/**"]}));
-storage$1.mount('src', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage$1.mount('build', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage$1.mount('cache', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternateframework\\content","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternateframework\\.nuxt\\content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternateframework","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternateframework\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternateframework\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternateframework\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function defineRenderHandler(handler) {
   return eventHandler(async (event) => {
@@ -478,7 +472,7 @@ const errorHandler = (async function errorhandler(error, event) {
     redirect: "manual"
   }).catch(() => null) : null;
   if (!res) {
-    const { template } = await import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@nuxt/ui-templates/dist/templates/error-dev.mjs') ;
+    const { template } = await import('file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/@nuxt/ui-templates/dist/templates/error-dev.mjs') ;
     {
       errorObject.description = errorObject.message;
     }
@@ -498,204 +492,12 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
-let prisma$4;
-const _Jx7ORH = eventHandler((event) => {
-  if (!prisma$4) {
-    prisma$4 = new PrismaClient();
+let prisma$3;
+const _R6uV21 = eventHandler((event) => {
+  if (!prisma$3) {
+    prisma$3 = new PrismaClient();
   }
-  event.context.prisma = prisma$4;
-});
-
-const sessionConfig = useRuntimeConfig().session.session;
-const driver = sessionDriver(sessionConfig.storageOptions.options);
-const storage = createStorage({ driver }).mount(sessionConfig.storePrefix, driver);
-const sessionStorage = prefixStorage(storage, sessionConfig.storePrefix);
-
-const getStorageSession = (sessionId) => sessionStorage.getItem(sessionId);
-const setStorageSession = (sessionId, session) => sessionStorage.setItem(sessionId, session);
-const dropStorageSession = (sessionId) => sessionStorage.removeItem(sessionId);
-
-class IpMismatch extends Error {
-  constructor(message = "User IP doesn't match the one in session") {
-    super(message);
-  }
-}
-class IpMissingFromSession extends Error {
-  constructor(message = "No IP in session even though ipPinning is enabled") {
-    super(message);
-  }
-}
-class SessionExpired extends Error {
-  constructor(message = "Session expired") {
-    super(message);
-  }
-}
-
-const argon2Options = {
-  type: argon2.argon2id,
-  hashLength: 60
-};
-const hashIpAddress = (ip) => !ip ? Promise.resolve(void 0) : argon2.hash(ip, argon2Options);
-const ipAddressesMatch = (ip, ipHash) => !ip && !ipHash ? Promise.resolve(false) : argon2.verify(ipHash, ip, argon2Options);
-const extractIpFromHeader = (header) => {
-  if (Array.isArray(header)) {
-    return header[0].split(",")[0];
-  }
-  if (typeof header === "string") {
-    return header.split(",")[0];
-  }
-  return void 0;
-};
-const getRequestIpAddress = ({ req }) => {
-  const sessionOptions = useRuntimeConfig().session.session;
-  const headerName = sessionOptions.ipPinning?.headerName;
-  if (typeof sessionOptions.ipPinning === "object" && "headerName" in sessionOptions.ipPinning.headerName) {
-    return extractIpFromHeader(req.headers[headerName.toLowerCase()]);
-  }
-  return req.socket.remoteAddress;
-};
-const getHashedIpAddress = (event) => {
-  return hashIpAddress(getRequestIpAddress(event));
-};
-const processSessionIp = async (event, session) => {
-  const hashedIP = session.ip;
-  if (!hashedIP) {
-    throw new IpMissingFromSession();
-  }
-  const requestIP = getRequestIpAddress(event);
-  const matches = await ipAddressesMatch(requestIP, hashedIP);
-  if (!matches) {
-    throw new IpMismatch();
-  }
-};
-
-const SESSION_COOKIE_NAME = "sessionId";
-const safeSetCookie = (event, name, value) => setCookie(event, name, value, {
-  maxAge: useRuntimeConfig().session.session.expiryInSeconds,
-  secure: useRuntimeConfig().session.session.cookieSecure,
-  httpOnly: useRuntimeConfig().session.session.cookieHttpOnly,
-  sameSite: useRuntimeConfig().session.session.cookieSameSite,
-  domain: useRuntimeConfig().session.session.domain
-});
-const checkSessionExpirationTime = (session, sessionExpiryInSeconds) => {
-  const now = dayjs();
-  if (now.diff(dayjs(session.createdAt), "seconds") > sessionExpiryInSeconds) {
-    throw new SessionExpired();
-  }
-};
-const getCurrentSessionId = (event) => {
-  const sessionIdRequest = parseCookies(event).sessionId;
-  const sessionIdContext = event.context.sessionId;
-  if (sessionIdContext && sessionIdRequest && sessionIdContext !== sessionIdRequest) {
-    return null;
-  }
-  return sessionIdRequest || sessionIdContext || null;
-};
-const deleteSession = async (event) => {
-  const currentSessionId = getCurrentSessionId(event);
-  if (currentSessionId) {
-    await dropStorageSession(currentSessionId);
-  }
-  deleteCookie(event, SESSION_COOKIE_NAME);
-};
-const newSession = async (event) => {
-  const runtimeConfig = useRuntimeConfig();
-  const sessionOptions = runtimeConfig.session.session;
-  const sessionId = nanoid(sessionOptions.idLength);
-  safeSetCookie(event, SESSION_COOKIE_NAME, sessionId);
-  const session = {
-    id: sessionId,
-    createdAt: new Date(),
-    ip: sessionOptions.ipPinning ? await getHashedIpAddress(event) : void 0
-  };
-  await setStorageSession(sessionId, session);
-  return session;
-};
-const getSession = async (event) => {
-  const existingSessionId = getCurrentSessionId(event);
-  if (!existingSessionId) {
-    return null;
-  }
-  const session = await getStorageSession(existingSessionId);
-  if (!isSession(session)) {
-    return null;
-  }
-  const runtimeConfig = useRuntimeConfig();
-  const sessionOptions = runtimeConfig.session.session;
-  const sessionExpiryInSeconds = sessionOptions.expiryInSeconds;
-  try {
-    if (sessionExpiryInSeconds !== null) {
-      checkSessionExpirationTime(session, sessionExpiryInSeconds);
-    }
-    if (sessionOptions.ipPinning) {
-      await processSessionIp(event, session);
-    }
-  } catch {
-    await deleteSession(event);
-    return null;
-  }
-  return session;
-};
-function isSession(shape) {
-  return typeof shape === "object" && !!shape && "id" in shape && "createdAt" in shape;
-}
-const ensureSession = async (event) => {
-  let session = await getSession(event);
-  if (!session) {
-    session = await newSession(event);
-  }
-  event.context.sessionId = session.id;
-  event.context.session = session;
-  return session;
-};
-const _06B1Cw = eventHandler(async (event) => {
-  await ensureSession(event);
-  event.res.on("finish", async () => {
-    const session = await getSession(event);
-    if (!session) {
-      return;
-    }
-    await setStorageSession(session.id, event.context.session);
-  });
-});
-
-const checkIfObjectAndContainsIllegalKeys = (shape) => {
-  if (typeof shape !== "object" || !shape) {
-    return false;
-  }
-  return !!["id", "createdAt", "ip"].find((key) => Object.prototype.hasOwnProperty.call(shape, key));
-};
-const _UK1vGu = eventHandler(async (event) => {
-  const body = await readBody(event);
-  if (checkIfObjectAndContainsIllegalKeys(body)) {
-    throw createError({ statusCode: 400, message: "Trying to pass invalid data to session, likely an object with `id` or `createdAt` fields or a non-object" });
-  }
-  event.context.session = {
-    ...event.context.session,
-    ...body
-  };
-  return event.context.session;
-});
-
-const _CpZCeO = eventHandler((event) => event.context.session);
-
-const _CSFo4Q = eventHandler(async (event) => {
-  const body = await readBody(event);
-  if (checkIfObjectAndContainsIllegalKeys(body)) {
-    throw createError({ statusCode: 400, message: "Trying to pass invalid data to session, likely an object with `id` or `createdAt` fields or a non-object" });
-  }
-  event.context.session = {
-    ...body,
-    id: event.context.session.id,
-    createdAt: event.context.session.createdAt,
-    ip: event.context.session.ip
-  };
-  return event.context.session;
-});
-
-const _9O3deq = eventHandler(async (event) => {
-  await deleteSession(event);
-  return null;
+  event.context.prisma = prisma$3;
 });
 
 const get = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj);
@@ -3117,7 +2919,7 @@ const json = defineTransformer({
     let parsed;
     if (typeof content === "string") {
       if (_id.endsWith("json5")) {
-        parsed = (await import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
+        parsed = (await import('file://C:/Users/sehilton/Documents/github/alternateframework/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
       } else if (_id.endsWith("json")) {
         parsed = destr(content);
       }
@@ -3434,7 +3236,7 @@ const getContentQuery = (event) => {
   return query;
 };
 
-const _4WcWNT = defineEventHandler(async (event) => {
+const _lnM9rc = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (query.first) {
     const content = await serverQueryContent(event, query).findOne();
@@ -3465,7 +3267,7 @@ const _4WcWNT = defineEventHandler(async (event) => {
   return contents;
 });
 
-const _PvySpV = defineEventHandler(async (event) => {
+const _kn7g2M = defineEventHandler(async (event) => {
   const { content } = useRuntimeConfig();
   const now = Date.now();
   const contents = await serverQueryContent(event).find();
@@ -3567,7 +3369,7 @@ function isObject(obj) {
   return Object.prototype.toString.call(obj) === "[object Object]";
 }
 
-const _smzehB = defineEventHandler(async (event) => {
+const _TInv4l = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (!isPreview(event) && Object.keys(query).length === 0) {
     const cache = await cacheStorage.getItem("content-navigation.json");
@@ -3596,42 +3398,35 @@ const _smzehB = defineEventHandler(async (event) => {
   return createNav(contents, configs);
 });
 
-const _lazy_lQSHP4 = () => Promise.resolve().then(function () { return update$1; });
-const _lazy_7cxtda = () => Promise.resolve().then(function () { return serverSessions$1; });
-const _lazy_ItkiBI = () => Promise.resolve().then(function () { return read$1; });
-const _lazy_erqJPE = () => Promise.resolve().then(function () { return prisma$3; });
-const _lazy_e5cmZJ = () => Promise.resolve().then(function () { return pages$1; });
-const _lazy_tGL4C0 = () => Promise.resolve().then(function () { return metrics; });
-const _lazy_05OzVT = () => Promise.resolve().then(function () { return _delete$1; });
-const _lazy_2EdZ29 = () => Promise.resolve().then(function () { return create$1; });
-const _lazy_uyLIo6 = () => Promise.resolve().then(function () { return _____$1; });
-const _lazy_HkWEan = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_Cl3s47 = () => Promise.resolve().then(function () { return update$1; });
+const _lazy_n3qILL = () => Promise.resolve().then(function () { return serverSessions$1; });
+const _lazy_SuDVom = () => Promise.resolve().then(function () { return read$1; });
+const _lazy_62TZIA = () => Promise.resolve().then(function () { return prisma$2; });
+const _lazy_2UlAxs = () => Promise.resolve().then(function () { return pages$1; });
+const _lazy_Vi4A9X = () => Promise.resolve().then(function () { return _delete$1; });
+const _lazy_6JyxD7 = () => Promise.resolve().then(function () { return create$1; });
+const _lazy_R37Dvr = () => Promise.resolve().then(function () { return _____$1; });
+const _lazy_XLsjYw = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _Jx7ORH, lazy: false, middleware: true, method: undefined },
-  { route: '/api/update', handler: _lazy_lQSHP4, lazy: true, middleware: false, method: undefined },
-  { route: '/api/serverSessions', handler: _lazy_7cxtda, lazy: true, middleware: false, method: undefined },
-  { route: '/api/read', handler: _lazy_ItkiBI, lazy: true, middleware: false, method: undefined },
-  { route: '/api/prisma', handler: _lazy_erqJPE, lazy: true, middleware: false, method: undefined },
-  { route: '/api/pages', handler: _lazy_e5cmZJ, lazy: true, middleware: false, method: undefined },
-  { route: '/api/metrics', handler: _lazy_tGL4C0, lazy: true, middleware: false, method: undefined },
-  { route: '/api/delete', handler: _lazy_05OzVT, lazy: true, middleware: false, method: undefined },
-  { route: '/api/create', handler: _lazy_2EdZ29, lazy: true, middleware: false, method: undefined },
-  { route: '/api/auth/**', handler: _lazy_uyLIo6, lazy: true, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_HkWEan, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _06B1Cw, lazy: false, middleware: true, method: undefined },
-  { route: '/api/session', handler: _UK1vGu, lazy: false, middleware: false, method: "patch" },
-  { route: '/api/session', handler: _CpZCeO, lazy: false, middleware: false, method: "get" },
-  { route: '/api/session', handler: _CSFo4Q, lazy: false, middleware: false, method: "post" },
-  { route: '/api/session', handler: _9O3deq, lazy: false, middleware: false, method: "delete" },
-  { route: '/api/_content/query/:qid/**:params', handler: _4WcWNT, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query/:qid', handler: _4WcWNT, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query', handler: _4WcWNT, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.json', handler: _PvySpV, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid/**:params', handler: _smzehB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid', handler: _smzehB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation', handler: _smzehB, lazy: false, middleware: false, method: "get" },
-  { route: '/**', handler: _lazy_HkWEan, lazy: true, middleware: false, method: undefined }
+  { route: '', handler: _R6uV21, lazy: false, middleware: true, method: undefined },
+  { route: '/api/update', handler: _lazy_Cl3s47, lazy: true, middleware: false, method: undefined },
+  { route: '/api/serverSessions', handler: _lazy_n3qILL, lazy: true, middleware: false, method: undefined },
+  { route: '/api/read', handler: _lazy_SuDVom, lazy: true, middleware: false, method: undefined },
+  { route: '/api/prisma', handler: _lazy_62TZIA, lazy: true, middleware: false, method: undefined },
+  { route: '/api/pages', handler: _lazy_2UlAxs, lazy: true, middleware: false, method: undefined },
+  { route: '/api/delete', handler: _lazy_Vi4A9X, lazy: true, middleware: false, method: undefined },
+  { route: '/api/create', handler: _lazy_6JyxD7, lazy: true, middleware: false, method: undefined },
+  { route: '/api/auth/**', handler: _lazy_R37Dvr, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_XLsjYw, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_content/query/:qid/**:params', handler: _lnM9rc, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query/:qid', handler: _lnM9rc, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query', handler: _lnM9rc, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/cache.json', handler: _kn7g2M, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid/**:params', handler: _TInv4l, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid', handler: _TInv4l, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation', handler: _TInv4l, lazy: false, middleware: false, method: "get" },
+  { route: '/**', handler: _lazy_XLsjYw, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -3740,14 +3535,14 @@ const read$1 = /*#__PURE__*/Object.freeze({
   'default': read
 });
 
-const prisma$1 = new PrismaClient();
-const prisma$2 = () => {
-  prisma$1;
+const prisma = new PrismaClient();
+const prisma$1 = () => {
+  prisma;
 };
 
-const prisma$3 = /*#__PURE__*/Object.freeze({
+const prisma$2 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  'default': prisma$2
+  'default': prisma$1
 });
 
 const pages = defineEventHandler(async (event) => {
@@ -3758,24 +3553,6 @@ const pages = defineEventHandler(async (event) => {
 const pages$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   'default': pages
-});
-
-const app = express();
-const port = 4001;
-const prisma = new PrismaClient();
-const register = new prom.Registry();
-prom.collectDefaultMetrics({ register });
-app.get("/metrics", async (_req, res) => {
-  let prismaMetrics = await prisma.$metrics.prometheus();
-  let appMetrics = await register.metrics();
-  res.end(prismaMetrics + appMetrics);
-});
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
-
-const metrics = /*#__PURE__*/Object.freeze({
-  __proto__: null
 });
 
 const _delete = defineEventHandler((event) => {
@@ -3955,9 +3732,9 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file://C:/Users/sehilton/Documents/github/alternateframework/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getStaticRenderedHead = () => Promise.resolve().then(function () { return _virtual__headStatic$1; }).then((r) => r.default || r);
-const getServerEntry = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('file://C:/Users/sehilton/Documents/github/alternateframework/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {

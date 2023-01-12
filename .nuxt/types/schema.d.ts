@@ -4,7 +4,6 @@ declare module '@nuxt/schema' {
     ["apollo"]?: typeof import("@nuxtjs/apollo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["formkit"]?: typeof import("@formkit/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["auth"]?: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["session"]?: typeof import("@sidebase/nuxt-session").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["monacoEditor"]?: typeof import("nuxt-monaco-editor").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["naiveUI"]?: typeof import("@huntersofbook/naive-ui-nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
@@ -39,44 +38,6 @@ declare module '@nuxt/schema' {
       enableGlobalAppMiddleware: boolean,
 
       isOriginSet: boolean,
-   },
-
-   session: {
-      isEnabled: boolean,
-
-      session: {
-         expiryInSeconds: number,
-
-         idLength: number,
-
-         storePrefix: string,
-
-         cookieSameSite: string,
-
-         cookieSecure: boolean,
-
-         cookieHttpOnly: boolean,
-
-         storageOptions: {
-            driver: string,
-
-            options: any,
-         },
-
-         domain: boolean,
-
-         ipPinning: boolean,
-
-         rolling: boolean,
-      },
-
-      api: {
-         isEnabled: boolean,
-
-         methods: Array<string>,
-
-         basePath: string,
-      },
    },
 
    content: {
@@ -200,16 +161,6 @@ declare module '@nuxt/schema' {
    },
   }
   interface PublicRuntimeConfig {
-   session: {
-      api: {
-         isEnabled: boolean,
-
-         methods: Array<string>,
-
-         basePath: string,
-      },
-   },
-
    auth: {
       isEnabled: boolean,
 
