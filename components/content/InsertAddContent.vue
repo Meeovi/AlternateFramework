@@ -1,15 +1,21 @@
 <template>
     <v-row justify="center">
-        <v-dialog v-model="dialog" persistent>
+        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
                     <v-icon start icon="fas fa-plus"></v-icon>Insert Content
                 </v-btn>
             </template>
             <v-card>
-                <v-card-title>
-                    <span class="text-h5">User Profile</span>
-                </v-card-title>
+                <form action="" method="post" @v-on:submit.prevent="addContent()">
+                    <v-toolbar dark color="primary">
+                        <v-btn icon dark @click="dialog = false">
+                            <v-icon icon="fas fa-circle-xmark"></v-icon>
+                        </v-btn>
+                        <v-card-title>
+                            <span class="text-h6">Insert new content</span>
+                        </v-card-title>
+                    </v-toolbar>
                 <v-card-text>
                     <v-container>
                         <v-row>
@@ -51,6 +57,7 @@
                         Save
                     </v-btn>
                 </v-card-actions>
+                </form>
             </v-card>
         </v-dialog>
     </v-row>
@@ -60,6 +67,9 @@
     export default {
         data: () => ({
             dialog: false,
+            notifications: false,
+            sound: true,
+            widgets: false,
         }),
     }
 </script>

@@ -19,6 +19,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@nuxtjs/apollo/dist/runtime/plugin").default> &
   InjectionType<typeof import("../../plugins/charts").default> &
   InjectionType<typeof import("../../plugins/fontawesome").default> &
+  InjectionType<typeof import("../../plugins/formkit").default> &
   InjectionType<typeof import("../../plugins/vuetify").default>
 
 declare module '#app' {

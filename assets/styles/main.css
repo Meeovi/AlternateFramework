@@ -185,6 +185,19 @@ body {
     padding-bottom: 10px;
 }
 
+.formkit-outer {
+    width: 100%;
+}
+
+.formkit-outer li {
+    display: inline-block;
+}
+
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+    transition: transform .2s ease-in-out;
+}
+
 /******************** Sidebar CSS *************/
 
 #sidebarNav {

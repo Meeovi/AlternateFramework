@@ -12,16 +12,16 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Feature Pack ID
+                        Content ID
                     </th>
                     <th class="text-left">
-                        Feature Pack Name
+                        Content Name
                     </th>
                     <th class="text-left">
-                        Feature Pack URL
+                        Content URL
                     </th>
                     <th class="text-left">
-                        Feature Pack Author
+                        Content Author
                     </th>
                     <th class="text-left">
                         Created
