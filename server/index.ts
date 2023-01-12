@@ -5,6 +5,8 @@ import * as path from "path";
 import { PrismaClient } from "@prisma/client";
 import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
+import { applyMiddleware } from 'graphql-middleware'
+import { shield, allow, deny } from 'graphql-shield'
 
 import { createYoga } from 'graphql-yoga';
 import { createServer } from 'node:http';
@@ -42,14 +44,29 @@ app.options('*', cors())
 // Pulling our Graphql Resolvers from Type-graphql & Prisma generation
 
 async function main() {
-  const schema = await buildSchema({
+  const schemamain = await buildSchema({
     resolvers,
     emitSchemaFile: path.resolve(__dirname, "./generated-schema.graphql"),
     validate: false,
   });
 
+  // Graphql Shield generates GraphQL Middleware layer from your rules.
+  const permissions = shield({
+    Query: {
+      "*": allow
+    },
+    Mutation: {
+      "*": allow
+    },
+  }, {
+    fallbackRule: allow
+  });
+
   // Make sure all services are loaded
   // await gateway.load()
+
+  // Integrating Graphql-Sheild 
+  const schema = applyMiddleware(schemamain, permissions);
 
   // Connect to Prisma
 
