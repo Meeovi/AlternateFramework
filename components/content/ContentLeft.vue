@@ -18,10 +18,36 @@
 import LeftCreateTable from './LeftCreateTable'
 
     export default {
-        components: { LeftCreateTable }
+        components: { 
+            LeftCreateTable,
+            //editUser
+        },
+    /*    data() {
+            return {
+                findManyPages: [],
+            }
+        },
+        apollo: {
+            findManyPages: {
+                prefetch: true,
+                query: findManyPages
+            }
+        }, */
     }
 </script>
 
 <script setup>
-    const { data } = await useAsyncData(() => $fetch("/api/read"));
+const query = gql`
+  query {
+  __schema {
+    queryType {
+      name
+      fields {
+        name
+      }
+    }
+  }
+}
+`
+const { data } = await useAsyncQuery(query)
 </script>

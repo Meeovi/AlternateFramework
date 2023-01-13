@@ -96,6 +96,8 @@
       "fastify": "^4.10.2",
       "fastify-multer": "^2.0.3",
       "formidable": "^2.0.1",
+      "graphiql": "^2.2.0",
+      "graphiql-explorer": "^0.9.0",
       "graphql-fields": "^2.0.3",
       "graphql-middleware": "^6.1.33",
       "graphql-passport": "^0.6.4",
