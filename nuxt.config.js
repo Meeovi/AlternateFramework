@@ -18,7 +18,6 @@ export default defineNuxtConfig({
       '@nuxtjs/apollo',
       '@formkit/nuxt',
       '@sidebase/nuxt-auth',
-      'nuxt-highcharts',
       'nuxt-monaco-editor',
       '@nuxt/content',
     ],

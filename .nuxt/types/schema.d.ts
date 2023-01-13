@@ -177,12 +177,6 @@ declare module '@nuxt/schema' {
       enableGlobalAppMiddleware: boolean,
    },
 
-   nuxtHighcharts: {
-      pluginOptions: any,
-
-      hcMods: Array<string>,
-   },
-
    content: {
       locales: Array<any>,
 
