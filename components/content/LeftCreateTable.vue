@@ -60,7 +60,9 @@
                                                         :items="['Set as NULL', 'Set as empty string']"
                                                         label="Default Value"></v-autocomplete>
                                                 </v-col>
-                                                <v-col><v-btn variant="text" prepend-icon="fas fa-plus">Add Field</v-btn></v-col>
+                                                <v-col>
+                                                    <v-btn variant="text" prepend-icon="fas fa-plus">Add Field</v-btn>
+                                                </v-col>
                                             </v-row>
                                         </div>
                                     </div>
@@ -92,28 +94,40 @@
                 notifications: false,
                 sound: true,
                 widgets: false,
-                tableName: "",
-                tableDescription: "",
-                tableBroadcast: "",
-                tableVisible: "",
-                tableColumnName: "",
-                tableColumnType: "",
-                tableColumnDefault: "",
+                form: {
+                    tableName: "",
+                    tableDescription: "",
+                    tableBroadcast: "",
+                    tableVisible: "",
+                    tableColumnName: "",
+                    tableColumnType: "",
+                    tableColumnDefault: "",
+                }
+
             }
         },
         methods: {
-            addDatabaseTable() {
-                this.$axios
-                    .post("/admin/content/manager", {
-                        tableName: this.tableName,
-                        tableDescription: this.tableDescription,
-                        tableBroadcast: this.tableBroadcast,
-                        tableVisible: this.tableVisible,
-                        tableColumnName: this.tableColumnName,
-                        tableColumnType: this.tableColumnType,
-                        tableColumnDefault: this.tableColumnDefault
+            addDatabaseTable: async function () {
+                const formData = new FormData();
+
+                for (let [key, value] of Object.entries(this.form)) {
+                    formData.append(key, value);
+                }
+
+                await axios
+                    .post("{Formeezy-Endpoint}", formData)
+                    .then(({
+                        data
+                    }) => {
+                        const {
+                            redirect
+                        } = data;
+                        window.location.href = redirect;
+                    })
+                    .catch((e) => {
+                        window.location.href = e.response.data.redirect;
                     });
-            },
+            }
         }
     }
 </script>
