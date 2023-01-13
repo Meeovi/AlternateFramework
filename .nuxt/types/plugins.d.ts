@@ -13,7 +13,6 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@huntersofbook/naive-ui-nuxt/dist/runtime/plugin").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
   InjectionType<typeof import("../../node_modules/nuxt-monaco-editor/dist/runtime/plugin.client").default> &
-  InjectionType<typeof import("../../node_modules/nuxt-highcharts/lib/plugin").default> &
   InjectionType<typeof import("../../node_modules/@sidebase/nuxt-auth/dist/runtime/plugin").default> &
   InjectionType<typeof import("../formkitPlugin").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/apollo/dist/runtime/plugin").default> &

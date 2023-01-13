@@ -2,7 +2,6 @@
 /// <reference types="@nuxtjs/apollo" />
 /// <reference types="@formkit/nuxt" />
 /// <reference types="@sidebase/nuxt-auth" />
-/// <reference types="nuxt-highcharts" />
 /// <reference types="nuxt-monaco-editor" />
 /// <reference types="@nuxt/content" />
 /// <reference types="@huntersofbook/naive-ui-nuxt" />
