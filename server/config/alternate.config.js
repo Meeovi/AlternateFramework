@@ -15,14 +15,45 @@ export default {
   }
 };
 
-// DATABASE DETAILS
+// APACHE THRIFT DETAILS
 
+
+// GRPCPROTOBUF DEFAULTS
+
+
+// JSON SCHEMA DETAILS
+
+
+// MONGODB DETAILS
+
+
+// MYSQL DETAILS
 const DB_HOST = '';
 const DB_PORT = '';
 const DB_USER = '';
 const DB_PASSWORD = '';
 const DB_DATABASE = '';
 const DB_CLIENT = '';
+
+// NEO4J DETAILS
+
+
+// ODATA DETAILS
+
+
+// OPENAPI SWAGGER DETAILS
+
+
+// POSTGRESQL DETAILS
+
+
+// RESTAPI DETAILS
+
+
+// SOAP DETAILS
+
+
+// SQLITE DETAILS
 
 const SQLITE_FILENAME = '';
 
