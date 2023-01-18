@@ -15,7 +15,6 @@ import { useGraphQlJit } from '@envelop/graphql-jit';
 import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
-import { APIGatewayEvent, APIGatewayProxyResult, Context } from 'aws-lambda'
 
 import '@sentry/tracing';
 //import { ApolloGateway } from '@apollo/gateway'
@@ -78,8 +77,6 @@ async function main() {
   const yoga = createYoga < {
     req: FastifyRequest
     reply: FastifyReply
-    event: APIGatewayEvent
-    lambdaContext: Context
   } > ({
     // Integrate Fastify logger
     logging: {
@@ -164,51 +161,6 @@ async function main() {
     }
     
   })
-
-  // Serverless Lambda feature
-
-  async function handler(
-    event: APIGatewayEvent,
-    lambdaContext: Context
-  ): Promise<APIGatewayProxyResult> {
-    const url = new URL(event.path, 'http://localhost')
-    if (event.queryStringParameters != null) {
-      for (const name in event.queryStringParameters) {
-        const value = event.queryStringParameters[name]
-        if (value != null) {
-          url.searchParams.set(name, value)
-        }
-      }
-    }
-  
-    const response = await yoga.fetch(
-      url,
-      {
-        method: event.httpMethod,
-        headers: event.headers as HeadersInit,
-        body: event.body
-          ? Buffer.from(event.body, event.isBase64Encoded ? 'base64' : 'utf8')
-          : undefined
-      },
-      {
-        event,
-        lambdaContext
-      }
-    )
-  
-    const responseHeaders: Record<string, string> = {}
-  
-    response.headers.forEach((value, name) => {
-      responseHeaders[name] = value
-    })
-  
-    return {
-      statusCode: response.status,
-      headers: responseHeaders,
-      body: await response.text(),
-      isBase64Encoded: false
-    }
-  }
 
   server.listen(4000, () => {
     console.info('Server is running on http://localhost:4000/graphql')

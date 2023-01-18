@@ -23,6 +23,48 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], RolesCreateInput.prototype, "created_at", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "createRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "updateRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "deleteRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "publishRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "unpublishRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesCreateInput.prototype, "role", void 0);
 RolesCreateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("RolesCreateInput", {
         isAbstract: true

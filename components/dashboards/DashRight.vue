@@ -70,7 +70,5 @@
 </script>
 
 <script setup>
-    useHead({
-        title: 'Pages',
-    })
+
 </script>

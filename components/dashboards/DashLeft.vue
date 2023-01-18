@@ -5,7 +5,7 @@
                 <h4>Dashboards</h4>
                 <CreateDashboard />
                 <v-divider></v-divider>
-                <div v-for="dashboards in findManyDashboards" :key="dashboards.id">
+                <div v-for="dashboards in dashboards" :key="dashboards.id">
                    <v-list-item :title="dashboards.name" :value="dashboards.name"></v-list-item> 
                 </div>
             </v-list>
@@ -15,11 +15,11 @@
 
 <script>
 import CreateDashboard from './CreateDashboard.vue'
-import findManyDashboards from '../../graphql/query/findManyDashboards.gql'
+//import findManyDashboards from '../../graphql/query/findManyDashboards.gql'
 
     export default {
         components: { CreateDashboard },
-        data() {
+    /*    data() {
             return {
                 findManyDashboards: [],
             }
@@ -29,6 +29,10 @@ import findManyDashboards from '../../graphql/query/findManyDashboards.gql'
                 prefetch: true,
                 query: findManyDashboards
             }
-        },
+        }, */
     }
+</script>
+
+<script setup>
+const { data: dashboards } = await useAsyncData(() => $fetch("/api/dashboards"));
 </script>

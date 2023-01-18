@@ -13,6 +13,7 @@ export declare class PagesGroupBy {
     meta_title: string | null;
     meta_keywords: string | null;
     meta_description: string | null;
+    created_at: Date | null;
     _count: PagesCountAggregate | null;
     _avg: PagesAvgAggregate | null;
     _sum: PagesSumAggregate | null;

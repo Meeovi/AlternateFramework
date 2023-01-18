@@ -6,8 +6,8 @@
                 <LeftCreateTable />
                 <v-divider></v-divider>
                 <h6>Tables ({})</h6>
-                <div v-for="data in data" :key="data">
-                    <v-list-item  :value="data">{{ data.name }}</v-list-item>
+                <div v-for="data in tables" :key="data">
+                    <v-list-item>{{ data.name }}</v-list-item>
                 </div>
             </v-list>
         </v-navigation-drawer>
@@ -37,19 +37,5 @@ import LeftCreateTable from './LeftCreateTable'
 </script>
 
 <script setup>
-/* 
-const query = gql`
-  query {
-  __schema {
-    queryType {
-      name
-      fields {
-        name
-      }
-    }
-  }
-}
-`
-const { data } = await useAsyncQuery(query)
- */
+const { data: tables } = await useAsyncData(() => $fetch("/api/read"));
 </script>

@@ -14,6 +14,7 @@ var PagesScalarFieldEnum;
     PagesScalarFieldEnum["meta_title"] = "meta_title";
     PagesScalarFieldEnum["meta_keywords"] = "meta_keywords";
     PagesScalarFieldEnum["meta_description"] = "meta_description";
+    PagesScalarFieldEnum["created_at"] = "created_at";
 })(PagesScalarFieldEnum = exports.PagesScalarFieldEnum || (exports.PagesScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(PagesScalarFieldEnum, {
     name: "PagesScalarFieldEnum",

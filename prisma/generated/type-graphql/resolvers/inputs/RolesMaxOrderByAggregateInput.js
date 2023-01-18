@@ -30,6 +30,48 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], RolesMaxOrderByAggregateInput.prototype, "created_at", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "createRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "updateRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "deleteRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "publishRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "unpublishRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesMaxOrderByAggregateInput.prototype, "role", void 0);
 RolesMaxOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("RolesMaxOrderByAggregateInput", {
         isAbstract: true

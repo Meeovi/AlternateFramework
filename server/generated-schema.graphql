@@ -6191,6 +6191,7 @@ input NullableStringFieldUpdateOperationsInput {
 type Pages {
   content: String
   content_title: String
+  created_at: DateTime
   enable_page: Boolean
   id: Int!
   meta_description: String
@@ -6212,6 +6213,7 @@ type PagesCountAggregate {
   _all: Int!
   content: Int!
   content_title: Int!
+  created_at: Int!
   enable_page: Int!
   id: Int!
   meta_description: Int!
@@ -6224,6 +6226,7 @@ type PagesCountAggregate {
 input PagesCountOrderByAggregateInput {
   content: SortOrder
   content_title: SortOrder
+  created_at: SortOrder
   enable_page: SortOrder
   id: SortOrder
   meta_description: SortOrder
@@ -6236,6 +6239,7 @@ input PagesCountOrderByAggregateInput {
 input PagesCreateInput {
   content: String
   content_title: String
+  created_at: DateTime
   enable_page: Boolean
   meta_description: String
   meta_keywords: String
@@ -6247,6 +6251,7 @@ input PagesCreateInput {
 input PagesCreateManyInput {
   content: String
   content_title: String
+  created_at: DateTime
   enable_page: Boolean
   id: Int
   meta_description: String
@@ -6264,6 +6269,7 @@ type PagesGroupBy {
   _sum: PagesSumAggregate
   content: String
   content_title: String
+  created_at: DateTime
   enable_page: Boolean
   id: Int!
   meta_description: String
@@ -6276,6 +6282,7 @@ type PagesGroupBy {
 type PagesMaxAggregate {
   content: String
   content_title: String
+  created_at: DateTime
   enable_page: Boolean
   id: Int
   meta_description: String
@@ -6288,6 +6295,7 @@ type PagesMaxAggregate {
 input PagesMaxOrderByAggregateInput {
   content: SortOrder
   content_title: SortOrder
+  created_at: SortOrder
   enable_page: SortOrder
   id: SortOrder
   meta_description: SortOrder
@@ -6300,6 +6308,7 @@ input PagesMaxOrderByAggregateInput {
 type PagesMinAggregate {
   content: String
   content_title: String
+  created_at: DateTime
   enable_page: Boolean
   id: Int
   meta_description: String
@@ -6312,6 +6321,7 @@ type PagesMinAggregate {
 input PagesMinOrderByAggregateInput {
   content: SortOrder
   content_title: SortOrder
+  created_at: SortOrder
   enable_page: SortOrder
   id: SortOrder
   meta_description: SortOrder
@@ -6345,6 +6355,7 @@ input PagesOrderByWithAggregationInput {
   _sum: PagesSumOrderByAggregateInput
   content: SortOrder
   content_title: SortOrder
+  created_at: SortOrder
   enable_page: SortOrder
   id: SortOrder
   meta_description: SortOrder
@@ -6358,6 +6369,7 @@ input PagesOrderByWithRelationAndSearchRelevanceInput {
   _relevance: PagesOrderByRelevanceInput
   content: SortOrder
   content_title: SortOrder
+  created_at: SortOrder
   enable_page: SortOrder
   id: SortOrder
   meta_description: SortOrder
@@ -6370,6 +6382,7 @@ input PagesOrderByWithRelationAndSearchRelevanceInput {
 enum PagesScalarFieldEnum {
   content
   content_title
+  created_at
   enable_page
   id
   meta_description
@@ -6385,6 +6398,7 @@ input PagesScalarWhereWithAggregatesInput {
   OR: [PagesScalarWhereWithAggregatesInput!]
   content: StringNullableWithAggregatesFilter
   content_title: StringNullableWithAggregatesFilter
+  created_at: DateTimeNullableWithAggregatesFilter
   enable_page: BoolNullableWithAggregatesFilter
   id: IntWithAggregatesFilter
   meta_description: StringNullableWithAggregatesFilter
@@ -6405,6 +6419,7 @@ input PagesSumOrderByAggregateInput {
 input PagesUpdateInput {
   content: NullableStringFieldUpdateOperationsInput
   content_title: NullableStringFieldUpdateOperationsInput
+  created_at: NullableDateTimeFieldUpdateOperationsInput
   enable_page: NullableBoolFieldUpdateOperationsInput
   meta_description: NullableStringFieldUpdateOperationsInput
   meta_keywords: NullableStringFieldUpdateOperationsInput
@@ -6416,6 +6431,7 @@ input PagesUpdateInput {
 input PagesUpdateManyMutationInput {
   content: NullableStringFieldUpdateOperationsInput
   content_title: NullableStringFieldUpdateOperationsInput
+  created_at: NullableDateTimeFieldUpdateOperationsInput
   enable_page: NullableBoolFieldUpdateOperationsInput
   meta_description: NullableStringFieldUpdateOperationsInput
   meta_keywords: NullableStringFieldUpdateOperationsInput
@@ -6430,6 +6446,7 @@ input PagesWhereInput {
   OR: [PagesWhereInput!]
   content: StringNullableFilter
   content_title: StringNullableFilter
+  created_at: DateTimeNullableFilter
   enable_page: BoolNullableFilter
   id: IntFilter
   meta_description: StringNullableFilter
@@ -7498,9 +7515,16 @@ enum QueryMode {
 
 type Roles {
   content: String
+  createRole: String
   created_at: DateTime
+  deleteRole: String
   id: Int!
+  publishRole: String
+  role: String
   role_name: String!
+  type: String
+  unpublishRole: String
+  updateRole: String
 }
 
 type RolesAvgAggregate {
@@ -7514,29 +7538,57 @@ input RolesAvgOrderByAggregateInput {
 type RolesCountAggregate {
   _all: Int!
   content: Int!
+  createRole: Int!
   created_at: Int!
+  deleteRole: Int!
   id: Int!
+  publishRole: Int!
+  role: Int!
   role_name: Int!
+  type: Int!
+  unpublishRole: Int!
+  updateRole: Int!
 }
 
 input RolesCountOrderByAggregateInput {
   content: SortOrder
+  createRole: SortOrder
   created_at: SortOrder
+  deleteRole: SortOrder
   id: SortOrder
+  publishRole: SortOrder
+  role: SortOrder
   role_name: SortOrder
+  type: SortOrder
+  unpublishRole: SortOrder
+  updateRole: SortOrder
 }
 
 input RolesCreateInput {
   content: String
+  createRole: String
   created_at: DateTime
+  deleteRole: String
+  publishRole: String
+  role: String
   role_name: String!
+  type: String
+  unpublishRole: String
+  updateRole: String
 }
 
 input RolesCreateManyInput {
   content: String
+  createRole: String
   created_at: DateTime
+  deleteRole: String
   id: Int
+  publishRole: String
+  role: String
   role_name: String!
+  type: String
+  unpublishRole: String
+  updateRole: String
 }
 
 type RolesGroupBy {
@@ -7546,42 +7598,84 @@ type RolesGroupBy {
   _min: RolesMinAggregate
   _sum: RolesSumAggregate
   content: String
+  createRole: String
   created_at: DateTime
+  deleteRole: String
   id: Int!
+  publishRole: String
+  role: String
   role_name: String!
+  type: String
+  unpublishRole: String
+  updateRole: String
 }
 
 type RolesMaxAggregate {
   content: String
+  createRole: String
   created_at: DateTime
+  deleteRole: String
   id: Int
+  publishRole: String
+  role: String
   role_name: String
+  type: String
+  unpublishRole: String
+  updateRole: String
 }
 
 input RolesMaxOrderByAggregateInput {
   content: SortOrder
+  createRole: SortOrder
   created_at: SortOrder
+  deleteRole: SortOrder
   id: SortOrder
+  publishRole: SortOrder
+  role: SortOrder
   role_name: SortOrder
+  type: SortOrder
+  unpublishRole: SortOrder
+  updateRole: SortOrder
 }
 
 type RolesMinAggregate {
   content: String
+  createRole: String
   created_at: DateTime
+  deleteRole: String
   id: Int
+  publishRole: String
+  role: String
   role_name: String
+  type: String
+  unpublishRole: String
+  updateRole: String
 }
 
 input RolesMinOrderByAggregateInput {
   content: SortOrder
+  createRole: SortOrder
   created_at: SortOrder
+  deleteRole: SortOrder
   id: SortOrder
+  publishRole: SortOrder
+  role: SortOrder
   role_name: SortOrder
+  type: SortOrder
+  unpublishRole: SortOrder
+  updateRole: SortOrder
 }
 
 enum RolesOrderByRelevanceFieldEnum {
   content
+  createRole
+  deleteRole
+  publishRole
+  role
   role_name
+  type
+  unpublishRole
+  updateRole
 }
 
 input RolesOrderByRelevanceInput {
@@ -7597,24 +7691,45 @@ input RolesOrderByWithAggregationInput {
   _min: RolesMinOrderByAggregateInput
   _sum: RolesSumOrderByAggregateInput
   content: SortOrder
+  createRole: SortOrder
   created_at: SortOrder
+  deleteRole: SortOrder
   id: SortOrder
+  publishRole: SortOrder
+  role: SortOrder
   role_name: SortOrder
+  type: SortOrder
+  unpublishRole: SortOrder
+  updateRole: SortOrder
 }
 
 input RolesOrderByWithRelationAndSearchRelevanceInput {
   _relevance: RolesOrderByRelevanceInput
   content: SortOrder
+  createRole: SortOrder
   created_at: SortOrder
+  deleteRole: SortOrder
   id: SortOrder
+  publishRole: SortOrder
+  role: SortOrder
   role_name: SortOrder
+  type: SortOrder
+  unpublishRole: SortOrder
+  updateRole: SortOrder
 }
 
 enum RolesScalarFieldEnum {
   content
+  createRole
   created_at
+  deleteRole
   id
+  publishRole
+  role
   role_name
+  type
+  unpublishRole
+  updateRole
 }
 
 input RolesScalarWhereWithAggregatesInput {
@@ -7622,9 +7737,16 @@ input RolesScalarWhereWithAggregatesInput {
   NOT: [RolesScalarWhereWithAggregatesInput!]
   OR: [RolesScalarWhereWithAggregatesInput!]
   content: StringNullableWithAggregatesFilter
+  createRole: StringNullableWithAggregatesFilter
   created_at: DateTimeNullableWithAggregatesFilter
+  deleteRole: StringNullableWithAggregatesFilter
   id: IntWithAggregatesFilter
+  publishRole: StringNullableWithAggregatesFilter
+  role: StringNullableWithAggregatesFilter
   role_name: StringWithAggregatesFilter
+  type: StringNullableWithAggregatesFilter
+  unpublishRole: StringNullableWithAggregatesFilter
+  updateRole: StringNullableWithAggregatesFilter
 }
 
 type RolesSumAggregate {
@@ -7637,14 +7759,28 @@ input RolesSumOrderByAggregateInput {
 
 input RolesUpdateInput {
   content: NullableStringFieldUpdateOperationsInput
+  createRole: NullableStringFieldUpdateOperationsInput
   created_at: NullableDateTimeFieldUpdateOperationsInput
+  deleteRole: NullableStringFieldUpdateOperationsInput
+  publishRole: NullableStringFieldUpdateOperationsInput
+  role: NullableStringFieldUpdateOperationsInput
   role_name: StringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
+  unpublishRole: NullableStringFieldUpdateOperationsInput
+  updateRole: NullableStringFieldUpdateOperationsInput
 }
 
 input RolesUpdateManyMutationInput {
   content: NullableStringFieldUpdateOperationsInput
+  createRole: NullableStringFieldUpdateOperationsInput
   created_at: NullableDateTimeFieldUpdateOperationsInput
+  deleteRole: NullableStringFieldUpdateOperationsInput
+  publishRole: NullableStringFieldUpdateOperationsInput
+  role: NullableStringFieldUpdateOperationsInput
   role_name: StringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
+  unpublishRole: NullableStringFieldUpdateOperationsInput
+  updateRole: NullableStringFieldUpdateOperationsInput
 }
 
 input RolesWhereInput {
@@ -7652,9 +7788,16 @@ input RolesWhereInput {
   NOT: [RolesWhereInput!]
   OR: [RolesWhereInput!]
   content: StringNullableFilter
+  createRole: StringNullableFilter
   created_at: DateTimeNullableFilter
+  deleteRole: StringNullableFilter
   id: IntFilter
+  publishRole: StringNullableFilter
+  role: StringNullableFilter
   role_name: StringFilter
+  type: StringNullableFilter
+  unpublishRole: StringNullableFilter
+  updateRole: StringNullableFilter
 }
 
 input RolesWhereUniqueInput {

@@ -11,7 +11,7 @@ generator typegraphql {
 
 generator docs {
   provider = "node node_modules/prisma-docs-generator"
-  output = "../prisma/docs"
+  output   = "../prisma/docs"
 }
 
 generator jsonSchema {
@@ -24,8 +24,8 @@ generator jsonSchema {
 }
 
 datasource db {
-  provider   = "postgresql"
-  url        = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model apitoken {
@@ -202,7 +202,7 @@ model mediamanager {
 }
 
 model pages {
-  id               Int      @id @default(autoincrement())
+  id               Int       @id @default(autoincrement())
   enable_page      Boolean?
   title            String
   content_title    String?
@@ -211,6 +211,7 @@ model pages {
   meta_title       String?
   meta_keywords    String?
   meta_description String?
+  created_at       DateTime? @db.Timestamptz(6)
 }
 
 model permissions {
@@ -255,10 +256,17 @@ model providers {
 }
 
 model roles {
-  id         Int       @id @default(autoincrement())
-  role_name  String
-  content    String?
-  created_at DateTime? @default(now())
+  id            Int       @id @default(autoincrement())
+  role_name     String
+  content       String?
+  created_at    DateTime? @default(now())
+  type          String?
+  createRole    String?
+  updateRole    String?
+  deleteRole    String?
+  publishRole   String?
+  unpublishRole String?
+  role          String?
 }
 
 model tags {

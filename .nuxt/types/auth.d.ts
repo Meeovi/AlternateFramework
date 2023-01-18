@@ -1,5 +1,0 @@
-declare module '#auth' {
-  const getServerSession: typeof import('C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@sidebase/nuxt-auth/dist/runtime/server/services').getServerSession
-  const getToken: typeof import('C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@sidebase/nuxt-auth/dist/runtime/server/services').getToken
-  const NuxtAuthHandler: typeof import('C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@sidebase/nuxt-auth/dist/runtime/server/services').NuxtAuthHandler
-}

@@ -7,5 +7,6 @@ export declare enum PagesScalarFieldEnum {
     url_key = "url_key",
     meta_title = "meta_title",
     meta_keywords = "meta_keywords",
-    meta_description = "meta_description"
+    meta_description = "meta_description",
+    created_at = "created_at"
 }

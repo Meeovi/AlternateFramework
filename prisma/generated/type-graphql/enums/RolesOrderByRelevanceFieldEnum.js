@@ -7,6 +7,13 @@ var RolesOrderByRelevanceFieldEnum;
 (function (RolesOrderByRelevanceFieldEnum) {
     RolesOrderByRelevanceFieldEnum["role_name"] = "role_name";
     RolesOrderByRelevanceFieldEnum["content"] = "content";
+    RolesOrderByRelevanceFieldEnum["type"] = "type";
+    RolesOrderByRelevanceFieldEnum["createRole"] = "createRole";
+    RolesOrderByRelevanceFieldEnum["updateRole"] = "updateRole";
+    RolesOrderByRelevanceFieldEnum["deleteRole"] = "deleteRole";
+    RolesOrderByRelevanceFieldEnum["publishRole"] = "publishRole";
+    RolesOrderByRelevanceFieldEnum["unpublishRole"] = "unpublishRole";
+    RolesOrderByRelevanceFieldEnum["role"] = "role";
 })(RolesOrderByRelevanceFieldEnum = exports.RolesOrderByRelevanceFieldEnum || (exports.RolesOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(RolesOrderByRelevanceFieldEnum, {
     name: "RolesOrderByRelevanceFieldEnum",

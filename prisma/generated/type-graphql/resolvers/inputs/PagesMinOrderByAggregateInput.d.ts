@@ -8,4 +8,5 @@ export declare class PagesMinOrderByAggregateInput {
     meta_title?: "asc" | "desc" | undefined;
     meta_keywords?: "asc" | "desc" | undefined;
     meta_description?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
 }

@@ -17,11 +17,12 @@ export default defineNuxtConfig({
     modules: [
       '@nuxtjs/apollo',
       '@formkit/nuxt',
-      '@sidebase/nuxt-auth',
+      //'@sidebase/nuxt-auth',
       'nuxt-monaco-editor',
       '@nuxt/content',
     ],
 
+  /*
     auth: {
       // The module is enabled. Change this to disable the module
       isEnabled: false,
@@ -35,7 +36,8 @@ export default defineNuxtConfig({
       enableSessionRefreshOnWindowFocus: true,
       // Whether to add a global authentication middleware that will protect all pages without exclusion
       enableGlobalAppMiddleware: false
-    },
+    }, 
+    */
 
     apollo: {
       clients: {

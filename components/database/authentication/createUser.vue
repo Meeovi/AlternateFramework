@@ -55,7 +55,7 @@
 <script>
 /* eslint-disable camelcase */
 import  gql from "graphql-tag";
-import findManyUsers from "../../../graphql/query/findManyUsers.gql";
+//import findManyUsers from "../../../graphql/query/findManyUsers.gql";
 
 const ADD_USER = gql`
     mutation ($first_name:String!,$last_name:String!,$username:String!,$email:String!, $password: String!, $phone: String!){

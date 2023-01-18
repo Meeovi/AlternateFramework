@@ -8,5 +8,6 @@ export declare class PagesCountAggregate {
     meta_title: number;
     meta_keywords: number;
     meta_description: number;
+    created_at: number;
     _all: number;
 }

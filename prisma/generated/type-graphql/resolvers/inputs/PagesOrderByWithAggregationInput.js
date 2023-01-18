@@ -66,6 +66,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], PagesOrderByWithAggregationInput.prototype, "meta_description", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], PagesOrderByWithAggregationInput.prototype, "created_at", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => PagesCountOrderByAggregateInput_1.PagesCountOrderByAggregateInput, {
         nullable: true
     }),

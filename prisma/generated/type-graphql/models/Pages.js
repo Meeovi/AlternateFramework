@@ -59,6 +59,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], Pages.prototype, "meta_description", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], Pages.prototype, "created_at", void 0);
 Pages = tslib_1.__decorate([
     TypeGraphQL.ObjectType("Pages", {
         isAbstract: true
