@@ -32,6 +32,48 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "createRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "updateRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "deleteRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "publishRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "unpublishRole", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], RolesOrderByWithRelationAndSearchRelevanceInput.prototype, "role", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => RolesOrderByRelevanceInput_1.RolesOrderByRelevanceInput, {
         nullable: true
     }),

@@ -1,4 +1,5 @@
 import { BoolNullableWithAggregatesFilter } from "../inputs/BoolNullableWithAggregatesFilter";
+import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
 import { IntWithAggregatesFilter } from "../inputs/IntWithAggregatesFilter";
 import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
 import { StringWithAggregatesFilter } from "../inputs/StringWithAggregatesFilter";
@@ -15,4 +16,5 @@ export declare class PagesScalarWhereWithAggregatesInput {
     meta_title?: StringNullableWithAggregatesFilter | undefined;
     meta_keywords?: StringNullableWithAggregatesFilter | undefined;
     meta_description?: StringNullableWithAggregatesFilter | undefined;
+    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
 }

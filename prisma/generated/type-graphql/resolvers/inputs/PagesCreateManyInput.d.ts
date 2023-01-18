@@ -8,4 +8,5 @@ export declare class PagesCreateManyInput {
     meta_title?: string | undefined;
     meta_keywords?: string | undefined;
     meta_description?: string | undefined;
+    created_at?: Date | undefined;
 }

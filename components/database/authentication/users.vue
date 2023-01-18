@@ -31,7 +31,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="users in findManyUsers" :key="users.id">
+            <tbody v-for="users in users" :key="users.id">
                 <tr>
                     <td>{{ users.id }}</td>
                     <td>{{ users.first_name }} {{ users.last_name }}</td>
@@ -49,14 +49,14 @@
 <script>
     import createUser from './createUser'
     //import editUser from '../../../Admin/Database/1.vue'
-    import findManyUsers from '../../../graphql/query/findManyUsers.gql'
+    //import findManyUsers from '../../../graphql/query/findManyUsers.gql'
 
     export default {
         components: {
             createUser,
             //editUser
         },
-        data() {
+     /*   data() {
             return {
                 findManyUsers: [],
             }
@@ -66,6 +66,10 @@
                 prefetch: true,
                 query: findManyUsers
             }
-        },
+        },*/
     }
+</script>
+
+<script setup>
+const { data: users } = await useAsyncData(() => $fetch("/api/users"));
 </script>

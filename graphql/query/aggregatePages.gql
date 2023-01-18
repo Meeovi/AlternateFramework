@@ -8,6 +8,7 @@ query {
       _all
       content
       content_title
+      created_at
       enable_page
       id
       meta_description
@@ -19,6 +20,7 @@ query {
     _max {
       content
       content_title
+      created_at
       enable_page
       id
       meta_description
@@ -30,6 +32,7 @@ query {
     _min {
       content
       content_title
+      created_at
       enable_page
       id
       meta_description

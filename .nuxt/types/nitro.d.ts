@@ -2,6 +2,7 @@
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/users': Awaited<ReturnType<typeof import('../../server/api/users').default>>
     '/api/update': Awaited<ReturnType<typeof import('../../server/api/update').default>>
     '/api/serverSessions': Awaited<ReturnType<typeof import('../../server/api/serverSessions').default>>
     '/api/read': Awaited<ReturnType<typeof import('../../server/api/read').default>>
@@ -15,11 +16,12 @@ declare module 'nitropack' {
     '/api/delete': Awaited<ReturnType<typeof import('../../server/api/delete').default>>
     '/api/create': Awaited<ReturnType<typeof import('../../server/api/create').default>>
     '/api/auth/**': Awaited<ReturnType<typeof import('../../server/api/auth/[...]').default>>
+    '/api/agreements': Awaited<ReturnType<typeof import('../../server/api/agreements').default>>
     '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
     '/api/_content/query/:qid/**:params': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
     '/api/_content/query/:qid': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
     '/api/_content/query': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
-    '/api/_content/cache.json': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>
+    '/api/_content/cache.1674001498390.json': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>
     '/api/_content/navigation/:qid/**:params': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>
     '/api/_content/navigation/:qid': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>
     '/api/_content/navigation': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>

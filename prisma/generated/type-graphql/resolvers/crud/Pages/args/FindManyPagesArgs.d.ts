@@ -7,5 +7,5 @@ export declare class FindManyPagesArgs {
     cursor?: PagesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "enable_page" | "title" | "content_title" | "content" | "url_key" | "meta_title" | "meta_keywords" | "meta_description"> | undefined;
+    distinct?: Array<"id" | "enable_page" | "title" | "content_title" | "content" | "url_key" | "meta_title" | "meta_keywords" | "meta_description" | "created_at"> | undefined;
 }

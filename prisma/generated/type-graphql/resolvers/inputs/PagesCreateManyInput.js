@@ -59,6 +59,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], PagesCreateManyInput.prototype, "meta_description", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], PagesCreateManyInput.prototype, "created_at", void 0);
 PagesCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("PagesCreateManyInput", {
         isAbstract: true

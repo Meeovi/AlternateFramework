@@ -60,6 +60,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], PagesMinOrderByAggregateInput.prototype, "meta_description", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], PagesMinOrderByAggregateInput.prototype, "created_at", void 0);
 PagesMinOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("PagesMinOrderByAggregateInput", {
         isAbstract: true

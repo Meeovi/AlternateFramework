@@ -1,4 +1,5 @@
 import { NullableBoolFieldUpdateOperationsInput } from "../inputs/NullableBoolFieldUpdateOperationsInput";
+import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 export declare class PagesUpdateManyMutationInput {
@@ -10,4 +11,5 @@ export declare class PagesUpdateManyMutationInput {
     meta_title?: NullableStringFieldUpdateOperationsInput | undefined;
     meta_keywords?: NullableStringFieldUpdateOperationsInput | undefined;
     meta_description?: NullableStringFieldUpdateOperationsInput | undefined;
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
 }

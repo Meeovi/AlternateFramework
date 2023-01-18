@@ -4,7 +4,7 @@ import { RolesWhereInput } from "../../../inputs/RolesWhereInput";
 export declare class GroupByRolesArgs {
     where?: RolesWhereInput | undefined;
     orderBy?: RolesOrderByWithAggregationInput[] | undefined;
-    by: Array<"id" | "role_name" | "content" | "created_at">;
+    by: Array<"id" | "role_name" | "content" | "created_at" | "type" | "createRole" | "updateRole" | "deleteRole" | "publishRole" | "unpublishRole" | "role">;
     having?: RolesScalarWhereWithAggregatesInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

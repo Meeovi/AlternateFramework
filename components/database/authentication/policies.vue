@@ -31,7 +31,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="policies in findManyAgreements" :key="policies.id">
+            <tbody v-for="policies in agreements" :key="policies.id">
                 <tr>
                     <td>{{ policies.id }}</td>
                     <td>{{ policies.name }}</td>
@@ -49,14 +49,14 @@
 <script>
     import createPolicy from './createPolicy'
     //import editUser from '../../../Admin/Database/1.vue'
-    import findManyAgreements from '../../../graphql/query/findManyAgreements.gql'
+    //import findManyAgreements from '../../../graphql/query/findManyAgreements.gql'
 
     export default {
         components: {
             createPolicy,
             //editUser
         },
-        data() {
+    /*    data() {
             return {
                 findManyAgreements: [],
             }
@@ -66,6 +66,10 @@
                 prefetch: true,
                 query: findManyAgreements
             }
-        },
+        }, */
     }
+</script>
+
+<script setup>
+const { data: agreements } = await useAsyncData(() => $fetch("/api/agreements"));
 </script>

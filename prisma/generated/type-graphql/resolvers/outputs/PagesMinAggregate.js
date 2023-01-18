@@ -59,6 +59,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], PagesMinAggregate.prototype, "meta_description", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], PagesMinAggregate.prototype, "created_at", void 0);
 PagesMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("PagesMinAggregate", {
         isAbstract: true

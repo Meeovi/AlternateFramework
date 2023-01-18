@@ -115,10 +115,6 @@ declare global {
   const useRoute: typeof import('../../node_modules/nuxt/dist/app')['useRoute']
   const useRouter: typeof import('../../node_modules/nuxt/dist/app')['useRouter']
   const useRuntimeConfig: typeof import('../../node_modules/nuxt/dist/app')['useRuntimeConfig']
-  const useSession: typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSession')['default']
-  const useSessionD: typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSession.d')['default']
-  const useSessionState: typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSessionState')['default']
-  const useSessionStateD: typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSessionState.d')['default']
   const useSlots: typeof import('vue')['useSlots']
   const useState: typeof import('../../node_modules/nuxt/dist/app')['useState']
   const useSubscription: typeof import('@vue/apollo-composable')['useSubscription']
@@ -253,10 +249,6 @@ declare module 'vue' {
     readonly useRoute: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRouter']>
     readonly useRuntimeConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRuntimeConfig']>
-    readonly useSession: UnwrapRef<typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSession')['default']>
-    readonly useSessionD: UnwrapRef<typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSession.d')['default']>
-    readonly useSessionState: UnwrapRef<typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSessionState')['default']>
-    readonly useSessionStateD: UnwrapRef<typeof import('../../node_modules/@sidebase/nuxt-auth/dist/runtime/composables/useSessionState.d')['default']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useState: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useState']>
     readonly useSubscription: UnwrapRef<typeof import('@vue/apollo-composable')['useSubscription']>

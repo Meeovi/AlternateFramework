@@ -45,7 +45,7 @@
 <script>
 /* eslint-disable camelcase */
 import  gql from "graphql-tag";
-import findManyAgreements from "../../../graphql/query/findManyAgreements.gql";
+//import findManyAgreements from "../../../graphql/query/findManyAgreements.gql";
 
 const ADD_POLICY = gql`
     mutation ($type:String!,$name:String!,$author: String!){

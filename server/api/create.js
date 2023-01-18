@@ -7,5 +7,4 @@ export default defineEventHandler(async (event) => {
 
   return prisma.$executeRaw`CREATE TABLE test;`
 
-
 })

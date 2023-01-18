@@ -8,4 +8,5 @@ export declare class PagesMaxAggregate {
     meta_title: string | null;
     meta_keywords: string | null;
     meta_description: string | null;
+    created_at: Date | null;
 }

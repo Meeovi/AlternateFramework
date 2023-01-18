@@ -1,4 +1,5 @@
 import { BoolNullableFilter } from "../inputs/BoolNullableFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { StringFilter } from "../inputs/StringFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
@@ -15,4 +16,5 @@ export declare class PagesWhereInput {
     meta_title?: StringNullableFilter | undefined;
     meta_keywords?: StringNullableFilter | undefined;
     meta_description?: StringNullableFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
 }

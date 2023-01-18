@@ -7,5 +7,5 @@ export declare class FindManyRolesArgs {
     cursor?: RolesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "role_name" | "content" | "created_at"> | undefined;
+    distinct?: Array<"id" | "role_name" | "content" | "created_at" | "type" | "createRole" | "updateRole" | "deleteRole" | "publishRole" | "unpublishRole" | "role"> | undefined;
 }

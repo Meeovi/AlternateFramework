@@ -13,6 +13,7 @@ export declare class PagesOrderByWithAggregationInput {
     meta_title?: "asc" | "desc" | undefined;
     meta_keywords?: "asc" | "desc" | undefined;
     meta_description?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
     _count?: PagesCountOrderByAggregateInput | undefined;
     _avg?: PagesAvgOrderByAggregateInput | undefined;
     _max?: PagesMaxOrderByAggregateInput | undefined;

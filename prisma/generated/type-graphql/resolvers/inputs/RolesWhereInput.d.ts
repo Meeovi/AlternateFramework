@@ -10,4 +10,11 @@ export declare class RolesWhereInput {
     role_name?: StringFilter | undefined;
     content?: StringNullableFilter | undefined;
     created_at?: DateTimeNullableFilter | undefined;
+    type?: StringNullableFilter | undefined;
+    createRole?: StringNullableFilter | undefined;
+    updateRole?: StringNullableFilter | undefined;
+    deleteRole?: StringNullableFilter | undefined;
+    publishRole?: StringNullableFilter | undefined;
+    unpublishRole?: StringNullableFilter | undefined;
+    role?: StringNullableFilter | undefined;
 }

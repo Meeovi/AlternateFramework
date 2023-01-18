@@ -48,14 +48,14 @@
 
 <script>
     import createPage from './createPage'
-    import findManyPages from '../../../graphql/query/findManyPages.gql'
+    //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
             createPage,
             //editUser
         },
-        data() {
+    /*    data() {
             return {
                 findManyPages: [],
             }
@@ -65,7 +65,7 @@
                 prefetch: true,
                 query: findManyPages
             }
-        },
+        }, */
     }
 </script>
 

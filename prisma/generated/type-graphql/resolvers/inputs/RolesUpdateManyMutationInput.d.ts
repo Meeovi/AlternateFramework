@@ -5,4 +5,11 @@ export declare class RolesUpdateManyMutationInput {
     role_name?: StringFieldUpdateOperationsInput | undefined;
     content?: NullableStringFieldUpdateOperationsInput | undefined;
     created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    type?: NullableStringFieldUpdateOperationsInput | undefined;
+    createRole?: NullableStringFieldUpdateOperationsInput | undefined;
+    updateRole?: NullableStringFieldUpdateOperationsInput | undefined;
+    deleteRole?: NullableStringFieldUpdateOperationsInput | undefined;
+    publishRole?: NullableStringFieldUpdateOperationsInput | undefined;
+    unpublishRole?: NullableStringFieldUpdateOperationsInput | undefined;
+    role?: NullableStringFieldUpdateOperationsInput | undefined;
 }

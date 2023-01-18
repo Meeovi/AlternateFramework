@@ -3,7 +3,6 @@ declare module '@nuxt/schema' {
   interface NuxtConfig {
     ["apollo"]?: typeof import("@nuxtjs/apollo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["formkit"]?: typeof import("@formkit/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["auth"]?: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["monacoEditor"]?: typeof import("nuxt-monaco-editor").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["naiveUI"]?: typeof import("@huntersofbook/naive-ui-nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
@@ -20,24 +19,6 @@ declare module '@nuxt/schema' {
       __MONACO_EDITOR_LOCALE__: string,
 
       __MONACO_EDITOR_LOCATION__: string,
-   },
-
-   auth: {
-      isEnabled: boolean,
-
-      origin: string,
-
-      basePath: string,
-
-      trustHost: boolean,
-
-      enableSessionRefreshPeriodically: boolean,
-
-      enableSessionRefreshOnWindowFocus: boolean,
-
-      enableGlobalAppMiddleware: boolean,
-
-      isOriginSet: boolean,
    },
 
    content: {
@@ -161,28 +142,12 @@ declare module '@nuxt/schema' {
    },
   }
   interface PublicRuntimeConfig {
-   auth: {
-      isEnabled: boolean,
-
-      origin: string,
-
-      basePath: string,
-
-      trustHost: boolean,
-
-      enableSessionRefreshPeriodically: boolean,
-
-      enableSessionRefreshOnWindowFocus: boolean,
-
-      enableGlobalAppMiddleware: boolean,
-   },
-
    content: {
       locales: Array<any>,
 
       defaultLocale: any,
 
-      integrity: any,
+      integrity: number,
 
       experimental: {
          stripQueryParameters: boolean,
