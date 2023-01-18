@@ -11,7 +11,6 @@
 /// <reference path="types/vue-shim.d.ts" />
 /// <reference path="types/schema.d.ts" />
 /// <reference path="types/app.config.d.ts" />
-/// <reference path="types/auth.d.ts" />
 /// <reference path="types/content.d.ts" />
 /// <reference path="types/naive-ui.d.ts" />
 /// <reference types="vue-router" />

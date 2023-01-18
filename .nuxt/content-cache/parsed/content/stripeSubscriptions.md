@@ -1,6 +1,1 @@
----
-title: 'Stripe Subscriptions'
-description: 'Starter template for the Nuxt.js Stripe Subscription Starter'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/stripesubscriptions","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Stripe Subscriptions","description":"Starter template for the Nuxt.js Stripe Subscription Starter","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:stripeSubscriptions.md","_source":"content","_file":"stripeSubscriptions.md","_extension":"md"},"hash":"erDQPdVP1T"}

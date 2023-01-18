@@ -1,6 +1,6 @@
 <template>
     <div>
-            <v-card class="metricsVcard">
+            <v-card class="contentright">
                 <v-toolbar color="primary">
                     <v-toolbar-title>Monitoring</v-toolbar-title>
                 </v-toolbar>

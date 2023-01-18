@@ -1,6 +1,1 @@
----
-title: 'Slack Clone'
-description: 'Build a basic slack clone with Row Level Security.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/slackclone","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Slack Clone","description":"Build a basic slack clone with Row Level Security.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:slackClone.md","_source":"content","_file":"slackClone.md","_extension":"md"},"hash":"2ozRd9JD85"}

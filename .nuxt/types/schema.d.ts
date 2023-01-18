@@ -22,24 +22,6 @@ declare module '@nuxt/schema' {
       __MONACO_EDITOR_LOCATION__: string,
    },
 
-   auth: {
-      isEnabled: boolean,
-
-      origin: string,
-
-      basePath: string,
-
-      trustHost: boolean,
-
-      enableSessionRefreshPeriodically: boolean,
-
-      enableSessionRefreshOnWindowFocus: boolean,
-
-      enableGlobalAppMiddleware: boolean,
-
-      isOriginSet: boolean,
-   },
-
    content: {
       cacheVersion: number,
 
@@ -161,22 +143,6 @@ declare module '@nuxt/schema' {
    },
   }
   interface PublicRuntimeConfig {
-   auth: {
-      isEnabled: boolean,
-
-      origin: string,
-
-      basePath: string,
-
-      trustHost: boolean,
-
-      enableSessionRefreshPeriodically: boolean,
-
-      enableSessionRefreshOnWindowFocus: boolean,
-
-      enableGlobalAppMiddleware: boolean,
-   },
-
    content: {
       locales: Array<any>,
 

@@ -37,6 +37,7 @@ import LeftCreateTable from './LeftCreateTable'
 </script>
 
 <script setup>
+/* 
 const query = gql`
   query {
   __schema {
@@ -50,4 +51,5 @@ const query = gql`
 }
 `
 const { data } = await useAsyncQuery(query)
+ */
 </script>

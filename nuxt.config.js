@@ -24,7 +24,7 @@ export default defineNuxtConfig({
 
     auth: {
       // The module is enabled. Change this to disable the module
-      isEnabled: true,
+      isEnabled: false,
       // The origin is set to the development origin. Change this when deploying to production
       origin: 'http://localhost:3000',
       // The base path to the authentication endpoints. Change this if you want to add your auth-endpoints at a non-default location

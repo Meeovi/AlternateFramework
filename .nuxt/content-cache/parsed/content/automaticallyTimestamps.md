@@ -1,6 +1,1 @@
----
-title: 'Automatically update timestamps'
-description: 'Update a column timestamp on every update.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/automaticallytimestamps","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Automatically update timestamps","description":"Update a column timestamp on every update.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:automaticallyTimestamps.md","_source":"content","_file":"automaticallyTimestamps.md","_extension":"md"},"hash":"3IxtPqPfvA"}

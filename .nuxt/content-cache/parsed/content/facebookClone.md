@@ -1,6 +1,1 @@
----
-title: 'Facebook Clone'
-description: 'Build a simple facebook clone with Row Level Security.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/facebookclone","_dir":"","_draft":false,"_partial":false,"_locale":"en","_empty":false,"title":"Facebook Clone","description":"Build a simple facebook clone with Row Level Security.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:facebookClone.md","_source":"content","_file":"facebookClone.md","_extension":"md"},"hash":"D7A5peIgiH"}
