@@ -41,7 +41,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import apitokens from "../../graphql/query/apitokens.gql";
+  import apitokens from "../../../graphql/query/apitokens.gql";
 
   const ADD_LOCALES = gql`
       mutation ($name: String!, $description: String!, $token_type: String!, $token: String!) {

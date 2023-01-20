@@ -43,7 +43,7 @@
 </template>
 
 <script>
-    import createToken from './InsertAddTokens'
+    import createToken from './addSetting/add-token.vue'
     import apitokens from '../../graphql/query/apitokens.gql'
 
     export default {

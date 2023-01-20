@@ -47,7 +47,7 @@
 </template>
 
 <script>
-    import createPromotion from './addInventory/add-attribute.vue'
+    import createPromotion from '../inventory/addInventory/add-attribute.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {

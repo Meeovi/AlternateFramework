@@ -46,7 +46,7 @@
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
-                            Promotions
+                            Discounts
                         </v-tab>
                         <v-tab value="option-8">
                             <v-icon start>
@@ -65,6 +65,30 @@
                                 mdi-access-point
                             </v-icon>
                             Warehouses
+                        </v-tab>
+                        <v-tab value="option-11">
+                            <v-icon start>
+                                mdi-access-point
+                            </v-icon>
+                            Channels
+                        </v-tab>
+                        <v-tab value="option-12">
+                            <v-icon start>
+                                mdi-access-point
+                            </v-icon>
+                            Quotes
+                        </v-tab>
+                        <v-tab value="option-13">
+                            <v-icon start>
+                                mdi-access-point
+                            </v-icon>
+                            Payments
+                        </v-tab>
+                        <v-tab value="option-14">
+                            <v-icon start>
+                                mdi-access-point
+                            </v-icon>
+                            Wishlists
                         </v-tab>
                     </v-tabs>
                     <v-window v-model="tab" class="metricsWindowRight">
@@ -100,7 +124,7 @@
                         </v-window-item>
                         <v-window-item value="option-7">
                             <v-card flat>
-                                <promotions />
+                                <discounts />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-8">
@@ -118,6 +142,26 @@
                                 <warehouses />
                             </v-card>
                         </v-window-item>
+                        <v-window-item value="option-11">
+                            <v-card flat>
+                                <channels />
+                            </v-card>
+                        </v-window-item>
+                        <v-window-item value="option-12">
+                            <v-card flat>
+                                <quotes />
+                            </v-card>
+                        </v-window-item>
+                        <v-window-item value="option-13">
+                            <v-card flat>
+                                <payments />
+                            </v-card>
+                        </v-window-item>
+                        <v-window-item value="option-14">
+                            <v-card flat>
+                                <wishlists />
+                            </v-card>
+                        </v-window-item>
                     </v-window>
                 </div>
             </v-card>
@@ -131,10 +175,14 @@
     import attributes from '~/components/content/inventory/attributes'
     import productTypes from '~/components/content/inventory/product-types'
     import collections from '~/components/content/inventory/collections'
-    import promotions from '~/components/content/inventory/promotions'
+    import discounts from '~/components/content/inventory/discounts'
     import transactions from '~/components/content/inventory/transactions'
     import vendors from '~/components/content/inventory/vendors'
     import warehouses from '~/components/content/inventory/warehouses'
+    import channels from '~/components/content/inventory/channels'
+    import quotes from '~/components/content/inventory/quotes'
+    import payments from '~/components/content/inventory/payments'
+    import wishlists from '~/components/content/inventory/wishlists'
 
     export default {
         components: {
@@ -144,10 +192,14 @@
             attributes,
             productTypes,
             collections,
-            promotions,
+            discounts,
             transactions,
             vendors,
-            warehouses
+            warehouses,
+            channels,
+            quotes,
+            payments,
+            wishlists
         },
         data: () => ({
             tab: 'option-1',

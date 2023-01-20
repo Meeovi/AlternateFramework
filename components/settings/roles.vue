@@ -63,7 +63,7 @@
 </template>
 
 <script>
-    import createRole from './InsertAddRoles'
+    import createRole from './addSetting/add-role.vue'
     import findManyRoles from '../../graphql/query/findManyRoles.gql'
 
     export default {

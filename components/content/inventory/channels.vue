@@ -2,10 +2,10 @@
     <div>
         <v-toolbar>
             <v-col cols="9">
-                <v-toolbar-title>Zones</v-toolbar-title>
+                <v-toolbar-title>Channels</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createZone />
+                <createChannel />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-    import createZone from './addInventory/add-zone.vue'
+    import createChannel from './addInventory/add-channel.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createZone,
+            createChannel,
             //editUser
         },
     /*    data() {
@@ -71,7 +71,7 @@
 
 <script setup>
     useHead({
-        title: 'Zones',
+        title: 'Channels',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));

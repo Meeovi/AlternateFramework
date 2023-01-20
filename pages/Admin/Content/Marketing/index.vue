@@ -32,6 +32,12 @@
                         </v-icon>
                         Templates
                     </v-tab>
+                    <v-tab value="option-5">
+                        <v-icon start>
+                            mdi-access-point
+                        </v-icon>
+                        Promotions
+                    </v-tab>
                 </v-tabs>
                 <v-card-text>
                     <v-window v-model="tab" class="databaseSections">
@@ -55,6 +61,11 @@
                                 <templates />
                             </v-card>
                         </v-window-item>
+                        <v-window-item value="option-5">
+                            <v-card flat>
+                                <promotions />
+                            </v-card>
+                        </v-window-item>
                     </v-window>
                 </v-card-text>
             </div>
@@ -67,13 +78,15 @@
     import emails from '~/components/content/marketing/emails.vue'
     import newsletters from '~/components/content/marketing/newsletters.vue'
     import templates from '~/components/content/marketing/templates.vue'
+    import promotions from '~/components/content/marketing/promotions.vue'
 
     export default {
         components: {
             overview,
             emails,
             newsletters,
-            templates
+            templates,
+            promotions
         },
         data: () => ({
             tab: 'option-1',

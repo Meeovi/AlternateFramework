@@ -70,7 +70,7 @@
 
 <script>
 import gql from "graphql-tag";
-  import findManyRoles from "../../graphql/query/findManyRoles.gql";
+  import findManyRoles from "../../../graphql/query/findManyRoles.gql";
 
   const ADD_ROLES = gql `
     mutation ($role_name:String!,$content:String!, $type: String!, $createRole: String!, $updateRole: String!, $deleteRole: String!, $publishRole: String!, $unpublishRole: String!, $role: String!){

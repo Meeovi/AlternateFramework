@@ -1,13 +1,13 @@
 <template>
     <div>
-        <v-toolbar>
-            <v-col cols="9">
-                <v-toolbar-title>Cities</v-toolbar-title>
+        <v-row>
+            <v-col cols="10">
+                <v-toolbar-title>Countries</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createCity />
+                <createCountry />
             </v-col>
-        </v-toolbar>
+        </v-row>
         <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-    import createCity from './addInventory/add-city.vue'
+    import createCountry from './addSetting/add-country.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createCity,
+            createCountry,
             //editUser
         },
     /*    data() {
@@ -71,7 +71,7 @@
 
 <script setup>
     useHead({
-        title: 'Cities',
+        title: 'Countries',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));

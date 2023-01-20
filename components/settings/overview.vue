@@ -48,3 +48,9 @@
         
     }
 </script>
+
+<script setup>
+    useHead({
+        title: 'Settings',
+    });
+</script>

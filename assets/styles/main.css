@@ -154,3 +154,14 @@ body {
     width: 98%;
     height: 95vh;
 }
+
+/************************ Settings CSS ***************/
+
+.settingsLeft h5 {
+    padding: 10px;
+}
+
+.settingsRight {
+    width: 80vw !important;
+    height: 100vh !important;
+}

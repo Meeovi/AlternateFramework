@@ -43,7 +43,7 @@
 </template>
 
 <script>
-    import createInternationalization from './InsertAddInternationalization'
+    import createInternationalization from './addSetting/add-internalionalization.vue'
     import apitokens from '../../graphql/query/apitokens.gql'
 
     export default {

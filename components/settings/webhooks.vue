@@ -58,7 +58,7 @@
 </template>
 
 <script>
-    import createWebhook from './InsertAddWebhooks'
+    import createWebhook from './addSetting/add-webhook.vue'
     import findManyWebhooks from '../../graphql/query/findManyWebhooks.gql'
 
     export default {

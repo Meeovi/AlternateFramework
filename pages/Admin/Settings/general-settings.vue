@@ -1,12 +1,12 @@
 <template>
     <div>
-            <v-card class="metricsVcard">
+            <v-card class="settingsCard">
                 <v-toolbar color="primary">
                     <v-toolbar-title>Settings</v-toolbar-title>
                 </v-toolbar>
                 <div class="d-flex flex-row">
-                    <v-tabs v-model="tab" direction="vertical" color="primary">
-                        <h4>GLOBAL SETTINGS</h4>
+                    <v-tabs class="settingsLeft" v-model="tab" direction="vertical" color="primary">
+                        <h5>GLOBAL SETTINGS</h5>
                         <v-tab value="option-1">
                             <v-icon start>
                                 mdi-account
@@ -29,43 +29,49 @@
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
-                            Media Library
+                            Localization
                         </v-tab>
                         <v-tab value="option-5">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
+                            Media Library
+                        </v-tab>
+                        <v-tab value="option-6">
+                            <v-icon start>
+                                mdi-access-point
+                            </v-icon>
                             Webhooks
                         </v-tab>
-                        <h4>ADMINISTRATION PANEL</h4>
-                        <v-tab value="option-6">
+                        <h5>ADMINISTRATION PANEL</h5>
+                        <v-tab value="option-7">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Roles
                         </v-tab>
-                        <h4>EMAIL</h4>
-                        <v-tab value="option-7">
+                        <h5>EMAIL</h5>
+                        <v-tab value="option-8">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Configuration
                         </v-tab>
-                        <h4>ADVANCE SETTINGS</h4>
-                        <v-tab value="option-8">
+                        <h5>ADVANCE SETTINGS</h5>
+                        <v-tab value="option-9">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Storage
                         </v-tab>
-                        <v-tab value="option-9">
+                        <v-tab value="option-10">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Auth
                         </v-tab>
                     </v-tabs>
-                    <v-window v-model="tab" class="metricsWindowRight">
+                    <v-window v-model="tab" class="settingsRight">
                         <v-window-item value="option-1">
                             <v-card flat>
                                 <overview />
@@ -83,30 +89,35 @@
                         </v-window-item>
                         <v-window-item value="option-4">
                             <v-card flat>
-                                <medialibrary />
+                                <localization />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-5">
                             <v-card flat>
-                                <webhooks />
+                                <medialibrary />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-6">
                             <v-card flat>
-                                <roles />
+                                <webhooks />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-7">
                             <v-card flat>
-                                <emailConfiguration />
+                                <roles />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-8">
                             <v-card flat>
-                                <storage />
+                                <emailConfiguration />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-9">
+                            <v-card flat>
+                                <storage />
+                            </v-card>
+                        </v-window-item>
+                        <v-window-item value="option-10">
                             <v-card flat>
                                 <auth />
                             </v-card>
@@ -122,6 +133,7 @@
     import apitokens from '~/components/settings/apitokens'
     import emailConfiguration from '~/components/settings/emailConfiguration'
     import internalionalization from '~/components/settings/internalionalization'
+    import localization from '~/components/settings/localization'
     import webhooks from '~/components/settings/webhooks'
     import medialibrary from '~/components/settings/medialibrary'
     import roles from '~/components/settings/roles'
@@ -134,6 +146,7 @@
             apitokens,
             emailConfiguration,
             internalionalization,
+            localization,
             webhooks,
             roles,
             medialibrary,

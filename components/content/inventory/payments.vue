@@ -2,10 +2,10 @@
     <div>
         <v-toolbar>
             <v-col cols="9">
-                <v-toolbar-title>Taxes</v-toolbar-title>
+                <v-toolbar-title>Payments</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createTax />
+                <createPayment />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-    import createTax from './addInventory/add-tax.vue'
+    import createPayment from './addInventory/add-payment.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createTax,
+            createPayment,
             //editUser
         },
     /*    data() {
@@ -71,7 +71,7 @@
 
 <script setup>
     useHead({
-        title: 'Taxes',
+        title: 'Payments',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
