@@ -75,18 +75,18 @@
 </template>
 
 <script>
-import apacheThrift from '../dashboardChoices/apacheThrift.vue'
-import graphql from '../dashboardChoices/graphql.vue'
-import grpcProtobuf from '../dashboardChoices/grpcProtobuf.vue'
-import jsonSchema from '../dashboardChoices/jsonSchema.vue'
-import mongodb from '../dashboardChoices/mongodb.vue'
-import mysql from '../dashboardChoices/mysql.vue'
-import neo4j from '../dashboardChoices/neo4j.vue'
-import odata from '../dashboardChoices/odata.vue'
-import openapiSwagger from '../dashboardChoices/openapiSwagger.vue'
-import postgresql from '../dashboardChoices/postgresql.vue'
-import soap from '../dashboardChoices/soap.vue'
-import sqlite from '../dashboardChoices/sqlite.vue'
+import apacheThrift from './dashboardChoices/apacheThrift.vue'
+import graphql from './dashboardChoices/graphql.vue'
+import grpcProtobuf from './dashboardChoices/grpcProtobuf.vue'
+import jsonSchema from './dashboardChoices/jsonSchema.vue'
+import mongodb from './dashboardChoices/mongodb.vue'
+import mysql from './dashboardChoices/mysql.vue'
+import neo4j from './dashboardChoices/neo4j.vue'
+import odata from './dashboardChoices/odata.vue'
+import openapiSwagger from './dashboardChoices/openapiSwagger.vue'
+import postgresql from './dashboardChoices/postgresql.vue'
+import soap from './dashboardChoices/soap.vue'
+import sqlite from './dashboardChoices/sqlite.vue'
 
     export default {
         components: { apacheThrift, graphql, grpcProtobuf, jsonSchema, mongodb, mysql, neo4j, odata, openapiSwagger, postgresql, soap, sqlite },

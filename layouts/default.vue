@@ -61,18 +61,23 @@
 
             <v-list density="compact" nav>
               <v-list-item prepend-icon="fas fa-home" title="Home" value="home" href="/"></v-list-item>
-              <v-list-item prepend-icon="fas fa-feather-pointed" title="Content Manager" value="content manager"
-                href="/Admin/Content/manager"></v-list-item>
+                <v-list-group prepend-icon="fas fa-feather-pointed" value="content manager">
+                  <template v-slot:activator="{ props }">
+                    <v-list-item v-bind="props" title="Content Manager"></v-list-item>
+                  </template>
+                  <v-list-item prepend-icon="fas fa-feather" title="Blog" value="Blog" href="/Admin/Content/Blog"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-th" title="Categories" value="Categories" href="/Admin/Content/Categories"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-tag" title="Tags" value="Tags" href="/Admin/Content/Tags"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-shopping-cart" title="Inventory" value="Inventory" href="/Admin/Content/Inventory"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Content/Media/"></v-list-item>
+                </v-list-group>
               <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
                 href="/Admin/Dashboard/explorer"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-column" title="Monitoring" value="monitoring"
                 href="/Admin/Monitoring/"></v-list-item>
               <v-list-item prepend-icon="fas fa-database" title="Database" value="database"
                 href="/Admin/Database/editor"></v-list-item>
-              <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/PageManager/">
-              </v-list-item>
-              <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Media/">
-              </v-list-item>
               <v-list-item prepend-icon="fas fa-cubes" title="Integrations" value="integrations"
                 href="/Admin/Integrations/"></v-list-item>
               <v-list-item prepend-icon="fas fa-gear" title="Settings" value="settings"

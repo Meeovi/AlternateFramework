@@ -75,11 +75,11 @@
 </template>
 
 <script>
-  import overview from '~/components/media/overview'
-  import files from '~/components/media/files'
-  import albums from '~/components/media/albums'
-  import workflow from '~/components/media/workflow'
-  import guidelines from '~/components/media/guidelines'
+  import overview from '~/components/content/media/overview'
+  import files from '~/components/content/media/files'
+  import albums from '~/components/content/media/albums'
+  import workflow from '~/components/content/media/workflow'
+  import guidelines from '~/components/content/media/guidelines'
 
   export default {
     components: {

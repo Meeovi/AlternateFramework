@@ -1,81 +1,64 @@
+import { todoFixture } from "//unpkg.com/can-demo-models@^6/index.mjs";
+todoFixture(3);
 
-class tableCreator {
-    static get view() {
-        return `
-            <form action="" method="post" @v-on:submit.prevent="addDatabaseTable()">
-            <v-toolbar dark color="primary">
-                <v-btn icon dark @click="dialog = false">
-                    <v-icon icon="fas fa-circle-xmark"></v-icon>
-                </v-btn>
-                <v-card-title>
-                    <span class="text-h6">Create new content</span>
-                </v-card-title>
-            </v-toolbar>
-            <v-card-text>
-                <v-container>
-                    <v-row>
-                        <v-col cols="6">
-                            <v-text-field v-model="tableName" label="Name*" id="tableName" required>
-                            </v-text-field>
-                        </v-col>
-                        <v-col cols="6">
-                            <v-text-field v-model="tableDescription" label="Description" id="tableDescription"
-                                hint="Optional"></v-text-field>
-                        </v-col>
-                        <v-divider></v-divider>
-                        <v-col cols="6">
-                            <div class="text-subtitle-1 text-medium-emphasis">Broadcast changes to eligible
-                                users?</div>
-                            <v-autocomplete v-model="tableBroadcast" id="tableBroadcast"
-                                :items="['Broadcast', 'Disable']" label="Notifications"></v-autocomplete>
-                        </v-col>
-                        <v-col cols="6">
-                            <div class="text-subtitle-1 text-medium-emphasis">Who can see this content?</div>
-                            <v-autocomplete v-model="tableVisible" id="tableVisible"
-                                :items="['Public', 'Private']" label="Visibility"></v-autocomplete>
-                        </v-col>
-                        <v-divider></v-divider>
-                        <br>
-                        <div class="form-wrapper">
-                            <div type="group" name="taskGroup" :repeatable="true" add-label="+ Add Task"
-                                validation="required">
-                                <div class="task" style="padding-bottom:10px;">
-                                    <v-row>
-                                        <v-col cols="4">
-                                            <v-text-field v-model="tableColumnName" id="columnName"
-                                                label="Column Name" hint="Column Name"></v-text-field>
-                                        </v-col>
-                                        <v-col cols="4">
-                                            <v-select v-model="tableColumnType" id="columnType"
-                                                :items="['Integer', 'BigInteger', 'Text', 'Boolean', 'SmallInteger', 'Datetime', 'Float', 'Json', 'Bytes', 'Decimal']"
-                                                label="Type*" required></v-select>
-                                        </v-col>
-                                        <v-col cols="4">
-                                            <v-autocomplete v-model="tableColumnDefault" id="columnDefaultName"
-                                                :items="['Set as NULL', 'Set as empty string']"
-                                                label="Default Value"></v-autocomplete>
-                                        </v-col>
-                                        <v-col>
-                                            <v-btn variant="text" prepend-icon="fas fa-plus">Add Field</v-btn>
-                                        </v-col>
-                                    </v-row>
-                                </div>
-                            </div>
-                        </div>
-                    </v-row>
-                </v-container>
-                <small>*indicates required field</small>
-            </v-card-text>
-            <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                    Close
-                </v-btn>
-                <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                    Create
-                </v-btn>
-            </v-card-actions>
-        </form>
-        `;
+import {
+  StacheElement,
+  realtimeRestModel,
+  type
+} from "//unpkg.com/can@pre/core.mjs";
+
+const Todo = realtimeRestModel("/api/todos/{id}").Map;
+
+class TodosApp extends StacheElement {
+  static view = `
+    <h1>Today’s to-dos</h1>
+    {{# if(this.todosPromise.isPending) }}
+      Loading todos…
+    {{/ if }}
+    {{# if(this.todosPromise.isRejected) }}
+      <p>Couldn’t load todos; {{ this.todosPromise.reason }}</p>
+    {{/ if }}
+    {{# if(this.todosPromise.isResolved) }}
+      <input placeholder="What needs to be done?" value:bind="this.newName" />
+      <button on:click="this.save()" type="button">Add</button>
+      <ul>
+        {{# for(todo of this.todosPromise.value) }}
+          <li class="{{# if(todo.complete) }}done{{/ if }}">
+            <label>
+              <input checked:bind="todo.complete" on:change="todo.save()" type="checkbox" />
+            </label>
+            {{# eq(todo, this.selected) }}
+              <input focused:from="true" on:blur="this.saveTodo(todo)" value:bind="todo.name" />
+            {{ else }}
+              <span on:click="this.selected = todo">
+                {{ todo.name }}
+              </span>
+            {{/ eq }}
+            <button on:click="todo.destroy()" type="button"></button>
+          </li>
+        {{/ for }}
+      </ul>
+    {{/ if }}
+  `;
+
+  static props = {
+    newName: String,
+    selected: type.maybe(Todo),
+    get todosPromise() {
+      return Todo.getList({ sort: "name" });
     }
+  };
+
+  save() {
+    const todo = new Todo({ name: this.newName });
+    todo.save();
+    this.newName = "";
+  }
+
+  saveTodo(todo) {
+    todo.save();
+    this.selected = null;
+  }
 }
+
+customElements.define("todos-app", TodosApp);

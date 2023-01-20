@@ -1,11 +1,11 @@
 <template>
     <div>
-        <v-toolbar color="info">
+        <v-toolbar>
             <v-col cols="9">
-                <v-toolbar-title>Pages</v-toolbar-title>
+                <v-toolbar-title>Product Collections</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createPage />
+                <createCollection />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-    import createPage from './createPage'
+    import createCollection from './addInventory/add-collection.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createPage,
+            createCollection,
             //editUser
         },
     /*    data() {
@@ -71,7 +71,7 @@
 
 <script setup>
     useHead({
-        title: 'Pages',
+        title: 'Product Collections',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
