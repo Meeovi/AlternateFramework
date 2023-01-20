@@ -69,9 +69,11 @@
                   <v-list-item prepend-icon="fas fa-th" title="Categories" value="Categories" href="/Admin/Content/Categories"></v-list-item>
                   <v-list-item prepend-icon="fas fa-tag" title="Tags" value="Tags" href="/Admin/Content/Tags"></v-list-item>
                   <v-list-item prepend-icon="fas fa-shopping-cart" title="Inventory" value="Inventory" href="/Admin/Content/Inventory"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-sparkles" title="Marketing" value="Marketing" href="/Admin/Content/Marketing"></v-list-item>
                   <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
                   <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Content/Media/"></v-list-item>
                 </v-list-group>
+              <v-list-item prepend-icon="fas fa-user" title="Customers" value="Customers" href="/Admin/Customers"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
                 href="/Admin/Dashboard/explorer"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-column" title="Monitoring" value="monitoring"

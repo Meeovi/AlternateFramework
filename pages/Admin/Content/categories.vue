@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-toolbar color="info">
+        <v-toolbar style="background-color: yellow; color: black;">
             <v-col cols="9">
                 <v-toolbar-title>Categories</v-toolbar-title>
             </v-col>
