@@ -40,7 +40,7 @@
                     </v-tab>
                 </v-tabs>
                 <v-card-text>
-                    <v-window v-model="tab" class="databaseSections">
+                    <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
                             <v-card flat>
                                 <overview />
