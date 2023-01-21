@@ -35,36 +35,42 @@
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
-                            Media Library
+                            Shipping
                         </v-tab>
                         <v-tab value="option-6">
+                            <v-icon start>
+                                mdi-access-point
+                            </v-icon>
+                            Media Library
+                        </v-tab>
+                        <v-tab value="option-7">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Webhooks
                         </v-tab>
                         <h5>ADMINISTRATION PANEL</h5>
-                        <v-tab value="option-7">
+                        <v-tab value="option-8">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Roles
                         </v-tab>
                         <h5>EMAIL</h5>
-                        <v-tab value="option-8">
+                        <v-tab value="option-9">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Configuration
                         </v-tab>
                         <h5>ADVANCE SETTINGS</h5>
-                        <v-tab value="option-9">
+                        <v-tab value="option-10">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
                             Storage
                         </v-tab>
-                        <v-tab value="option-10">
+                        <v-tab value="option-11">
                             <v-icon start>
                                 mdi-access-point
                             </v-icon>
@@ -94,30 +100,35 @@
                         </v-window-item>
                         <v-window-item value="option-5">
                             <v-card flat>
-                                <medialibrary />
+                                <shipping />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-6">
                             <v-card flat>
-                                <webhooks />
+                                <medialibrary />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-7">
                             <v-card flat>
-                                <roles />
+                                <webhooks />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-8">
                             <v-card flat>
-                                <emailConfiguration />
+                                <roles />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-9">
                             <v-card flat>
-                                <storage />
+                                <emailConfiguration />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-10">
+                            <v-card flat>
+                                <storage />
+                            </v-card>
+                        </v-window-item>
+                        <v-window-item value="option-11">
                             <v-card flat>
                                 <auth />
                             </v-card>
@@ -134,6 +145,7 @@
     import emailConfiguration from '~/components/settings/emailConfiguration'
     import internalionalization from '~/components/settings/internalionalization'
     import localization from '~/components/settings/localization'
+    import shipping from '~/components/settings/shipments'
     import webhooks from '~/components/settings/webhooks'
     import medialibrary from '~/components/settings/medialibrary'
     import roles from '~/components/settings/roles'
@@ -147,6 +159,7 @@
             emailConfiguration,
             internalionalization,
             localization,
+            shipping,
             webhooks,
             roles,
             medialibrary,

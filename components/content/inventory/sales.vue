@@ -1,78 +1,56 @@
 <template>
-    <div>
-        <v-toolbar>
-            <v-col cols="9">
-                <v-toolbar-title>Sales</v-toolbar-title>
-            </v-col>
-            <v-col cols="2">
-                <createSale />
-            </v-col>
-        </v-toolbar>
-        <v-table fixed-header height="300px" width="100%">
-            <thead>
-                <tr>
-                    <th class="text-left">
-                        Page ID
-                    </th>
-                    <th class="text-left">
-                        Page Name
-                    </th>
-                    <th class="text-left">
-                        URL
-                    </th>
-                    <th class="text-left">
-                        Meta Title
-                    </th>
-                    <th class="text-left">
-                        Created
-                    </th>
-                    <th class="text-left">
-                        Edit
-                    </th>
-                </tr>
-            </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
-                <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
-                </tr>
-            </tbody>
-        </v-table>
-    </div>
+    <v-card>
+        <v-tabs v-model="tab">
+            <v-tab value="one">OPEN</v-tab>
+            <v-tab value="two">SHIPPED</v-tab>
+            <v-tab value="three">COMPLETED</v-tab>
+            <v-tab value="four">ACTIVE</v-tab>
+            <v-tab value="five">DRAFT</v-tab>
+        </v-tabs>
+
+        <v-card-text>
+            <v-window v-model="tab">
+                <v-window-item value="one">
+                    <open />
+                </v-window-item>
+
+                <v-window-item value="two">
+                    <shipped />
+                </v-window-item>
+
+                <v-window-item value="three">
+                    <completed />
+                </v-window-item>
+
+                <v-window-item value="four">
+                    <active />
+                </v-window-item>
+
+                <v-window-item value="five">
+                    <draft />
+                </v-window-item>
+            </v-window>
+        </v-card-text>
+    </v-card>
 </template>
 
 <script>
-    import createSale from './addInventory/add-sale.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+import open from './sales/open.vue'
+import shipped from './sales/shipped.vue'
+import completed from './sales/completed.vue'
+import active from './sales/active.vue'
+import draft from './sales/draft.vue'
 
     export default {
-        components: {
-            createSale,
-            //editUser
-        },
-    /*    data() {
-            return {
-                findManyPages: [],
-            }
-        },
-        apollo: {
-            findManyPages: {
-                prefetch: true,
-                query: findManyPages
-            }
-        }, */
+        components: { open, shipped, completed, active, draft},
+        data: () => ({
+            tab: null,
+        }),
     }
 </script>
 
 <script setup>
     useHead({
-        title: 'Product Attributes',
-    });
-
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+        title: 'Sales',
+    })
 </script>
