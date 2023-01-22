@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar color="info">
-            <v-col cols="9">
+            <v-col cols="10">
                 <v-toolbar-title>Pages</v-toolbar-title>
             </v-col>
             <v-col cols="2">
@@ -31,7 +31,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="pages in findManyPages" :key="pages.id">
                 <tr>
                     <td>{{ pages.id }}</td>
                     <td>{{ pages.title }}</td>
@@ -48,14 +48,14 @@
 
 <script>
     import createPage from '../../../..components/content/pages/createPage'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
             createPage,
             //editUser
         },
-    /*    data() {
+       data() {
             return {
                 findManyPages: [],
             }
@@ -65,7 +65,7 @@
                 prefetch: true,
                 query: findManyPages
             }
-        }, */
+        },
     }
 </script>
 
@@ -73,6 +73,4 @@
     useHead({
         title: 'Pages',
     });
-
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
 </script>

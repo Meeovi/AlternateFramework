@@ -6,9 +6,15 @@ export declare class AgreementsWhereInput {
     OR?: AgreementsWhereInput[] | undefined;
     NOT?: AgreementsWhereInput[] | undefined;
     id?: BigIntFilter | undefined;
-    created_at?: DateTimeNullableFilter | undefined;
+    reference_id?: StringNullableFilter | undefined;
+    created?: DateTimeNullableFilter | undefined;
+    updated?: DateTimeNullableFilter | undefined;
+    content?: StringNullableFilter | undefined;
     name?: StringNullableFilter | undefined;
+    image?: StringNullableFilter | undefined;
+    excerpt?: StringNullableFilter | undefined;
     type?: StringNullableFilter | undefined;
-    author?: StringNullableFilter | undefined;
-    updated_at?: DateTimeNullableFilter | undefined;
+    user_id?: StringNullableFilter | undefined;
+    shop_id?: StringNullableFilter | undefined;
+    mediamanager?: StringNullableFilter | undefined;
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar style="background-color: yellow; color: black;">
-            <v-col cols="9">
+            <v-col cols="10">
                 <v-toolbar-title>Categories</v-toolbar-title>
             </v-col>
             <v-col cols="2">
@@ -12,13 +12,13 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Category Thumbnail
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Category ID
                     </th>
                     <th class="text-left">
-                        URL
+                        Name
                     </th>
                     <th class="text-left">
                         Meta Title
@@ -31,14 +31,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="categories in findManyCategories" :key="categories.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
+                    <td>{{ categories.image }}</td>
+                    <td>{{ categories.id }}</td>
+                    <td>{{ categories.name }}</td>
+                    <td>{{ categories.meta_title }}</td>
+                    <td>{{ categories.created_at }}</td>
+                    <td><a :href="`/admin/content/categories/${categories.id}`">
                             <!--<editUser />--></a></td>
                 </tr>
             </tbody>
@@ -48,24 +48,24 @@
 
 <script>
     import createCategory from '../../../components/content/add-category.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyCategories from '../../../graphql/query/findManyCategories.gql'
 
     export default {
         components: {
             createCategory,
             //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyCategories: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyCategories: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyCategories
             }
-        }, */
+        },
     }
 </script>
 
@@ -73,6 +73,4 @@
     useHead({
         title: 'Categories',
     });
-
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
 </script>

@@ -1,6 +1,6 @@
 /********************** Main CSS *************/
 html {
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 body {
     margin: 0;
@@ -32,7 +32,6 @@ body {
 .contentLeft {
     left: 0px !important;
     position: relative;
-    overflow-x: scroll;
     top: 0px !important;
     width: 209px !important;
     height: 100vh !important;
@@ -44,7 +43,8 @@ body {
 
 .contentRight {
     top: 0px !important;
-    width: 100% !important;
+    width: 85vw !important;
+    height: 100vh !important;
 }
 
 .contentRight h4 {
@@ -67,11 +67,9 @@ body {
 
 #mainSection {
     top: 0px !important;
-    position: relative !important;
+    position: absolute !important;
     left: 56px;
-    max-width: 100% !important;
-    height: 100% !important;
-    overflow-y: scroll;
+    width: 100% !important;
 }
 
 .homeSection {
@@ -113,20 +111,19 @@ body {
     position: relative;
     padding-left: 0px;
     padding-right: 0px;
-    overflow-y: scroll;
 }
 
 /********************* Metrics CSS ***********/
 
 .metricsWindowRight {
     width: 80%;
-    height: 83vh !important;
+    height: 100vh !important;
 }
 
 .databaseSections {
     width: 100%;
     position: relative;
-    height: 83vh !important;
+    height: 100vh !important;
 }
 
 /********************** Media Manager CSS ***********/

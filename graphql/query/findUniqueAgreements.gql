@@ -1,11 +1,17 @@
 query {
   findUniqueAgreements 
  {
-    author
-    created_at
+    content
+    created
+    excerpt
     id
+    image
+    mediamanager
     name
+    reference_id
+    shop_id
     type
-    updated_at
+    updated
+    user_id
   }
 }

@@ -22,7 +22,25 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsOrderByWithAggregationInput.prototype, "created_at", void 0);
+], AgreementsOrderByWithAggregationInput.prototype, "reference_id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithAggregationInput.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithAggregationInput.prototype, "updated", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithAggregationInput.prototype, "content", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
@@ -34,19 +52,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithAggregationInput.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithAggregationInput.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
 ], AgreementsOrderByWithAggregationInput.prototype, "type", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsOrderByWithAggregationInput.prototype, "author", void 0);
+], AgreementsOrderByWithAggregationInput.prototype, "user_id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsOrderByWithAggregationInput.prototype, "updated_at", void 0);
+], AgreementsOrderByWithAggregationInput.prototype, "shop_id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithAggregationInput.prototype, "mediamanager", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => AgreementsCountOrderByAggregateInput_1.AgreementsCountOrderByAggregateInput, {
         nullable: true

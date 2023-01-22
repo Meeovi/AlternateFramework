@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-toolbar color="info">
+        <v-toolbar>
             <v-col cols="9">
                 <v-toolbar-title>Customers</v-toolbar-title>
             </v-col>
@@ -12,16 +12,16 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Customer ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Customer Name
                     </th>
                     <th class="text-left">
-                        URL
+                        Email
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Segment
                     </th>
                     <th class="text-left">
                         Created
@@ -31,14 +31,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="customers in findManyCustomers" :key="customers.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
+                    <td>{{ customers.id }}</td>
+                    <td>{{ customers.first_name }} {{ customers.last_name }}</td>
+                    <td>{{ customers.email }}</td>
+                    <td>{{ customers.customer_group }}</td>
+                    <td>{{ customers.created_at }}</td>
+                    <td><a :href="`/admin/customers/${customers.id}`">
                             <!--<editUser />--></a></td>
                 </tr>
             </tbody>
@@ -48,14 +48,14 @@
 
 <script>
     import createCustomer from './addCustomer/add-customer.vue'
-    //import findManyCustomers from '../../../graphql/query/findManyCustomers.gql'
+    import findManyCustomers from '../../graphql/query/findManyCustomers.gql'
 
     export default {
         components: {
             createCustomer,
             //editUser
         },
-    /*    data() {
+       data() {
             return {
                 findManyCustomers: [],
             }
@@ -65,7 +65,7 @@
                 prefetch: true,
                 query: findManyCustomers
             }
-        }, */
+        }, 
     }
 </script>
 
@@ -74,5 +74,5 @@
         title: 'Customers',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: customers } = await useAsyncData(() => $fetch("/api/customers"));
 </script>

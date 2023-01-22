@@ -6,28 +6,46 @@ query {
     }
     _count {
       _all
-      author
-      created_at
+      content
+      created
+      excerpt
       id
+      image
+      mediamanager
       name
+      reference_id
+      shop_id
       type
-      updated_at
+      updated
+      user_id
     }
     _max {
-      author
-      created_at
+      content
+      created
+      excerpt
       id
+      image
+      mediamanager
       name
+      reference_id
+      shop_id
       type
-      updated_at
+      updated
+      user_id
     }
     _min {
-      author
-      created_at
+      content
+      created
+      excerpt
       id
+      image
+      mediamanager
       name
+      reference_id
+      shop_id
       type
-      updated_at
+      updated
+      user_id
     }
     _sum {
       id

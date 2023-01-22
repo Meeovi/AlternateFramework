@@ -6,9 +6,15 @@ export declare class AgreementsScalarWhereWithAggregatesInput {
     OR?: AgreementsScalarWhereWithAggregatesInput[] | undefined;
     NOT?: AgreementsScalarWhereWithAggregatesInput[] | undefined;
     id?: BigIntWithAggregatesFilter | undefined;
-    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
+    reference_id?: StringNullableWithAggregatesFilter | undefined;
+    created?: DateTimeNullableWithAggregatesFilter | undefined;
+    updated?: DateTimeNullableWithAggregatesFilter | undefined;
+    content?: StringNullableWithAggregatesFilter | undefined;
     name?: StringNullableWithAggregatesFilter | undefined;
+    image?: StringNullableWithAggregatesFilter | undefined;
+    excerpt?: StringNullableWithAggregatesFilter | undefined;
     type?: StringNullableWithAggregatesFilter | undefined;
-    author?: StringNullableWithAggregatesFilter | undefined;
-    updated_at?: DateTimeNullableWithAggregatesFilter | undefined;
+    user_id?: StringNullableWithAggregatesFilter | undefined;
+    shop_id?: StringNullableWithAggregatesFilter | undefined;
+    mediamanager?: StringNullableWithAggregatesFilter | undefined;
 }

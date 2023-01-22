@@ -1,8 +1,14 @@
 export declare enum AgreementsScalarFieldEnum {
     id = "id",
-    created_at = "created_at",
+    reference_id = "reference_id",
+    created = "created",
+    updated = "updated",
+    content = "content",
     name = "name",
+    image = "image",
+    excerpt = "excerpt",
     type = "type",
-    author = "author",
-    updated_at = "updated_at"
+    user_id = "user_id",
+    shop_id = "shop_id",
+    mediamanager = "mediamanager"
 }

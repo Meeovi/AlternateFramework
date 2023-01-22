@@ -18,7 +18,25 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "created_at", void 0);
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "reference_id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "updated", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "content", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
@@ -30,19 +48,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
 ], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "type", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "author", void 0);
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "user_id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "updated_at", void 0);
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "shop_id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsOrderByWithRelationAndSearchRelevanceInput.prototype, "mediamanager", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => AgreementsOrderByRelevanceInput_1.AgreementsOrderByRelevanceInput, {
         nullable: true

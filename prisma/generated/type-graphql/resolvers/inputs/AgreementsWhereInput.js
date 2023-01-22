@@ -34,11 +34,29 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", BigIntFilter_1.BigIntFilter)
 ], AgreementsWhereInput.prototype, "id", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], AgreementsWhereInput.prototype, "reference_id", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeNullableFilter_1.DateTimeNullableFilter, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", DateTimeNullableFilter_1.DateTimeNullableFilter)
-], AgreementsWhereInput.prototype, "created_at", void 0);
+], AgreementsWhereInput.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => DateTimeNullableFilter_1.DateTimeNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", DateTimeNullableFilter_1.DateTimeNullableFilter)
+], AgreementsWhereInput.prototype, "updated", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], AgreementsWhereInput.prototype, "content", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
@@ -50,19 +68,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], AgreementsWhereInput.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], AgreementsWhereInput.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], AgreementsWhereInput.prototype, "type", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], AgreementsWhereInput.prototype, "author", void 0);
+], AgreementsWhereInput.prototype, "user_id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => DateTimeNullableFilter_1.DateTimeNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", DateTimeNullableFilter_1.DateTimeNullableFilter)
-], AgreementsWhereInput.prototype, "updated_at", void 0);
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], AgreementsWhereInput.prototype, "shop_id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], AgreementsWhereInput.prototype, "mediamanager", void 0);
 AgreementsWhereInput = AgreementsWhereInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("AgreementsWhereInput", {
         isAbstract: true

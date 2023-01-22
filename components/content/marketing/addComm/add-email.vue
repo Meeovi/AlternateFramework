@@ -16,47 +16,48 @@
                             <span class="text-h6">Create new Email</span>
                         </v-card-title>
                     </v-toolbar>
-                <v-card-text>
-                    <v-container>
-                        <v-row>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal first name*" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal middle name" hint="example of helper text only on focus">
-                                </v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                    persistent-hint required></v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                                <v-text-field label="Email*" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                                <v-text-field label="Password*" type="password" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6">
-                                <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required></v-select>
-                            </v-col>
-                            <v-col cols="12" sm="6">
-                                <v-autocomplete
-                                    :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                    label="Interests" multiple></v-autocomplete>
-                            </v-col>
-                        </v-row>
-                    </v-container>
-                    <small>*indicates required field</small>
-                </v-card-text>
-                <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Close
-                    </v-btn>
-                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Save
-                    </v-btn>
-                </v-card-actions>
+                    <v-card-text>
+                        <v-container>
+                            <v-row>
+                                <v-col cols="12" sm="6" md="4">
+                                    <v-text-field label="Legal first name*" required></v-text-field>
+                                </v-col>
+                                <v-col cols="12" sm="6" md="4">
+                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
+                                    </v-text-field>
+                                </v-col>
+                                <v-col cols="12" sm="6" md="4">
+                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
+                                        persistent-hint required></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field label="Email*" required></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field label="Password*" type="password" required></v-text-field>
+                                </v-col>
+                                <v-col cols="12" sm="6">
+                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="12" sm="6">
+                                    <v-autocomplete
+                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                                        label="Interests" multiple></v-autocomplete>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                        <small>*indicates required field</small>
+                    </v-card-text>
+                    <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+                            Close
+                        </v-btn>
+                        <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+                            Save
+                        </v-btn>
+                    </v-card-actions>
                 </form>
             </v-card>
         </v-dialog>
@@ -64,12 +65,83 @@
 </template>
 
 <script>
+    import gql from "graphql-tag";
+
+    import findManyEmails from "~/graphql/query/findManyEmails";
+
+    const ADD_EMAILS = gql `
+    mutation ($from:String!,$subject:String!,$bcc:String!,$content:String!,$media:String!,$bcc:String!,$cc:String!){
+    createOneEmails(data: {from: $from, subject: $subject, bcc: $bcc, content: $content, cc: $cc}) {
+            from
+            subject
+            bcc
+            cc
+            content
+            media
+    }
+}`;
+
     export default {
-        data: () => ({
-            dialog: false,
-            notifications: false,
-            sound: true,
-            widgets: false,
-        }),
+        data() {
+            return {
+                dialog: false,
+                notifications: false,
+                sound: true,
+                widgets: false,
+                bcc: [],
+                cc: [],
+                from: " ",
+                subject: " ",
+                content: " ",
+                media: [],
+            }
+        },
+        methods: {
+            async addEmail() {
+                const from = this.from;
+                const content = this.content;
+                const subject = this.subject;
+                const bcc = this.bcc;
+                const cc = this.cc;
+                const media = this.media;
+                await this.$apollo.mutate({
+                    mutation: ADD_EMAILS,
+                    variables: {
+                        from,
+                        subject,
+                        bcc,
+                        cc,
+                        content,
+                        media,
+                    },
+                    update: (cache, {
+                        data: {
+                            insertEmails
+                        }
+                    }) => {
+                        try {
+                            const insertedEmail = insertEmails.returning;
+                            console.log(insertedEmail)
+                            cache.writeQuery({
+                                query: findManyEmails
+                            })
+                        } catch (err) {
+                            console.error(err)
+                        }
+                    }
+                }).then(() => {
+                    this.$router.push({
+                        path: '../marketing/emails'
+                    })
+                }).catch(err => console.log(err));
+                this.from = ' ';
+                this.subject = ' ';
+                this.bcc = ' ';
+                this.cc = ' ';
+                this.content = ' ';
+                this.media = ' ';
+            },
+
+        },
     }
 </script>

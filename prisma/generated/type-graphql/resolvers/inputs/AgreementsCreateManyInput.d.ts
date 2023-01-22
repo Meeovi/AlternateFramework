@@ -1,8 +1,14 @@
 export declare class AgreementsCreateManyInput {
     id?: bigint | undefined;
-    created_at?: Date | undefined;
+    reference_id?: string | undefined;
+    created?: Date | undefined;
+    updated?: Date | undefined;
+    content?: string | undefined;
     name?: string | undefined;
+    image?: string | undefined;
+    excerpt?: string | undefined;
     type?: string | undefined;
-    author?: string | undefined;
-    updated_at?: Date | undefined;
+    user_id?: string | undefined;
+    shop_id?: string | undefined;
+    mediamanager?: string | undefined;
 }

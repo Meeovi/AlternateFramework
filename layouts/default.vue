@@ -86,13 +86,13 @@
                 href="/Admin/Settings/general-settings"></v-list-item>
             </v-list>
           </v-navigation-drawer>
-          <v-main id="sidebarNav">
-            <main id="mainSection">
+          <v-main id="sidebarNav"></v-main>
+          <main id="mainSection">
               <slot />
             </main>
-          </v-main>
         </v-layout>
       </v-card>
+      
     </v-main>
   </v-app>
 </template>

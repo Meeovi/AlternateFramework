@@ -1,7 +1,7 @@
 <template>
     <div>
-        <v-toolbar color="info">
-            <v-col cols="9">
+        <v-toolbar>
+            <v-col cols="10">
                 <v-toolbar-title>Segments</v-toolbar-title>
             </v-col>
             <v-col cols="2">
@@ -11,35 +11,18 @@
         <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
-                    <th class="text-left">
-                        Page ID
-                    </th>
-                    <th class="text-left">
-                        Page Name
-                    </th>
-                    <th class="text-left">
-                        URL
-                    </th>
-                    <th class="text-left">
-                        Meta Title
-                    </th>
-                    <th class="text-left">
-                        Created
-                    </th>
-                    <th class="text-left">
-                        Edit
-                    </th>
+                    <th>ID</th>
+                    <th>Segment</th>
+                    <th>Website</th>
+                    <th>Action</th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="segments in findManySegments" :key="segments.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ segments.id }}</td>
+                    <td>{{ segments.name }}</td>
+                    <td><a :href=segments.website>{{ segments.website }}</a></td>
+                    <td><a :href="`/admin/edit/segments/${segments.id}`">View</a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -48,14 +31,14 @@
 
 <script>
     import createSegment from './addCustomer/add-segment.vue'
-    //import findManySegments from '../../../graphql/query/findManySegments.gql'
+    import findManySegments from '../../graphql/query/findManySegments.gql'
 
     export default {
         components: {
             createSegment,
             //editUser
         },
-    /*    data() {
+        data() {
             return {
                 findManySegments: [],
             }
@@ -65,7 +48,7 @@
                 prefetch: true,
                 query: findManySegments
             }
-        }, */
+        },
     }
 </script>
 
@@ -73,6 +56,4 @@
     useHead({
         title: 'Segments',
     });
-
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
 </script>

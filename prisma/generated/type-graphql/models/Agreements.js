@@ -13,11 +13,29 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", typeof BigInt === "function" ? BigInt : Object)
 ], Agreements.prototype, "id", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Agreements.prototype, "reference_id", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Date)
-], Agreements.prototype, "created_at", void 0);
+], Agreements.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], Agreements.prototype, "updated", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Agreements.prototype, "content", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -29,19 +47,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
+], Agreements.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Agreements.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
 ], Agreements.prototype, "type", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], Agreements.prototype, "author", void 0);
+], Agreements.prototype, "user_id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Date)
-], Agreements.prototype, "updated_at", void 0);
+    tslib_1.__metadata("design:type", String)
+], Agreements.prototype, "shop_id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Agreements.prototype, "mediamanager", void 0);
 Agreements = tslib_1.__decorate([
     TypeGraphQL.ObjectType("Agreements", {
         isAbstract: true

@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-card class="contentright">
-            <v-toolbar style="background-color: powderblue;">
+            <v-toolbar style="background-color: powderblue;color: black;">
                 <v-col cols="9">
                 <v-toolbar-title>Customers</v-toolbar-title>
             </v-col>
@@ -37,7 +37,7 @@
                     </v-tab>
                 </v-tabs>
                 <v-card-text>
-                    <v-window v-model="tab" class="databaseSections">
+                    <v-window v-model="tab" class="contentRight">
                         <v-window-item value="option-1">
                             <v-card flat>
                                 <overview />

@@ -6,11 +6,17 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 var AgreementsScalarFieldEnum;
 (function (AgreementsScalarFieldEnum) {
     AgreementsScalarFieldEnum["id"] = "id";
-    AgreementsScalarFieldEnum["created_at"] = "created_at";
+    AgreementsScalarFieldEnum["reference_id"] = "reference_id";
+    AgreementsScalarFieldEnum["created"] = "created";
+    AgreementsScalarFieldEnum["updated"] = "updated";
+    AgreementsScalarFieldEnum["content"] = "content";
     AgreementsScalarFieldEnum["name"] = "name";
+    AgreementsScalarFieldEnum["image"] = "image";
+    AgreementsScalarFieldEnum["excerpt"] = "excerpt";
     AgreementsScalarFieldEnum["type"] = "type";
-    AgreementsScalarFieldEnum["author"] = "author";
-    AgreementsScalarFieldEnum["updated_at"] = "updated_at";
+    AgreementsScalarFieldEnum["user_id"] = "user_id";
+    AgreementsScalarFieldEnum["shop_id"] = "shop_id";
+    AgreementsScalarFieldEnum["mediamanager"] = "mediamanager";
 })(AgreementsScalarFieldEnum = exports.AgreementsScalarFieldEnum || (exports.AgreementsScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(AgreementsScalarFieldEnum, {
     name: "AgreementsScalarFieldEnum",

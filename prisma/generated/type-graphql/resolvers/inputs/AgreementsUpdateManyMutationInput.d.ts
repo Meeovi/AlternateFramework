@@ -3,9 +3,15 @@ import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDa
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
 export declare class AgreementsUpdateManyMutationInput {
     id?: BigIntFieldUpdateOperationsInput | undefined;
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    reference_id?: NullableStringFieldUpdateOperationsInput | undefined;
+    created?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    updated?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    content?: NullableStringFieldUpdateOperationsInput | undefined;
     name?: NullableStringFieldUpdateOperationsInput | undefined;
+    image?: NullableStringFieldUpdateOperationsInput | undefined;
+    excerpt?: NullableStringFieldUpdateOperationsInput | undefined;
     type?: NullableStringFieldUpdateOperationsInput | undefined;
-    author?: NullableStringFieldUpdateOperationsInput | undefined;
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    user_id?: NullableStringFieldUpdateOperationsInput | undefined;
+    shop_id?: NullableStringFieldUpdateOperationsInput | undefined;
+    mediamanager?: NullableStringFieldUpdateOperationsInput | undefined;
 }
