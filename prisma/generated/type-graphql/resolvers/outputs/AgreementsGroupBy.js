@@ -22,43 +22,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsGroupBy.prototype, "reference_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Date)
-], AgreementsGroupBy.prototype, "created", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Date)
-], AgreementsGroupBy.prototype, "updated", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsGroupBy.prototype, "content", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], AgreementsGroupBy.prototype, "name", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsGroupBy.prototype, "image", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsGroupBy.prototype, "excerpt", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -70,7 +34,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsGroupBy.prototype, "user_id", void 0);
+], AgreementsGroupBy.prototype, "content", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], AgreementsGroupBy.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsGroupBy.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsGroupBy.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsGroupBy.prototype, "mediamanager", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsGroupBy.prototype, "reference_id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -78,11 +72,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AgreementsGroupBy.prototype, "shop_id", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], AgreementsGroupBy.prototype, "updated", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsGroupBy.prototype, "mediamanager", void 0);
+], AgreementsGroupBy.prototype, "user_id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => AgreementsCountAggregate_1.AgreementsCountAggregate, {
         nullable: true

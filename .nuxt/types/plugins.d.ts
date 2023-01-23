@@ -11,6 +11,8 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/router").default> &
   InjectionType<typeof import("../../node_modules/@huntersofbook/naive-ui-nuxt/dist/runtime/config").default> &
   InjectionType<typeof import("../../node_modules/@huntersofbook/naive-ui-nuxt/dist/runtime/plugin").default> &
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/composition").default> &
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/i18n").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
   InjectionType<typeof import("../../node_modules/nuxt-monaco-editor/dist/runtime/plugin.client").default> &
   InjectionType<typeof import("../formkitPlugin").default> &

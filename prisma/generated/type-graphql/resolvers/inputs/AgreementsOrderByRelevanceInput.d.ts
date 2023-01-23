@@ -1,5 +1,5 @@
 export declare class AgreementsOrderByRelevanceInput {
-    fields: Array<"reference_id" | "content" | "name" | "image" | "excerpt" | "type" | "user_id" | "shop_id" | "mediamanager">;
+    fields: Array<"name" | "type" | "content" | "excerpt" | "image" | "mediamanager" | "reference_id" | "shop_id" | "user_id">;
     sort: "asc" | "desc";
     search: string;
 }

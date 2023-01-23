@@ -249,19 +249,18 @@ model emails {
 
 model agreements {
   id           BigInt    @id @default(autoincrement())
-  reference_id String?
-  created      DateTime? @default(now())
-  updated      DateTime? @default(now())
-  content      String?
   name         String?
-  image        String?
-  excerpt      String?
   type         String?
-  user_id      String?
-  shop_id      String?
+  content      String?
+  created      DateTime? @default(now())
+  excerpt      String?
+  image        String?
   mediamanager String?
+  reference_id String?
+  shop_id      String?
+  updated      DateTime? @default(now())
+  user_id      String?
 }
-
 
 model reviews {
   id         Int       @id @default(autoincrement())

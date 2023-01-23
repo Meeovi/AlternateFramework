@@ -6,17 +6,17 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 var AgreementsScalarFieldEnum;
 (function (AgreementsScalarFieldEnum) {
     AgreementsScalarFieldEnum["id"] = "id";
-    AgreementsScalarFieldEnum["reference_id"] = "reference_id";
-    AgreementsScalarFieldEnum["created"] = "created";
-    AgreementsScalarFieldEnum["updated"] = "updated";
-    AgreementsScalarFieldEnum["content"] = "content";
     AgreementsScalarFieldEnum["name"] = "name";
-    AgreementsScalarFieldEnum["image"] = "image";
-    AgreementsScalarFieldEnum["excerpt"] = "excerpt";
     AgreementsScalarFieldEnum["type"] = "type";
-    AgreementsScalarFieldEnum["user_id"] = "user_id";
-    AgreementsScalarFieldEnum["shop_id"] = "shop_id";
+    AgreementsScalarFieldEnum["content"] = "content";
+    AgreementsScalarFieldEnum["created"] = "created";
+    AgreementsScalarFieldEnum["excerpt"] = "excerpt";
+    AgreementsScalarFieldEnum["image"] = "image";
     AgreementsScalarFieldEnum["mediamanager"] = "mediamanager";
+    AgreementsScalarFieldEnum["reference_id"] = "reference_id";
+    AgreementsScalarFieldEnum["shop_id"] = "shop_id";
+    AgreementsScalarFieldEnum["updated"] = "updated";
+    AgreementsScalarFieldEnum["user_id"] = "user_id";
 })(AgreementsScalarFieldEnum = exports.AgreementsScalarFieldEnum || (exports.AgreementsScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(AgreementsScalarFieldEnum, {
     name: "AgreementsScalarFieldEnum",

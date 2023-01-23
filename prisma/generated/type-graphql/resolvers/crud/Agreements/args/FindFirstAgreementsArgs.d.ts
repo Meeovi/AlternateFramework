@@ -7,5 +7,5 @@ export declare class FindFirstAgreementsArgs {
     cursor?: AgreementsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "reference_id" | "created" | "updated" | "content" | "name" | "image" | "excerpt" | "type" | "user_id" | "shop_id" | "mediamanager"> | undefined;
+    distinct?: Array<"id" | "name" | "type" | "content" | "created" | "excerpt" | "image" | "mediamanager" | "reference_id" | "shop_id" | "updated" | "user_id"> | undefined;
 }

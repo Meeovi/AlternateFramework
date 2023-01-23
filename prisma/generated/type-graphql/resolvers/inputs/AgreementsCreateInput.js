@@ -17,43 +17,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsCreateInput.prototype, "reference_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Date)
-], AgreementsCreateInput.prototype, "created", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Date)
-], AgreementsCreateInput.prototype, "updated", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsCreateInput.prototype, "content", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], AgreementsCreateInput.prototype, "name", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsCreateInput.prototype, "image", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsCreateInput.prototype, "excerpt", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -65,7 +29,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsCreateInput.prototype, "user_id", void 0);
+], AgreementsCreateInput.prototype, "content", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], AgreementsCreateInput.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsCreateInput.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsCreateInput.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsCreateInput.prototype, "mediamanager", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsCreateInput.prototype, "reference_id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -73,11 +67,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AgreementsCreateInput.prototype, "shop_id", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], AgreementsCreateInput.prototype, "updated", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsCreateInput.prototype, "mediamanager", void 0);
+], AgreementsCreateInput.prototype, "user_id", void 0);
 AgreementsCreateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("AgreementsCreateInput", {
         isAbstract: true

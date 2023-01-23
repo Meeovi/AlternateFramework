@@ -35,6 +35,12 @@
                         </v-icon>
                         Companies
                     </v-tab>
+                    <v-tab value="option-5">
+                        <v-icon start>
+                            mdi-access-point
+                        </v-icon>
+                        Reviews
+                    </v-tab>
                 </v-tabs>
                 <v-card-text>
                     <v-window v-model="tab" class="contentRight">
@@ -58,6 +64,11 @@
                                 <companies />
                             </v-card>
                         </v-window-item>
+                        <v-window-item value="option-5">
+                            <v-card flat>
+                                <reviews />
+                            </v-card>
+                        </v-window-item>
                     </v-window>
                 </v-card-text>
             </div>
@@ -67,10 +78,11 @@
 
 <script>
     import createCustomer from '~/components/customers/addCustomer/add-customer.vue'
-    import overview from '~/components/customers/overview'
-    import customers from '~/components/customers/customers'
-    import segments from '~/components/customers/segments'
-    import companies from '~/components/customers/companies'
+    import overview from '~/components/customers/overview.vue'
+    import customers from '~/components/customers/customers.vue'
+    import segments from '~/components/customers/segments.vue'
+    import companies from '~/components/customers/companies.vue'
+    import reviews from '~/components/customers/reviews.vue'
 
     export default {
         components: {
@@ -78,7 +90,8 @@
             overview,
             customers,
             segments,
-            companies
+            companies,
+            reviews
         },
         data: () => ({
             tab: 'option-1',

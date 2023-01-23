@@ -5,17 +5,17 @@ import { AgreementsMinOrderByAggregateInput } from "../inputs/AgreementsMinOrder
 import { AgreementsSumOrderByAggregateInput } from "../inputs/AgreementsSumOrderByAggregateInput";
 export declare class AgreementsOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
-    reference_id?: "asc" | "desc" | undefined;
-    created?: "asc" | "desc" | undefined;
-    updated?: "asc" | "desc" | undefined;
-    content?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    image?: "asc" | "desc" | undefined;
-    excerpt?: "asc" | "desc" | undefined;
     type?: "asc" | "desc" | undefined;
-    user_id?: "asc" | "desc" | undefined;
-    shop_id?: "asc" | "desc" | undefined;
+    content?: "asc" | "desc" | undefined;
+    created?: "asc" | "desc" | undefined;
+    excerpt?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
     mediamanager?: "asc" | "desc" | undefined;
+    reference_id?: "asc" | "desc" | undefined;
+    shop_id?: "asc" | "desc" | undefined;
+    updated?: "asc" | "desc" | undefined;
+    user_id?: "asc" | "desc" | undefined;
     _count?: AgreementsCountOrderByAggregateInput | undefined;
     _avg?: AgreementsAvgOrderByAggregateInput | undefined;
     _max?: AgreementsMaxOrderByAggregateInput | undefined;

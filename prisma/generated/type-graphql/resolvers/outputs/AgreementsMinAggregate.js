@@ -17,43 +17,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsMinAggregate.prototype, "reference_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Date)
-], AgreementsMinAggregate.prototype, "created", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => Date, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Date)
-], AgreementsMinAggregate.prototype, "updated", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsMinAggregate.prototype, "content", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], AgreementsMinAggregate.prototype, "name", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsMinAggregate.prototype, "image", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], AgreementsMinAggregate.prototype, "excerpt", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -65,7 +29,37 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsMinAggregate.prototype, "user_id", void 0);
+], AgreementsMinAggregate.prototype, "content", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], AgreementsMinAggregate.prototype, "created", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsMinAggregate.prototype, "excerpt", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsMinAggregate.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsMinAggregate.prototype, "mediamanager", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgreementsMinAggregate.prototype, "reference_id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
@@ -73,11 +67,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AgreementsMinAggregate.prototype, "shop_id", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Date, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", Date)
+], AgreementsMinAggregate.prototype, "updated", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], AgreementsMinAggregate.prototype, "mediamanager", void 0);
+], AgreementsMinAggregate.prototype, "user_id", void 0);
 AgreementsMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("AgreementsMinAggregate", {
         isAbstract: true

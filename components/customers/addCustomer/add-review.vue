@@ -66,7 +66,7 @@
 
 <script>
     import gql from "graphql-tag";
-    import findManyReviews from "~/graphql/query/findManyReviews"
+    import findManyReviews from "../../../graphql/query/findManyReviews.gql"
 
     const ADD_REVIEWS = gql `
     mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!){

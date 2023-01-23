@@ -20,6 +20,7 @@ export default defineNuxtConfig({
       //'@sidebase/nuxt-auth',
       'nuxt-monaco-editor',
       '@nuxt/content',
+      '@nuxtjs/i18n',
     ],
 
   /*
@@ -38,6 +39,30 @@ export default defineNuxtConfig({
       enableGlobalAppMiddleware: false
     }, 
     */
+
+    i18n: {
+      en: { pathMatch: ['not-found-my-post'] },
+      fr: { pathMatch: ['not-found-mon-article'] },
+      locales: [
+        {
+          code: 'en',
+          name: 'English'
+        },
+        {
+          code: 'es',
+          name: 'Español'
+        },
+        {
+          code: 'fr',
+          name: 'Français'
+        }
+      ],
+      skipSettingLocaleOnNavigate: true,
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieCrossOrigin: true
+      }
+    },
 
     apollo: {
       clients: {
