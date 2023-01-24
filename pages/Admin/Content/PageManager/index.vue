@@ -47,8 +47,8 @@
 </template>
 
 <script>
-    import createPage from '../../../..components/content/pages/createPage'
-    import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createPage from '../../../../components/content/pages/createPage'
+    import findManyPages from '../../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {

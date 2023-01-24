@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center">
-        <v-dialog v-model="dialog" persistent>
+        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
                     <v-icon start icon="fas fa-pager"></v-icon>Create Page
@@ -8,9 +8,14 @@
             </template>
             <v-card>
                 <form enctype="multipart/form-data" @submit.prevent="addPage()">
-                <v-card-title>
-                    <span class="text-h6">Create new page</span>
-                </v-card-title>
+                  <v-toolbar dark color="primary">
+                        <v-btn icon dark @click="dialog = false">
+                            <v-icon icon="fas fa-circle-xmark"></v-icon>
+                        </v-btn>
+                        <v-card-title>
+                            <span class="text-h6">Create new Page</span>
+                        </v-card-title>
+                    </v-toolbar>
                 <v-card-text>
                     <v-container>
                         <v-row>
@@ -73,6 +78,9 @@
     data() {
       return {
         dialog: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
         meta_keywords: " ",
         title: " ",
         meta_description: " ",
