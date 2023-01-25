@@ -35,8 +35,8 @@
           </v-menu>
         </v-col>
         <v-col>
-          <v-btn variant="flat">
-            <v-icon start icon="fas fa-comment"></v-icon>Feedback on this page?
+          <v-btn variant="flat" href="/admin/user/">
+            <v-icon start icon="fas fa-user-circle"></v-icon>
           </v-btn>
         </v-col>
         <v-col>

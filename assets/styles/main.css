@@ -63,6 +63,11 @@ body {
     display: block !important;
 }
 
+.table {
+    padding: 50px;
+    width: 80%;
+}
+
 /******************* Main Section CSS *********/
 
 #mainSection {
