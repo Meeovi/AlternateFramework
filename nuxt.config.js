@@ -21,6 +21,7 @@ export default defineNuxtConfig({
       'nuxt-monaco-editor',
       '@nuxt/content',
       '@nuxtjs/i18n',
+      "nuxt-security",
     ],
 
   /*

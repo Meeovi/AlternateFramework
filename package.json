@@ -112,6 +112,7 @@
       "lodash": "^4.17.21",
       "multer": "^1.4.5-lts.1",
       "nodemailer": "^6.8.0",
+      "nuxt-security": "^0.10.1",
       "prisma-docs-generator": "^0.5.0",
       "raw-loader": "^4.0.2",
       "reflect-metadata": "^0.1.13",
