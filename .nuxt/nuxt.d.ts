@@ -4,6 +4,7 @@
 /// <reference types="nuxt-monaco-editor" />
 /// <reference types="@nuxt/content" />
 /// <reference types="@nuxtjs/i18n" />
+/// <reference types="nuxt-security" />
 /// <reference types="@huntersofbook/naive-ui-nuxt" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference types="nuxt" />
