@@ -55,7 +55,7 @@
    },
    "dependencies": {
       "@apollo/client": "^3.7.1",
-      "@apollo/gateway": "^0.43.1",
+      "@apollo/gateway": "^0.54.0",
       "@envelop/apollo-federation": "^3.0.3",
       "@envelop/core": "^3.0.3",
       "@envelop/graphql-jit": "^5.0.3",
