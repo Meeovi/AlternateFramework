@@ -51,7 +51,7 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer expand-on-hover v-model="drawer" :rail="rail" @click="rail = false">
-            <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg" title="John Leider" nav>
+            <v-list-item prepend-icon="fas fa-user" title="Profile Name">
               <template v-slot:append>
                 <v-btn variant="text" icon="fas fa-chevron-left" @click.stop="rail = !rail"></v-btn>
               </template>
@@ -73,7 +73,7 @@
                   <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
                   <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Content/Media/"></v-list-item>
                 </v-list-group>
-              <v-list-item prepend-icon="fas fa-user" title="Customers" value="Customers" href="/Admin/Customers"></v-list-item>
+              <v-list-item prepend-icon="fas fa-users" title="Customers" value="Customers" href="/Admin/Customers"></v-list-item>
               <!--<v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
                 href="/Admin/Dashboard/explorer"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-column" title="Monitoring" value="monitoring"

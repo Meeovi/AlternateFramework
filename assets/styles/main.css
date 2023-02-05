@@ -44,7 +44,7 @@ body {
 .contentRight {
     top: 0px !important;
     width: 85vw !important;
-    height: 100vh !important;
+    height: 100% !important;
 }
 
 .contentRight h4 {
@@ -68,11 +68,19 @@ body {
     width: 80%;
 }
 
+.features3 {
+    background-color: transparent !important;
+}
+
+.features3 .mbr-text, .item-title {
+    color: black !important;
+}
+
 /******************* Main Section CSS *********/
 
 #mainSection {
     top: 0px !important;
-    position: absolute !important;
+    position: relative !important;
     left: 56px;
     width: 100% !important;
 }
@@ -114,10 +122,10 @@ body {
 /******************** Sidebar CSS *************/
 
 #sidebarNav {
-    height: 100vh !important;
+    height: 100% !important;
     left: 0px;
     float: left;
-    position: relative;
+    position: absolute;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -154,20 +162,15 @@ body {
     height: 100%;
 }
 
-/************************* Database CSS ***************/
-
-.apiStudio, .apiDocs, .dataLogs {
-    width: 98%;
-    height: 95vh;
-}
-
 /************************ Settings CSS ***************/
 
 .settingsLeft h5 {
     padding: 10px;
+    font-size: 15px;
 }
 
 .settingsRight {
+    padding-top: 10px;
     width: 80vw !important;
     height: 100vh !important;
 }
