@@ -17,8 +17,6 @@ import { useSentry } from '@envelop/sentry';
 import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
 
 import '@sentry/tracing';
-//import { ApolloGateway } from '@apollo/gateway'
-//import { useApolloFederation } from '@envelop/apollo-federation'
 import fastify, { FastifyRequest, FastifyReply } from 'fastify'
 
 // This is the fastify instance you have created
@@ -31,14 +29,6 @@ const app = fastify({
 var cors = require('cors')
 
 app.options('*', cors())
-
-// Initialize the gateway
-/* const gateway = new ApolloGateway({
-  serviceList: [
-    { name: 'First', url: process.env.GRAPHQL_ENV },
-    //{ name: 'products', url: 'http://localhost:4002' }
-  ]
-}) */
 
 // Pulling our Graphql Resolvers from Type-graphql & Prisma generation
 
@@ -60,9 +50,6 @@ async function main() {
   }, {
     fallbackRule: allow
   });
-
-  // Make sure all services are loaded
-  // await gateway.load()
 
   // Integrating Graphql-Sheild 
   const schema = applyMiddleware(schemamain, permissions);
@@ -86,7 +73,6 @@ async function main() {
       error: (...args) => args.forEach((arg) => app.log.error(arg))
     },
     schema,
-    //context: contextCreator,
     batching: true,
     cors: {
       origin: '*',
@@ -104,9 +90,6 @@ async function main() {
         includeResolverArgs: false, // set to `true` in order to include the args passed to resolvers
         includeExecuteVariables: false, // set to `true` in order to include the operation variables values
       }),
-      /* useApolloFederation({
-         gateway
-       }) */
        useSofaWithSwaggerUI({
         basePath: '/rest',
         swaggerUIEndpoint: '/swagger',
