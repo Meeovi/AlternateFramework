@@ -29,7 +29,7 @@
     "passport-oauth2": "^1.6.1",
     "passport-okta-oauth": "^0.0.1",
     "passport-reddit": "^1.1.0",
-    "passport-saml": "^3.2.4",
+    "@node-saml/passport-saml": "^4.0.4",
     "passport-slack-oauth2": "^1.1.1",
     "passport-spotify": "^2.0.0",
     "passport-twitch": "^1.0.3",
